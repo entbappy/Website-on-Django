@@ -1,0 +1,1743 @@
+{% extends 'base.html' %}
+
+{% block title %}MLlearning
+{% endblock title %}
+
+{% block body %}
+
+<title>Machine Learning - Definition and application examples</title>
+<link href="https://cdn2.vogel.de/applications/69/scss/basic.css" media="screen,print" rel="stylesheet" type="text/css">
+<link href="https://www.maschinenmarkt.international/english/global/articles/733318/" rel="canonical">
+<link href="https://www.spotlightmetal.com/amp/machine-learning--definition-and-application-examples-a-746226/" rel="amphtml">
+<link href="https://cdn1.vogel.de/zz6rSi-GnbK80ioA_lPzPy4E1YI=/fit-in/1200x630/filters:format(png):quality(90)/images.vogel.de/vogelonline/bdb/1444700/1444739/original.jpg" rel="images_src">
+	<link rel="preconnect" href="https://cdn1.vogel.de/" crossorigin>
+	<link rel="dns-prefetch" href="https://cdn1.vogel.de">
+	<link rel="preconnect" href="https://cdn2.vogel.de/" crossorigin>
+	<link rel="dns-prefetch" href="https://cdn2.vogel.de">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/android-chrome-192x192.png">
+<link rel="icon" type="image/png" sizes="150x150" href="/mstile-150x150.png">
+<link rel="icon" type="image/png" sizes="144x144" href="/mstile-144x144.png">
+<link rel="icon" type="image/png" sizes="70x70" href="/mstile-70x70.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="mask-icon" color="#ffffff" href="/safari-pinned-tab.svg">
+<link rel="manifest" href="/manifest.json">
+<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="alternate" href="/rss/news.xml"
+      type="application/rss+xml" title="RSS-Feed News">
+<link rel="alternate" href="/atom/news.xml"
+      type="application/atom+xml" title="ATOM-Feed News">
+
+<script  src="https://cdn2.vogel.de/js/vendors/jquery/jquery-3.5.1.min.js"></script>
+<script  src="https://cdn2.vogel.de/js/menu.js"></script>
+<script  defer="defer" src="https://cdn2.vogel.de/js/custom.js"></script>
+<script  defer="defer" src="https://cdn2.vogel.de/js/vendors/fitvids/jquery.fitvids.min.js"></script>
+<script  src="https://script.ioam.de/iam.js?m=1"></script>
+<script type="application/ld+json">
+    {"@context":"http:\/\/schema.org","@type":"NewsArticle","mainEntityOfPage":"https:\/\/www.maschinenmarkt.international\/english\/global\/articles\/733318\/","headline":"Machine Learning - Definition and application examples","description":"Machine Learning, deep learning, algorithms - you can no longer avoid these buzzwords when it comes to Industry 4.0. Find out what Machine Learning really is and how it is applied in practice.","datePublished":"2018-08-29T07:00:00+02:00","dateModified":"2020-08-07T09:40:01+02:00","author":{"@type":"Person","name":"Lina Klass"},"publisher":{"@type":"Organization","name":"SPOTLIGHTMETAL","logo":{"@type":"ImageObject","height":"60px","width":"600px","url":"https:\/\/www.spotlightmetal.com\/applications\/69\/img\/amp-logo.png"}},"image":["https:\/\/cdn1.vogel.de\/zz6rSi-GnbK80ioA_lPzPy4E1YI=\/fit-in\/1200x630\/filters:format(png):quality(90)\/images.vogel.de\/vogelonline\/bdb\/1444700\/1444739\/original.jpg"]}
+</script>
+<script  src="https://www.googletagservices.com/tag/js/gpt.js"></script>
+<script >
+    //<!--
+    var googletag = googletag || {}; 
+	googletag.cmd = googletag.cmd || [];
+    //-->
+</script>
+<script  defer="defer">
+    //<!--
+    
+	        function adsBlocked(callback)
+			{
+
+				var OBJ_request = new Request(
+					"https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+					{
+						method: 'HEAD',
+						mode: 'no-cors'
+					}
+				);
+
+				fetch(OBJ_request).then(function (response)
+				{
+					return response;
+				}).then(function (OBJ_response)
+				{
+					callback(false);
+				}).catch(function (OBJ_e)
+				{
+					callback(true);
+				});
+			}
+			
+            var BOO_adblocker = false;
+			adsBlocked(function (blocked)
+			{
+				BOO_adblocker = !!blocked;
+			});
+    //-->
+</script>
+<script  src="https://cdn2.vogel.de/js/vendors/hoverintent/jquery.hoverintent.min.js"></script>
+<script  src="https://cdn2.vogel.de/js/vendors/respiframe/jquery.responsiveiframe.js"></script>
+<script  async="async" src="https://cdn2.vogel.de/js/vendors/lazysizes/lazysizes.min.js"></script>
+<script  async="async" src="https://cdn2.vogel.de/js/vendors/lazysizes/plugins/print/ls.print.min.js"></script>
+<!--[if lt IE 9]>
+<script>document.createElement("video");
+document.createElement("header");
+document.createElement("section");
+document.createElement("article");
+document.createElement("footer");</script>
+<![endif]-->
+
+
+			<!-- GPT -->
+		<script>
+
+			try
+			{
+				// Array anlegen fuer spaetere Speicherung
+				var ARR_unknown_slots = [];
+				
+				googletag.cmd.push(function ()
+				{
+
+					// Client
+					var STR_client = "/2686/spotlightmetal.com/technologies";
+
+					// Groessen
+					var ARR_sizes = [
+						{
+							"type": "slot",
+							"size": [[960, 252], [980, 90], [728, 90], [468, 60], [1, 1]],
+							"mappings": [[[0, 0], [1, 1]], [[1025, 0], [[960, 252], [980, 90], [728, 90], [468, 60], [1, 1]]]],
+							"id": "advertisement_01"
+						},
+						{
+							"type": "slot",
+							"size": [[420, 600], [300, 600], [160, 600], [1, 1]],
+							"mappings": [[[0, 0], [1, 1]], [[1025, 0], [[420, 600], [300, 600], [160, 600], [1, 1]]]],
+							"id": "advertisement_02"
+						},
+						{
+							"type": "slot",
+							"size": [[161, 600], [121, 600], [1, 1]],
+							"mappings": [[[0, 0], [1, 1]], [[1025, 0], [[161, 600], [121, 600], [1, 1]]]],
+							"id": "advertisement_03"
+						},
+						{
+							"type": "slot",
+							"size": [[960, 250], [728, 91], [301, 630], [301, 330], [301, 280], [301, 180]],
+							"mappings": [[[0, 0], [[301, 630], [301, 330], [301, 280], [301, 180], [1, 1]]], [[1025, 0], [[960, 250], [728, 91], [1, 1]]]],
+							"id": "advertisement_04"
+						},
+						{
+							"type": "slot",
+							"size": [[960, 251], [728, 92], [1, 1]],
+							"mappings": [[[0, 0], [1, 1]], [[1025, 0], [[960, 251], [728, 92], [1, 1]]]],
+							"id": "advertisement_05"
+						},
+						{
+							"type": "slot",
+							"size": [[300, 631], [300, 630], [300, 331], [300, 330], [300, 281], [300, 280], [1, 1]],
+							"mappings": [[[0, 0], [[300, 631], [300, 630], [300, 331], [300, 330], [300, 281], [300, 280], [1, 1]]]],
+							"id": "advertisement_06"
+						},
+						{
+							"type": "slot",
+							"size": [[300, 632], [300, 630], [300, 332], [300, 330], [300, 282], [300, 280], [1, 1]],
+							"mappings": [[[0, 0], [[300, 632], [300, 630], [300, 332], [300, 330], [300, 282], [300, 280], [1, 1]]]],
+							"id": "advertisement_07"
+						},
+						{
+							// fluid NativeAd (in Arbeit)
+							"type": "slot",
+							"size": [1, 1],
+							"mappings": [[[0, 0], [1, 1]]],
+							"id": "advertisement_08"
+						},
+						{
+							"type": "slot",
+							"size": [[800, 500], [800, 350], [800, 250], [560, 330], [300, 631], [300, 630], [300, 331], [300, 330], [300, 281], [300, 280], [1, 1]],
+							"mappings": [[[0, 0], [[800, 500], [300, 631], [300, 630], [300, 331], [300, 330], [300, 281], [300, 280], [1, 1]]], [[1025, 0], [[800, 350], [800, 250], [800, 500], [560, 330], [300, 631], [300, 630], [300, 331], [300, 330], [300, 281], [300, 280], [1, 1]]]],
+							"id": "advertisement_09"
+						},
+						{
+							"type": "slot",
+							"size": [[300, 633], [300, 333], [300, 283], [300, 120], [1, 1]],
+							"mappings": [[[0, 0], [[300, 633], [300, 333], [300, 283], [300, 120], [1, 1]]]],
+							"id": "advertisement_10"
+						},
+						{
+							"type": "slot",
+                            "size": [[300, 121], [1, 1]],
+                            "mappings": [[[0, 0], [[300, 121], [1, 1]]]],
+							"id": "advertisement_11"
+						},
+						{
+							"type": "slot",
+							"size": [[300, 150], [1, 1]],
+							"mappings": [[[0, 0], [[300, 150], [1, 1]]]],
+							"id": "advertisement_12"
+						},
+						{
+							"type": "slot",
+							"size": [[300, 284], [300, 334], [300, 634], [1, 1]],
+							"mappings": [[[0, 0], [[300, 284], [300, 334], [300, 634], [1, 1]]]],
+							"id": "advertisement_13"
+						},
+					];
+
+					// Groessen durchlaufen
+					for (var INT_i = 0; INT_i < ARR_sizes.length; INT_i++)
+					{
+
+						// Mapping vorhanden
+						if (ARR_sizes[INT_i].mappings)
+						{
+
+							// Mappings durchlaufen
+							var OBJ_size_mapping = googletag.sizeMapping();
+							for (var INT_j = 0; INT_j < ARR_sizes[INT_i].mappings.length; INT_j++)
+							{
+								OBJ_size_mapping.addSize(ARR_sizes[INT_i].mappings[INT_j][0], ARR_sizes[INT_i].mappings[INT_j][1]);
+							} // end for
+
+						} // end if
+
+						// Typen
+						switch (ARR_sizes[INT_i].type)
+						{
+
+							// Slot:
+							case "slot":
+								googletag
+									.defineSlot(STR_client, ARR_sizes[INT_i].size, ARR_sizes[INT_i].id)
+									.defineSizeMapping(OBJ_size_mapping.build())
+									.setCollapseEmptyDiv(true, true)
+									.addService(googletag.pubads());
+								console.debug("Ad Slot " + ARR_sizes[INT_i].id + " created");
+								break;
+
+							// CompanionSlot
+							case "companionslot":
+								googletag
+									.defineSlot(STR_client, ARR_sizes[INT_i].size, ARR_sizes[INT_i].id)
+									.defineSizeMapping(OBJ_size_mapping.build())
+									.addService(googletag.companionAds())
+									.addService(googletag.pubads());
+								console.debug("Ad Slot " + ARR_sizes[INT_i].id + " created");
+								break;
+
+							// OutOfPageSlot
+							case "outofpageslot":
+								googletag
+									.defineOutOfPageSlot(STR_client, ARR_sizes[INT_i].id)
+									.addService(googletag.pubads());
+								console.debug("Ad Slot " + ARR_sizes[INT_i].id + " created");
+								break;
+
+							default:
+								console.debug("Ad Slot unknown");
+
+						} // end switch
+
+					} // end for
+
+					// Banner aktivieren
+					googletag.pubads().setTargeting("kw", 'wallpaper');
+					/*googletag.pubads().enableSyncRendering();/* Entfernen fuer Async */
+					googletag.pubads().enableAsyncRendering();/* Aktivieren fuer Async */
+					/*googletag.pubads().enableLazyLoad();/* Wegen Zaehlpixel deaktiviert lassen */
+					googletag.pubads().addEventListener("slotRequested", function (event)
+					{
+						// Nachricht in Konsole
+						console.debug("Ad Slot " + event.slot.getSlotElementId() + " requested");
+					});
+					googletag.pubads().addEventListener("slotResponseReceived", function (event)
+					{
+						// Nachricht in Konsole
+						console.debug("Ad Slot " + event.slot.getSlotElementId() + " response received");
+					});
+					googletag.pubads().addEventListener("slotRenderEnded", function (event)
+					{
+
+						try
+						{
+
+							// Creative geladen
+							if (
+								//typeof event.creativeId !== "undefined" && event.creativeId !== null &&
+								typeof event.slot !== "undefined"
+							)
+							{
+
+								// Slot nicht leer
+								if (!event.isEmpty)
+								{
+
+									// Nachricht in Konsole
+									console.debug("Ad Slot " + event.slot.getSlotElementId() + " rendered");
+
+									// Slot als jQuery Objekt speichern
+									var OBJ_slot = $("div#" + event.slot.getSlotElementId());
+
+									// Slot einblenden (falls ausgeblendet)
+									OBJ_slot.show();
+
+									// Eigene Slots durchlaufen (keine Manipulation von z.B. BusinessAd)
+									var BOO_found = false;
+									for (var INT_i = 0; INT_i < ARR_sizes.length; INT_i++)
+									{
+
+										// Slot bekannt
+										if (event.slot.getSlotElementId() === ARR_sizes[INT_i].id)
+										{
+
+											// Element gefunden
+											BOO_found = true;
+
+											// iFrame
+											var OBJ_iframe = OBJ_slot.find("iframe");
+
+
+											// Kein iFrame, aber Tracking-Pixel
+											if (
+												OBJ_slot.find("ins>ins").length > 0 &&
+												OBJ_slot.find("ins>ins").height() === 1
+											)
+											{
+
+												// Slot ausblenden
+												OBJ_slot.hide();
+
+												// Nachricht in Konsole
+												console.debug("Ad Slot " + event.slot.getSlotElementId() +
+													" hidden (ins)");
+
+											}
+											// iFrame vorhanden
+											else if (OBJ_iframe.length > 0)
+											{
+
+												// iFrame
+												var OBJ_iframe_content = OBJ_iframe.contents();
+
+												// Tracking-Pixel nicht vorhanden
+												if (
+													(
+														OBJ_iframe_content.find("body>img").length === 0 ||
+														OBJ_iframe_content.find("body>img").height() > 1
+													) &&
+													(
+														OBJ_iframe_content.find("body>div>img").length ===
+														0 ||
+														OBJ_iframe_content.find("body>div>img").height() >
+														1
+													) &&
+													OBJ_iframe_content.find("body>div>amp-pixel").length ===
+													0 &&
+													OBJ_iframe_content.find("body>amp-pixel").length === 0
+												)
+												{
+
+													// CSS-Klasse der Buchung nach aussen uebertragen (nur div)
+													/*OBJ_slot.find("div:first").addClass(
+													 OBJ_iframe_content.find("body>div:not(#whitespace_click)").attr("class")
+													 );*/
+													OBJ_slot.find("div:first").addClass(
+														OBJ_iframe_content.find("body>div>div:not(#whitespace_click)").attr("class")
+													);
+													//OBJ_iframe_content.find("body>div:not(#whitespace_click)").attr("class", "");
+													OBJ_iframe_content.find("body>div>div:not(#whitespace_click)").attr("class", "");
+													OBJ_slot.find("div:first").addClass(
+														OBJ_iframe_content.find("body>div>article:not(#whitespace_click)").attr("class")
+													);
+													OBJ_slot.find("div:first").addClass(
+														OBJ_iframe_content.find("body>article:not(#whitespace_click)").attr("class")
+													);
+													OBJ_iframe_content.find("body>div>article:not(#whitespace_click)").attr("class", "");
+													OBJ_iframe_content.find("body>article:not(#whitespace_click)").attr("class", "");
+
+													// Style und whitespace_click muss mit raus fuer brandgate
+													OBJ_iframe_content.find("body>style:first").insertBefore(OBJ_slot.find("div:first"));
+													OBJ_iframe_content.find("div#whitespace_click").css('height', '100%');
+													OBJ_iframe_content.find("div#whitespace_click").insertBefore(OBJ_slot.find("div:first"));
+
+													// Background transparent im iFrame
+													OBJ_iframe_content.find("head").append('<style type="text/css">body{background: transparent !important;}</style>');
+
+													// Stylesheet ebenfalls in iFrame kopieren
+													var STR_stylesheet = window.location.origin +
+														"/scss/basic.css";
+													OBJ_iframe_content.find("head").append($("<link/>", {
+														rel: "stylesheet",
+														href: STR_stylesheet,
+														type: "text/css"
+													}));
+
+													// Nachricht in Konsole
+													console.debug("Ad Slot " + event.slot.getSlotElementId() +
+														" manipulated");
+
+												}
+												else
+												{
+
+													// Slot ausblenden
+													OBJ_iframe.hide();
+
+													// Nachricht in Konsole
+													console.debug("Ad Slot " + event.slot.getSlotElementId() +
+														" hidden (iframe img/amp-pixel)");
+
+												} // end if
+
+											}
+											// Kein iFrame, aber Tracking-Pixel
+											else if (OBJ_slot.find("img").height() === 1)
+											{
+
+												// Slot ausblenden
+												OBJ_slot.hide();
+
+												// Nachricht in Konsole
+												console.debug("Ad Slot " + event.slot.getSlotElementId() +
+													" hidden (img)");
+
+											} // end if
+
+										} // end if
+
+									} // end for
+
+									// Slot nicht gefunden
+									if (!BOO_found)
+									{
+										
+										// Slot merken, ausblenden und Nachrichten in Konsole
+										var STR_ba_id = event.slot.getSlotElementId();
+
+										setTimeout(function(){
+											if (
+												$("#" + STR_ba_id).is(":visible") === false ||
+												$("#" + STR_ba_id).is(":hidden") === true
+											)
+											{
+												ARR_unknown_slots.push(STR_ba_id);
+												console.debug("Ad Slot " + STR_ba_id + " unknown empty");
+											}
+											else
+											{
+												console.debug("Ad Slot " + STR_ba_id + " unkown");
+											}
+										}, 500);
+										
+									} // end if
+
+								}
+								else
+								{
+									// Nachricht in Konsole
+									console.debug("Ad Slot " + event.slot.getSlotElementId() + " empty");
+								} // end if
+
+							} // end if
+
+						}
+						catch (OBJ_err)
+						{
+							console.debug(OBJ_err);
+						}
+
+					});
+					googletag.enableServices();
+
+				});
+
+			}
+			catch (OBJ_err)
+			{
+				// Nix
+				console.warn("Ad Error - define /2686/spotlightmetal.com/technologies");
+			} // end try
+
+
+        </script>
+
+		<!-- No BusinessAd: Data missing -->
+		<!-- GTM Vars -->
+	<script>
+		var dataLayer = [
+			{
+				"environment": "production", // Umgebung
+				"id": "69", // App-ID
+								"dimension1": "spom:artikel:746226 machine-learning--definition-and-application-examples", // Shortcut:Type:ID
+								"dimension2": "spom:themen:technologies", // Shortcut:"themen":Channel
+				"dimension4": "746226", // Content-ID
+				"dimension7": "/machine-learning--definition-and-application-examples-a-746226/?cmp=go-ta-art-trf-SLM_DSA-20180820&gclid=Cj0KCQjwzbv7BRDIARIsAM-A6-1LUa23zEBj1E3bxVox6hllJ2bescH0t6wBMs1h3cLehnmGRMUtrCgaAsleEALw_wcB", // URL
+				"dimension11": "832598,927713,662431,684981,839511,916467", // Ad-Views Article
+								"dimension12": "41380", // Ad-Views Downloads
+								"dimension13": "238247,285844", // Ad-Views Companies
+				
+			}
+		];
+	</script>
+</head>
+<body data-infinity-id="default" data-infinity-type="layout">
+	<!-- GTM Code -->
+	<noscript>
+		<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WTGMJS5"
+		        height="0" width="0" style="display:none;visibility:hidden"></iframe>
+	</noscript>
+	<!-- Automatisches Blockieren vom CMP vermeiden -->
+	<script data-cmp-ab="1">(function (w, d, s, l, i)
+		{
+			w[l] = w[l] || [];
+			w[l].push({
+				'gtm.start':
+					new Date().getTime(), event: 'gtm.js'
+			});
+			var f = d.getElementsByTagName(s)[0],
+				j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
+			j.async = true;
+			j.src =
+				'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+			f.parentNode.insertBefore(j, f);
+		})(window, document, 'script', 'dataLayer', 'GTM-WTGMJS5');
+	</script>
+	<!-- GA Code: no config found -->
+
+		<div id="advertisement_01" class="inf-leaderboard gpt"
+	     data-ad-id="advertisement_01" data-infinity-type="ad" data-infinity-id="v1/advertisement_01">
+
+		<script>
+
+			try
+			{
+
+				googletag.cmd.push(function ()
+				{
+					// Banner anzeigen
+					googletag.display(advertisement_01);
+				});
+
+			}
+			catch (OBJ_err)
+			{
+				// Nix
+				console.warn("Ad Slot Error - display advertisement_01");
+			} // end try
+
+		</script>
+
+	</div>
+	    		<div id="advertisement_02" class=" gpt"
+	     data-ad-id="advertisement_02" data-infinity-type="ad" data-infinity-id="v1/advertisement_02">
+
+		<script>
+
+			try
+			{
+
+				googletag.cmd.push(function ()
+				{
+					// Banner anzeigen
+					googletag.display(advertisement_02);
+				});
+
+			}
+			catch (OBJ_err)
+			{
+				// Nix
+				console.warn("Ad Slot Error - display advertisement_02");
+			} // end try
+
+		</script>
+
+	</div>
+		    	<div id="advertisement_03" class=" gpt"
+	     data-ad-id="advertisement_03" data-infinity-type="ad" data-infinity-id="v1/advertisement_03">
+
+		<script>
+
+			try
+			{
+
+				googletag.cmd.push(function ()
+				{
+					// Banner anzeigen
+					googletag.display(advertisement_03);
+				});
+
+			}
+			catch (OBJ_err)
+			{
+				// Nix
+				console.warn("Ad Slot Error - display advertisement_03");
+			} // end try
+
+		</script>
+
+	</div>
+	    <div class="inf-website">
+	<div id="mainwrapper" class="inf-wrapper">
+		<section class="inf-mainheader" data-hj-ignore-attributes>
+	<div class="inf-mainheader__wrapper-fixed">
+		<div class="inf-icon inf-icon--menu inf-mainheader__menu-icon"></div>
+
+		<div class="inf-mobile-menu">
+			<img alt="Mobile-Menu" title="Mobile Menu" class="inf-mobile-menu__dropdown-arrow" src="https://cdn2.vogel.de/img/arrow_dropdown.svg">
+
+			<div id="service-menu" class="inf-usermenu">
+				<div class="inf-btn inf-btn--mobile-menu inf-usermenu__button-account inf-icon--arrow-dropdown">
+					<div class="inf-icon inf-icon--account inf-usermenu__image"></div>
+					<span class="inf-usermenu__label">My Account</span>
+				</div>
+				<div class="inf-btn inf-btn--mobile-menu inf-usermenu__button-search inf-icon--arrow-dropdown">
+					<div class="inf-icon inf-icon--search inf-usermenu__image"></div>
+					<span class="inf-usermenu__label">Search</span>
+				</div>
+			</div>
+			
+						
+
+<div class="inf-mainheader__form inf-mainheader__form--userlogin inf-mainheader__form--login inf-mobile-submenu--usermenu">
+	
+	<ul class="inf-mobile-subnav" style="display:block;">
+		<li class="inf-mobile-subnav__item inf-mobile-submenu--usermenu__item" >
+			<a class="inf-mobile-subnav__link" href="/login/">Log in</a>
+		</li>
+
+		<li class="inf-mobile-subnav__item inf-mobile-submenu--usermenu__item" >
+			<a class="inf-mobile-subnav__link" href="/registration/">Registration</a>
+		</li>
+
+	</ul>
+	
+</div>
+			<form action="/search/"
+			      method="get"
+			      class="inf-mainheader__form inf-mainheader__form--search inf-mobile-submenu--searchmenu">
+				<label> <input type="text" placeholder="Enter search term"
+				               class="inf-form__input-text inf-search-header__input-text" name="k"> </label>
+				<button type="submit" id="search_submit_header-mobile"
+				        class="inf-btn inf-btn--info inf-search-header__btn">Search				</button>
+			</form>
+			
+			<ul class="inf-mobile-menu__content">
+				<li class="inf-mobile-menu__item					"
+			    id="home-mobile">
+				
+				<a id="menu-home-mobile" title="SPOTLIGHTMETAL" class="inf-mobile-mainnav__link" href="&#x2F;"></a>				
+								
+			</li>
+					<li class="inf-mobile-menu__item					"
+			    id="page_silver_69_page_5-mobile">
+				
+				<a id="menu-page_silver_69_page_5-mobile" title="Markets" class="inf-mobile-mainnav__link" href="&#x2F;markets&#x2F;">Markets</a>				
+								
+			</li>
+					<li class="inf-mobile-menu__item					 inf-mobile-menu__item--active"
+			    id="page_silver_69_page_6-mobile">
+				
+				<a id="menu-page_silver_69_page_6-mobile" title="Technologies" class="inf-mobile-mainnav__link" href="&#x2F;technologies&#x2F;">Technologies</a>				
+								
+			</li>
+					<li class="inf-mobile-menu__item					"
+			    id="page_silver_69_page_7-mobile">
+				
+				<a id="menu-page_silver_69_page_7-mobile" title="Industries" class="inf-mobile-mainnav__link" href="&#x2F;industries&#x2F;">Industries</a>				
+								
+			</li>
+					<li class="inf-mobile-menu__item					"
+			    id="page_5ace2d690f732-mobile">
+				
+				<a id="menu-page_5ace2d690f732-mobile" title="Our&#x20;network&#x20;of&#x20;experts" class="inf-mobile-mainnav__link" href="&#x2F;experts&#x2F;">Experts</a>				
+								
+			</li>
+					<li class="inf-mobile-menu__item inf-relative					"
+			    id="page_5d722c904cbad-mobile">
+				
+				<a id="menu-page_5d722c904cbad-mobile" title="Services" class="inf-mobile-mainnav__link&#x20;inf-mobile-mainnav__link--with-subnav" href="&#x2F;services&#x2F;">Services</a>				
+													
+										<a href="#" class="inf-icon--subnav-item inf-toggle inf-icon--arrow-dropdown"></a>
+					
+										<ul class="inf-mobile-subnav">
+	
+				<li class="inf-mobile-subnav__item" id="page_5d722d9363ecc-mobile">
+								<a id="menu-page_5d722d9363ecc-mobile" title="Whitepapers" class="inf-mobile-subnav__link" href="&#x2F;whitepaper&#x2F;">Whitepapers</a>			</li>
+		
+					<li class="inf-mobile-subnav__item" id="page_5eb418e0e3343-mobile">
+								<a id="menu-page_5eb418e0e3343-mobile" title="Webinars" class="inf-mobile-subnav__link" href="&#x2F;webinars&#x2F;">Webinars</a>			</li>
+		
+					<li class="inf-mobile-subnav__item" id="page_5ea859d20456c-mobile">
+								<a id="menu-page_5ea859d20456c-mobile" title="Videos" class="inf-mobile-subnav__link" href="&#x2F;videos&#x2F;">Videos</a>			</li>
+		
+		
+</ul>				
+				
+			</li>
+					<li class="inf-mobile-menu__item inf-relative					"
+			    id="page_5d7226b5cbc59-mobile">
+				
+				<a id="menu-page_5d7226b5cbc59-mobile" title="Events" class="inf-mobile-mainnav__link&#x20;inf-mobile-mainnav__link--with-subnav" href="&#x2F;events&#x2F;">Events</a>				
+													
+										<a href="#" class="inf-icon--subnav-item inf-toggle inf-icon--arrow-dropdown"></a>
+					
+										<ul class="inf-mobile-subnav">
+	
+				<li class="inf-mobile-subnav__item" id="page_5f11744566463-mobile">
+								<a id="menu-page_5f11744566463-mobile" title="FORUM&#x20;GIESSEREI-INDUSTRIE" class="inf-mobile-subnav__link" href="&#x2F;forum-giessereiindustrie&#x2F;">FORUM GIESSEREI-INDUSTRIE</a>			</li>
+		
+					<li class="inf-mobile-subnav__item" id="page_403DB82F-92BA-49DD-8DDC5A4D38B6A0A7-mobile">
+								<a id="menu-page_403DB82F-92BA-49DD-8DDC5A4D38B6A0A7-mobile" title="EUROGUSS" class="inf-mobile-subnav__link" href="&#x2F;euroguss&#x2F;">EUROGUSS</a>			</li>
+		
+					<li class="inf-mobile-subnav__item" id="page_5dc2e6cb33369-mobile">
+								<a id="menu-page_5dc2e6cb33369-mobile" title="EUROGUSS&#x20;MEXICO" class="inf-mobile-subnav__link" href="&#x2F;euroguss-mexico&#x2F;">EUROGUSS MEXICO</a>			</li>
+		
+					<li class="inf-mobile-subnav__item" id="page_FD319DA8-775C-4879-81535BDD4EE54E3C-mobile">
+								<a id="menu-page_FD319DA8-775C-4879-81535BDD4EE54E3C-mobile" title="EUROGUSS&#x20;ASIA&#x20;PACIFIC" class="inf-mobile-subnav__link" href="&#x2F;euroguss_asia_pacific&#x2F;">EUROGUSS ASIA PACIFIC</a>			</li>
+		
+					<li class="inf-mobile-subnav__item" id="page_5be2eeb7cc3b8-mobile">
+								<a id="menu-page_5be2eeb7cc3b8-mobile" title="ALUCAST" class="inf-mobile-subnav__link" href="&#x2F;alucast&#x2F;">ALUCAST</a>			</li>
+		
+					<li class="inf-mobile-subnav__item" id="page_5be9860e6904e-mobile">
+								<a id="menu-page_5be9860e6904e-mobile" title="CHINA&#x20;DIECASTING" class="inf-mobile-subnav__link" href="&#x2F;china-diecasting&#x2F;">CHINA DIECASTING</a>			</li>
+		
+		
+</ul>				
+				
+			</li>
+		</ul>
+		</div>
+
+
+		<div class="inf-mainheader__wrapper-logo">
+			<a class="inf-mainheader__wrapper-logolink" href="/">
+				<img class="inf-mainheader__logo" id="exit--header-logo" alt="Logo" src="https://cdn2.vogel.de/applications/69/img/logo.svg">
+				<img class="inf-mainheader__logo--mini" alt="Logo" src="https://cdn2.vogel.de/applications/69/img/logo_mini.svg"> </a>
+		</div>
+		
+				
+		<ul class="inf-mainnav">
+				<li class="inf-mainnav__item" id="home">
+				
+								<a id="menu-home" title="SPOTLIGHTMETAL" class="inf-mainnav__link" href="&#x2F;"></a>				
+											</li>
+					<li class="inf-mainnav__item inf-mainnav__item--with-flyout" id="page_silver_69_page_5">
+				
+								<a id="menu-page_silver_69_page_5" title="Markets" class="inf-mainnav__link" href="&#x2F;markets&#x2F;">Markets</a>				
+													
+										<div class="inf-subnav-flyout inf-flex inf-subnav-flyout--articles-only">
+						
+																		
+												<div class="inf-subnav-articles">
+	<p class="inf-section__title inf-subnav-articles__title">
+		Latest Articles in <span>"Markets"</span>
+	</p>
+	<div class="inf-flex" data-infinity-type="partial" data-infinity-id="layout/partials/menu/head/items">
+						<article class="inf-teaser inf-teaser--vertical inf-teaser--subnav">
+											<figure class="inf-teaser__figure--vertical">
+							<a href="/sharp-sales-decline-and-strict-cost-management-at-rheinmetall-automotive-a-963098/">
+								<picture>
+
+									<source type="image/webp"
+									        srcset="https://cdn1.vogel.de/0VjUeusBtkuCAtLQZ78GPli8Ebs=/288x162/filters:quality(1)/cdn4.vogel.de/infinity/white.jpg"
+									        data-srcset="https://cdn1.vogel.de/OiqPTt8IQ5IFaYFO7zCc7nJB4LQ=/288x162/smart/filters:format(webp):quality(80)/images.vogel.de/vogelonline/bdb/1745100/1745191/original.jpg 288w, https://cdn1.vogel.de/adGAEhf6Zco9SlsKgE3fhYDovMw=/576x324/smart/filters:format(webp):quality(80)/images.vogel.de/vogelonline/bdb/1745100/1745191/original.jpg 576w">
+									<source srcset="https://cdn1.vogel.de/0VjUeusBtkuCAtLQZ78GPli8Ebs=/288x162/filters:quality(1)/cdn4.vogel.de/infinity/white.jpg"
+									        data-srcset="https://cdn1.vogel.de/joVZjnaNL71VjvJXQ8YPh9_Wln4=/288x162/smart/filters:format(jpg):quality(80)/images.vogel.de/vogelonline/bdb/1745100/1745191/original.jpg 288w, https://cdn1.vogel.de/aIbfn0W-aNkdFQTWf-aVNinc9U8=/576x324/smart/filters:format(jpg):quality(80)/images.vogel.de/vogelonline/bdb/1745100/1745191/original.jpg 576w">
+									<img data-src="https://cdn1.vogel.de/joVZjnaNL71VjvJXQ8YPh9_Wln4=/288x162/smart/filters:format(jpg):quality(80)/images.vogel.de/vogelonline/bdb/1745100/1745191/original.jpg"
+									     src="https://cdn1.vogel.de/0VjUeusBtkuCAtLQZ78GPli8Ebs=/288x162/filters:quality(1)/cdn4.vogel.de/infinity/white.jpg"
+									     class="inf-teaser__image inf-teaser__image--vertical lazyload"
+									     title="The negative development in operating earnings was chiefly due to the crisis-induced lack of sales in the second quarter of 2020."
+									     alt="The negative development in operating earnings was chiefly due to the crisis-induced lack of sales in the second quarter of 2020."/>
+								</picture>
+							</a>
+						</figure>
+										<header>
+												
+												
+												
+												
+													<p class="inf-subhead inf-subhead--small inf-text--hyphens inf-subnav__subhead">
+								Business Report							</p>
+						
+						<p class="inf-headline inf-headline--small inf-subnav__headline">
+							<a class="inf-headline__link" href="/sharp-sales-decline-and-strict-cost-management-at-rheinmetall-automotive-a-963098/">
+								Sharp Sales Decline and Strict Cost Management at Rheinmetall Automotive							</a>
+						</p>
+					</header>
+				</article>
+								<article class="inf-teaser inf-teaser--vertical inf-teaser--subnav">
+											<figure class="inf-teaser__figure--vertical">
+							<a href="/worldwide-aircraft-actuators-industry--fast-growth-expected-a-962901/">
+								<picture>
+
+									<source type="image/webp"
+									        srcset="https://cdn1.vogel.de/0VjUeusBtkuCAtLQZ78GPli8Ebs=/288x162/filters:quality(1)/cdn4.vogel.de/infinity/white.jpg"
+									        data-srcset="https://cdn1.vogel.de/8MjTJcQPchtDm-raaftOYvnLHso=/288x162/smart/filters:format(webp):quality(80)/images.vogel.de/vogelonline/bdb/1744900/1744927/original.jpg 288w, https://cdn1.vogel.de/udBta5GswP0xwPogE6z437lNhSE=/576x324/smart/filters:format(webp):quality(80)/images.vogel.de/vogelonline/bdb/1744900/1744927/original.jpg 576w">
+									<source srcset="https://cdn1.vogel.de/0VjUeusBtkuCAtLQZ78GPli8Ebs=/288x162/filters:quality(1)/cdn4.vogel.de/infinity/white.jpg"
+									        data-srcset="https://cdn1.vogel.de/Q3aTyFXx6zygSArr-m1LKFo43pM=/288x162/smart/filters:format(jpg):quality(80)/images.vogel.de/vogelonline/bdb/1744900/1744927/original.jpg 288w, https://cdn1.vogel.de/E9RBOigPiC89Ybf06rUexdICWQU=/576x324/smart/filters:format(jpg):quality(80)/images.vogel.de/vogelonline/bdb/1744900/1744927/original.jpg 576w">
+									<img data-src="https://cdn1.vogel.de/Q3aTyFXx6zygSArr-m1LKFo43pM=/288x162/smart/filters:format(jpg):quality(80)/images.vogel.de/vogelonline/bdb/1744900/1744927/original.jpg"
+									     src="https://cdn1.vogel.de/0VjUeusBtkuCAtLQZ78GPli8Ebs=/288x162/filters:quality(1)/cdn4.vogel.de/infinity/white.jpg"
+									     class="inf-teaser__image inf-teaser__image--vertical lazyload"
+									     title="The market for actuators is anticipated to grow at a fast pace."
+									     alt="The market for actuators is anticipated to grow at a fast pace."/>
+								</picture>
+							</a>
+						</figure>
+										<header>
+												
+												
+												
+												
+													<p class="inf-subhead inf-subhead--small inf-text--hyphens inf-subnav__subhead">
+								Research Report							</p>
+						
+						<p class="inf-headline inf-headline--small inf-subnav__headline">
+							<a class="inf-headline__link" href="/worldwide-aircraft-actuators-industry--fast-growth-expected-a-962901/">
+								Worldwide Aircraft Actuators Industry - Fast Growth Expected							</a>
+						</p>
+					</header>
+				</article>
+								<article class="inf-teaser inf-teaser--vertical inf-teaser--subnav">
+											<figure class="inf-teaser__figure--vertical">
+							<a href="/indian-foundry-invests-in-industrial-3d-printer-a-960838/">
+								<picture>
+
+									<source type="image/webp"
+									        srcset="https://cdn1.vogel.de/0VjUeusBtkuCAtLQZ78GPli8Ebs=/288x162/filters:quality(1)/cdn4.vogel.de/infinity/white.jpg"
+									        data-srcset="https://cdn1.vogel.de/b3XMP4OfQjmhuN-Aa0wc2dqUKHc=/288x162/smart/filters:format(webp):quality(80)/images.vogel.de/vogelonline/bdb/1742100/1742148/original.jpg 288w, https://cdn1.vogel.de/THHKhEOJtloXOsj6ZaIjKxonyIc=/576x324/smart/filters:format(webp):quality(80)/images.vogel.de/vogelonline/bdb/1742100/1742148/original.jpg 576w">
+									<source srcset="https://cdn1.vogel.de/0VjUeusBtkuCAtLQZ78GPli8Ebs=/288x162/filters:quality(1)/cdn4.vogel.de/infinity/white.jpg"
+									        data-srcset="https://cdn1.vogel.de/VvN7qFeyseGXw5jTxDyNlT2oyPY=/288x162/smart/filters:format(jpg):quality(80)/images.vogel.de/vogelonline/bdb/1742100/1742148/original.jpg 288w, https://cdn1.vogel.de/x_ru1DipLB41grMvYE2VTE-jNsk=/576x324/smart/filters:format(jpg):quality(80)/images.vogel.de/vogelonline/bdb/1742100/1742148/original.jpg 576w">
+									<img data-src="https://cdn1.vogel.de/VvN7qFeyseGXw5jTxDyNlT2oyPY=/288x162/smart/filters:format(jpg):quality(80)/images.vogel.de/vogelonline/bdb/1742100/1742148/original.jpg"
+									     src="https://cdn1.vogel.de/0VjUeusBtkuCAtLQZ78GPli8Ebs=/288x162/filters:quality(1)/cdn4.vogel.de/infinity/white.jpg"
+									     class="inf-teaser__image inf-teaser__image--vertical lazyload"
+									     title="The 3D printer VX4000 from voxeljet has a build envelope of 4000 x 2000 x 1000 mm."
+									     alt="The 3D printer VX4000 from voxeljet has a build envelope of 4000 x 2000 x 1000 mm."/>
+								</picture>
+							</a>
+						</figure>
+										<header>
+												
+												
+												
+												
+													<p class="inf-subhead inf-subhead--small inf-text--hyphens inf-subnav__subhead">
+								Additive Manufacturing							</p>
+						
+						<p class="inf-headline inf-headline--small inf-subnav__headline">
+							<a class="inf-headline__link" href="/indian-foundry-invests-in-industrial-3d-printer-a-960838/">
+								Indian Foundry Invests in Industrial 3D Printer							</a>
+						</p>
+					</header>
+				</article>
+								<article class="inf-teaser inf-teaser--vertical inf-teaser--subnav">
+											<figure class="inf-teaser__figure--vertical">
+							<a href="/amag-acquires-majority-share-of-the-german-aircraft-philipp-group-a-957969/">
+								<picture>
+
+									<source type="image/webp"
+									        srcset="https://cdn1.vogel.de/0VjUeusBtkuCAtLQZ78GPli8Ebs=/288x162/filters:quality(1)/cdn4.vogel.de/infinity/white.jpg"
+									        data-srcset="https://cdn1.vogel.de/P_RQ9Usoj9E5BKHtdtY_eg-t5ek=/288x162/smart/filters:format(webp):quality(80)/images.vogel.de/vogelonline/bdb/1738200/1738250/original.jpg 288w, https://cdn1.vogel.de/n_CCw_lqg9nee_puGl8_lGstcZ8=/576x324/smart/filters:format(webp):quality(80)/images.vogel.de/vogelonline/bdb/1738200/1738250/original.jpg 576w">
+									<source srcset="https://cdn1.vogel.de/0VjUeusBtkuCAtLQZ78GPli8Ebs=/288x162/filters:quality(1)/cdn4.vogel.de/infinity/white.jpg"
+									        data-srcset="https://cdn1.vogel.de/xI-of9HkNxdGQSD2VoZ13HPOTOM=/288x162/smart/filters:format(jpg):quality(80)/images.vogel.de/vogelonline/bdb/1738200/1738250/original.jpg 288w, https://cdn1.vogel.de/_cOmJwv1CpPTPwwFjC-EocAi2z0=/576x324/smart/filters:format(jpg):quality(80)/images.vogel.de/vogelonline/bdb/1738200/1738250/original.jpg 576w">
+									<img data-src="https://cdn1.vogel.de/xI-of9HkNxdGQSD2VoZ13HPOTOM=/288x162/smart/filters:format(jpg):quality(80)/images.vogel.de/vogelonline/bdb/1738200/1738250/original.jpg"
+									     src="https://cdn1.vogel.de/0VjUeusBtkuCAtLQZ78GPli8Ebs=/288x162/filters:quality(1)/cdn4.vogel.de/infinity/white.jpg"
+									     class="inf-teaser__image inf-teaser__image--vertical lazyload"
+									     title="This picture shows Rolf Philipp, Managing Director of the Aircraft Philipp Group (left) and Gerald Mayer, CEO of Amag Austria Metall AG (right) with the future logo of the joint company"
+									     alt="This picture shows Rolf Philipp, Managing Director of the Aircraft Philipp Group (left) and Gerald Mayer, CEO of Amag Austria Metall AG (right) with the future logo of the joint company"/>
+								</picture>
+							</a>
+						</figure>
+										<header>
+												
+												
+												
+												
+													<p class="inf-subhead inf-subhead--small inf-text--hyphens inf-subnav__subhead">
+								Aviation Industry							</p>
+						
+						<p class="inf-headline inf-headline--small inf-subnav__headline">
+							<a class="inf-headline__link" href="/amag-acquires-majority-share-of-the-german-aircraft-philipp-group-a-957969/">
+								Amag Acquires Majority Share of the German Aircraft Philipp Group							</a>
+						</p>
+					</header>
+				</article>
+					</div>
+</div>
+					</div>
+				
+							</li>
+					<li class="inf-mainnav__item inf-mainnav__item--active inf-mainnav__item--with-flyout" id="page_silver_69_page_6">
+				
+								<a id="menu-page_silver_69_page_6" title="Technologies" class="inf-mainnav__link" href="&#x2F;technologies&#x2F;">Technologies</a>				
+													
+										<div class="inf-subnav-flyout inf-flex inf-subnav-flyout--articles-only">
+						
+																		
+												<div class="inf-subnav-articles">
+	<p class="inf-section__title inf-subnav-articles__title">
+		Latest Articles in <span>"Technologies"</span>
+	</p>
+	<div class="inf-flex" data-infinity-type="partial" data-infinity-id="layout/partials/menu/head/items">
+						<article class="inf-teaser inf-teaser--vertical inf-teaser--subnav">
+											<figure class="inf-teaser__figure--vertical">
+							<a href="/new-3d-scanner-for-quality-control-in-manufacturing-a-965503/">
+								<picture>
+
+									<source type="image/webp"
+									        srcset="https://cdn1.vogel.de/0VjUeusBtkuCAtLQZ78GPli8Ebs=/288x162/filters:quality(1)/cdn4.vogel.de/infinity/white.jpg"
+									        data-srcset="https://cdn1.vogel.de/FpaXduKK2_D2Wr3TMsdHq3WBfts=/288x162/smart/filters:format(webp):quality(80)/images.vogel.de/vogelonline/bdb/1748500/1748503/original.jpg 288w, https://cdn1.vogel.de/jrJVp5Wrr7Mr1vwvnLoCVOUL5hY=/576x324/smart/filters:format(webp):quality(80)/images.vogel.de/vogelonline/bdb/1748500/1748503/original.jpg 576w">
+									<source srcset="https://cdn1.vogel.de/0VjUeusBtkuCAtLQZ78GPli8Ebs=/288x162/filters:quality(1)/cdn4.vogel.de/infinity/white.jpg"
+									        data-srcset="https://cdn1.vogel.de/oUHVm8Zg1YrM_sAvFBszVB_VDEM=/288x162/smart/filters:format(jpg):quality(80)/images.vogel.de/vogelonline/bdb/1748500/1748503/original.jpg 288w, https://cdn1.vogel.de/4xzcEos2Ln4fu8gj0N7efsI5tSY=/576x324/smart/filters:format(jpg):quality(80)/images.vogel.de/vogelonline/bdb/1748500/1748503/original.jpg 576w">
+									<img data-src="https://cdn1.vogel.de/oUHVm8Zg1YrM_sAvFBszVB_VDEM=/288x162/smart/filters:format(jpg):quality(80)/images.vogel.de/vogelonline/bdb/1748500/1748503/original.jpg"
+									     src="https://cdn1.vogel.de/0VjUeusBtkuCAtLQZ78GPli8Ebs=/288x162/filters:quality(1)/cdn4.vogel.de/infinity/white.jpg"
+									     class="inf-teaser__image inf-teaser__image--vertical lazyload"
+									     title="The MetraSCAN BLACK dimensional metrology system has been developed to measure complex parts and assemblies from an array of industries and manufacturing processes."
+									     alt="The MetraSCAN BLACK dimensional metrology system has been developed to measure complex parts and assemblies from an array of industries and manufacturing processes."/>
+								</picture>
+							</a>
+						</figure>
+										<header>
+												
+												
+												
+												
+													<p class="inf-subhead inf-subhead--small inf-text--hyphens inf-subnav__subhead">
+								Quality Assurance							</p>
+						
+						<p class="inf-headline inf-headline--small inf-subnav__headline">
+							<a class="inf-headline__link" href="/new-3d-scanner-for-quality-control-in-manufacturing-a-965503/">
+								New 3D Scanner for Quality Control in Manufacturing							</a>
+						</p>
+					</header>
+				</article>
+								<article class="inf-teaser inf-teaser--vertical inf-teaser--subnav">
+											<figure class="inf-teaser__figure--vertical">
+							<a href="/digital-component-and-process-development-in-investment-casting-a-963490/">
+								<picture>
+
+									<source type="image/webp"
+									        srcset="https://cdn1.vogel.de/0VjUeusBtkuCAtLQZ78GPli8Ebs=/288x162/filters:quality(1)/cdn4.vogel.de/infinity/white.jpg"
+									        data-srcset="https://cdn1.vogel.de/H-AW88o42MGcGwcvf6QKyPCf0jM=/288x162/smart/filters:format(webp):quality(80)/images.vogel.de/vogelonline/bdb/1748100/1748157/original.jpg 288w, https://cdn1.vogel.de/0UyIvFPN6jSLufw4mkuHC2xCQb0=/576x324/smart/filters:format(webp):quality(80)/images.vogel.de/vogelonline/bdb/1748100/1748157/original.jpg 576w">
+									<source srcset="https://cdn1.vogel.de/0VjUeusBtkuCAtLQZ78GPli8Ebs=/288x162/filters:quality(1)/cdn4.vogel.de/infinity/white.jpg"
+									        data-srcset="https://cdn1.vogel.de/NAULUVSJBMWDvpJZuzLP_tV4Uu8=/288x162/smart/filters:format(jpg):quality(80)/images.vogel.de/vogelonline/bdb/1748100/1748157/original.jpg 288w, https://cdn1.vogel.de/nE3WDRZAia3l8ozKRcmUZU9MxyI=/576x324/smart/filters:format(jpg):quality(80)/images.vogel.de/vogelonline/bdb/1748100/1748157/original.jpg 576w">
+									<img data-src="https://cdn1.vogel.de/NAULUVSJBMWDvpJZuzLP_tV4Uu8=/288x162/smart/filters:format(jpg):quality(80)/images.vogel.de/vogelonline/bdb/1748100/1748157/original.jpg"
+									     src="https://cdn1.vogel.de/0VjUeusBtkuCAtLQZ78GPli8Ebs=/288x162/filters:quality(1)/cdn4.vogel.de/infinity/white.jpg"
+									     class="inf-teaser__image inf-teaser__image--vertical lazyload"
+									     title="Digital twin design process: Overview of the simulations."
+									     alt="Digital twin design process: Overview of the simulations."/>
+								</picture>
+							</a>
+						</figure>
+										<header>
+													<span class="inf-text--caps inf-teaser__flag inf-teaser__flag--subnav">#expert</span>
+												
+												
+												
+												
+													<p class="inf-subhead inf-subhead--small inf-text--hyphens inf-subnav__subhead">
+								Investment Casting							</p>
+						
+						<p class="inf-headline inf-headline--small inf-subnav__headline">
+							<a class="inf-headline__link" href="/digital-component-and-process-development-in-investment-casting-a-963490/">
+								Digital Component and Process Development in Investment Casting							</a>
+						</p>
+					</header>
+				</article>
+								<article class="inf-teaser inf-teaser--vertical inf-teaser--subnav">
+											<figure class="inf-teaser__figure--vertical">
+							<a href="/new-entry-level-unit-with-the-largest-filter-surface-a-963387/">
+								<picture>
+
+									<source type="image/webp"
+									        srcset="https://cdn1.vogel.de/0VjUeusBtkuCAtLQZ78GPli8Ebs=/288x162/filters:quality(1)/cdn4.vogel.de/infinity/white.jpg"
+									        data-srcset="https://cdn1.vogel.de/hv3z29Iis0rUtUPARy4bdBXAuAA=/288x162/smart/filters:format(webp):quality(80)/images.vogel.de/vogelonline/bdb/1745500/1745523/original.jpg 288w, https://cdn1.vogel.de/rHGvh92rnnLMZTGTl-uVFAEIyOM=/576x324/smart/filters:format(webp):quality(80)/images.vogel.de/vogelonline/bdb/1745500/1745523/original.jpg 576w">
+									<source srcset="https://cdn1.vogel.de/0VjUeusBtkuCAtLQZ78GPli8Ebs=/288x162/filters:quality(1)/cdn4.vogel.de/infinity/white.jpg"
+									        data-srcset="https://cdn1.vogel.de/iX5LwToCEg4TRyZvfVqX3RJnG1U=/288x162/smart/filters:format(jpg):quality(80)/images.vogel.de/vogelonline/bdb/1745500/1745523/original.jpg 288w, https://cdn1.vogel.de/SwDZ8RNvtDqYn3dwoFLzEd9c4cY=/576x324/smart/filters:format(jpg):quality(80)/images.vogel.de/vogelonline/bdb/1745500/1745523/original.jpg 576w">
+									<img data-src="https://cdn1.vogel.de/iX5LwToCEg4TRyZvfVqX3RJnG1U=/288x162/smart/filters:format(jpg):quality(80)/images.vogel.de/vogelonline/bdb/1745500/1745523/original.jpg"
+									     src="https://cdn1.vogel.de/0VjUeusBtkuCAtLQZ78GPli8Ebs=/288x162/filters:quality(1)/cdn4.vogel.de/infinity/white.jpg"
+									     class="inf-teaser__image inf-teaser__image--vertical lazyload"
+									     title="The stationary filter unit is suitable for filtering medium quantities of welding fumes and dust at up to two workplaces simultaneously."
+									     alt="The stationary filter unit is suitable for filtering medium quantities of welding fumes and dust at up to two workplaces simultaneously."/>
+								</picture>
+							</a>
+						</figure>
+										<header>
+												
+												
+												
+												
+													<p class="inf-subhead inf-subhead--small inf-text--hyphens inf-subnav__subhead">
+								Metalworking							</p>
+						
+						<p class="inf-headline inf-headline--small inf-subnav__headline">
+							<a class="inf-headline__link" href="/new-entry-level-unit-with-the-largest-filter-surface-a-963387/">
+								New Entry-Level Unit With the Largest Filter Surface							</a>
+						</p>
+					</header>
+				</article>
+								<article class="inf-teaser inf-teaser--vertical inf-teaser--subnav">
+											<figure class="inf-teaser__figure--vertical">
+							<a href="/ai-for-all-foundries--partnership-with-strategic-investment-a-962615/">
+								<picture>
+
+									<source type="image/webp"
+									        srcset="https://cdn1.vogel.de/0VjUeusBtkuCAtLQZ78GPli8Ebs=/288x162/filters:quality(1)/cdn4.vogel.de/infinity/white.jpg"
+									        data-srcset="https://cdn1.vogel.de/Jj4dDFj7yoHsHOuteyEj3-jsYso=/288x162/smart/filters:format(webp):quality(80)/images.vogel.de/vogelonline/bdb/1744500/1744524/original.jpg 288w, https://cdn1.vogel.de/wVDnnhqcqxGHzLVscYq2HuyR0Gw=/576x324/smart/filters:format(webp):quality(80)/images.vogel.de/vogelonline/bdb/1744500/1744524/original.jpg 576w">
+									<source srcset="https://cdn1.vogel.de/0VjUeusBtkuCAtLQZ78GPli8Ebs=/288x162/filters:quality(1)/cdn4.vogel.de/infinity/white.jpg"
+									        data-srcset="https://cdn1.vogel.de/co4FxHsJFcJZaRSjxhI-renbROc=/288x162/smart/filters:format(jpg):quality(80)/images.vogel.de/vogelonline/bdb/1744500/1744524/original.jpg 288w, https://cdn1.vogel.de/hSesqAn-eENxBK8NkODJEiUApnM=/576x324/smart/filters:format(jpg):quality(80)/images.vogel.de/vogelonline/bdb/1744500/1744524/original.jpg 576w">
+									<img data-src="https://cdn1.vogel.de/co4FxHsJFcJZaRSjxhI-renbROc=/288x162/smart/filters:format(jpg):quality(80)/images.vogel.de/vogelonline/bdb/1744500/1744524/original.jpg"
+									     src="https://cdn1.vogel.de/0VjUeusBtkuCAtLQZ78GPli8Ebs=/288x162/filters:quality(1)/cdn4.vogel.de/infinity/white.jpg"
+									     class="inf-teaser__image inf-teaser__image--vertical lazyload"
+									     title="“Our experience so far shows massive value in leveraging AI to reduce waste and resource consumption, as well as to increase yield.”"
+									     alt="“Our experience so far shows massive value in leveraging AI to reduce waste and resource consumption, as well as to increase yield.”"/>
+								</picture>
+							</a>
+						</figure>
+										<header>
+												
+												
+												
+												
+													<p class="inf-subhead inf-subhead--small inf-text--hyphens inf-subnav__subhead">
+								Artificial Intelligence							</p>
+						
+						<p class="inf-headline inf-headline--small inf-subnav__headline">
+							<a class="inf-headline__link" href="/ai-for-all-foundries--partnership-with-strategic-investment-a-962615/">
+								AI For All Foundries - Partnership with Strategic Investment							</a>
+						</p>
+					</header>
+				</article>
+					</div>
+</div>
+					</div>
+				
+							</li>
+					<li class="inf-mainnav__item inf-mainnav__item--with-flyout" id="page_silver_69_page_7">
+				
+								<a id="menu-page_silver_69_page_7" title="Industries" class="inf-mainnav__link" href="&#x2F;industries&#x2F;">Industries</a>				
+													
+										<div class="inf-subnav-flyout inf-flex inf-subnav-flyout--articles-only">
+						
+																		
+												<div class="inf-subnav-articles">
+	<p class="inf-section__title inf-subnav-articles__title">
+		Latest Articles in <span>"Industries"</span>
+	</p>
+	<div class="inf-flex" data-infinity-type="partial" data-infinity-id="layout/partials/menu/head/items">
+						<article class="inf-teaser inf-teaser--vertical inf-teaser--subnav">
+											<figure class="inf-teaser__figure--vertical">
+							<a href="/euroguss-2022-on-track-a-966629/">
+								<picture>
+
+									<source type="image/webp"
+									        srcset="https://cdn1.vogel.de/0VjUeusBtkuCAtLQZ78GPli8Ebs=/288x162/filters:quality(1)/cdn4.vogel.de/infinity/white.jpg"
+									        data-srcset="https://cdn1.vogel.de/eGp7xlfxwiJuB16jLMX_M9okblk=/288x162/smart/filters:format(webp):quality(80)/images.vogel.de/vogelonline/bdb/1750000/1750086/original.jpg 288w, https://cdn1.vogel.de/Ad7cuqQaB6Z5NPW-NMSJ6GjiQXE=/576x324/smart/filters:format(webp):quality(80)/images.vogel.de/vogelonline/bdb/1750000/1750086/original.jpg 576w">
+									<source srcset="https://cdn1.vogel.de/0VjUeusBtkuCAtLQZ78GPli8Ebs=/288x162/filters:quality(1)/cdn4.vogel.de/infinity/white.jpg"
+									        data-srcset="https://cdn1.vogel.de/e3_RggC9quC7-OVsqmnu3J0pkY4=/288x162/smart/filters:format(jpg):quality(80)/images.vogel.de/vogelonline/bdb/1750000/1750086/original.jpg 288w, https://cdn1.vogel.de/-nMFNh6C9BnuQjM02LqlB_DuP8U=/576x324/smart/filters:format(jpg):quality(80)/images.vogel.de/vogelonline/bdb/1750000/1750086/original.jpg 576w">
+									<img data-src="https://cdn1.vogel.de/e3_RggC9quC7-OVsqmnu3J0pkY4=/288x162/smart/filters:format(jpg):quality(80)/images.vogel.de/vogelonline/bdb/1750000/1750086/original.jpg"
+									     src="https://cdn1.vogel.de/0VjUeusBtkuCAtLQZ78GPli8Ebs=/288x162/filters:quality(1)/cdn4.vogel.de/infinity/white.jpg"
+									     class="inf-teaser__image inf-teaser__image--vertical lazyload"
+									     title="“EUROGUSS 2022 is clearly an event not to be missed in this sector, and one that appeals to all die casting foundries, their suppliers, and of course all buyers of die cast components”."
+									     alt="“EUROGUSS 2022 is clearly an event not to be missed in this sector, and one that appeals to all die casting foundries, their suppliers, and of course all buyers of die cast components”."/>
+								</picture>
+							</a>
+						</figure>
+										<header>
+												
+												
+												
+												
+													<p class="inf-subhead inf-subhead--small inf-text--hyphens inf-subnav__subhead">
+								Trade Fair News							</p>
+						
+						<p class="inf-headline inf-headline--small inf-subnav__headline">
+							<a class="inf-headline__link" href="/euroguss-2022-on-track-a-966629/">
+								EUROGUSS 2022 on Track							</a>
+						</p>
+					</header>
+				</article>
+								<article class="inf-teaser inf-teaser--vertical inf-teaser--subnav">
+											<figure class="inf-teaser__figure--vertical">
+							<a href="/over-10-million-turbine-blade-repairs-at-supplier-of-am-systems-a-966056/">
+								<picture>
+
+									<source type="image/webp"
+									        srcset="https://cdn1.vogel.de/0VjUeusBtkuCAtLQZ78GPli8Ebs=/288x162/filters:quality(1)/cdn4.vogel.de/infinity/white.jpg"
+									        data-srcset="https://cdn1.vogel.de/9sV-A3rReVIaxIzrAVmSzQvCD4o=/288x162/smart/filters:format(webp):quality(80)/images.vogel.de/vogelonline/bdb/1748600/1748689/original.jpg 288w, https://cdn1.vogel.de/3GHOUYR375t-03HJTWqYMBzxDKo=/576x324/smart/filters:format(webp):quality(80)/images.vogel.de/vogelonline/bdb/1748600/1748689/original.jpg 576w">
+									<source srcset="https://cdn1.vogel.de/0VjUeusBtkuCAtLQZ78GPli8Ebs=/288x162/filters:quality(1)/cdn4.vogel.de/infinity/white.jpg"
+									        data-srcset="https://cdn1.vogel.de/4KbUqFYvLZB2cgntDAxJrpQf42o=/288x162/smart/filters:format(jpg):quality(80)/images.vogel.de/vogelonline/bdb/1748600/1748689/original.jpg 288w, https://cdn1.vogel.de/rMDVPevj_AFgfMjifrWQvYQXiBw=/576x324/smart/filters:format(jpg):quality(80)/images.vogel.de/vogelonline/bdb/1748600/1748689/original.jpg 576w">
+									<img data-src="https://cdn1.vogel.de/4KbUqFYvLZB2cgntDAxJrpQf42o=/288x162/smart/filters:format(jpg):quality(80)/images.vogel.de/vogelonline/bdb/1748600/1748689/original.jpg"
+									     src="https://cdn1.vogel.de/0VjUeusBtkuCAtLQZ78GPli8Ebs=/288x162/filters:quality(1)/cdn4.vogel.de/infinity/white.jpg"
+									     class="inf-teaser__image inf-teaser__image--vertical lazyload"
+									     title="Optomec’s automated solution typically replaces manual operations."
+									     alt="Optomec’s automated solution typically replaces manual operations."/>
+								</picture>
+							</a>
+						</figure>
+										<header>
+												
+												
+												
+												
+													<p class="inf-subhead inf-subhead--small inf-text--hyphens inf-subnav__subhead">
+								Additive Manufacturing							</p>
+						
+						<p class="inf-headline inf-headline--small inf-subnav__headline">
+							<a class="inf-headline__link" href="/over-10-million-turbine-blade-repairs-at-supplier-of-am-systems-a-966056/">
+								Over 10 Million Turbine Blade Repairs at Supplier of AM Systems							</a>
+						</p>
+					</header>
+				</article>
+								<article class="inf-teaser inf-teaser--vertical inf-teaser--subnav">
+											<figure class="inf-teaser__figure--vertical">
+							<a href="/vw-appoints-new-head-of-business-unit-engine-and-foundry-a-966062/">
+								<picture>
+
+									<source type="image/webp"
+									        srcset="https://cdn1.vogel.de/0VjUeusBtkuCAtLQZ78GPli8Ebs=/288x162/filters:quality(1)/cdn4.vogel.de/infinity/white.jpg"
+									        data-srcset="https://cdn1.vogel.de/XsT4El617oH1rogUZINLTGzoYw4=/288x162/smart/filters:format(webp):quality(80)/images.vogel.de/vogelonline/bdb/1749200/1749212/original.jpg 288w, https://cdn1.vogel.de/87146nqhbt2IepZLUXp8g6CHRoM=/576x324/smart/filters:format(webp):quality(80)/images.vogel.de/vogelonline/bdb/1749200/1749212/original.jpg 576w">
+									<source srcset="https://cdn1.vogel.de/0VjUeusBtkuCAtLQZ78GPli8Ebs=/288x162/filters:quality(1)/cdn4.vogel.de/infinity/white.jpg"
+									        data-srcset="https://cdn1.vogel.de/7545BJvBnqQb3sUxT2HhGh0a-N4=/288x162/smart/filters:format(jpg):quality(80)/images.vogel.de/vogelonline/bdb/1749200/1749212/original.jpg 288w, https://cdn1.vogel.de/4lP_gw_U7vIM_x3dHd5RRzVbnDg=/576x324/smart/filters:format(jpg):quality(80)/images.vogel.de/vogelonline/bdb/1749200/1749212/original.jpg 576w">
+									<img data-src="https://cdn1.vogel.de/7545BJvBnqQb3sUxT2HhGh0a-N4=/288x162/smart/filters:format(jpg):quality(80)/images.vogel.de/vogelonline/bdb/1749200/1749212/original.jpg"
+									     src="https://cdn1.vogel.de/0VjUeusBtkuCAtLQZ78GPli8Ebs=/288x162/filters:quality(1)/cdn4.vogel.de/infinity/white.jpg"
+									     class="inf-teaser__image inf-teaser__image--vertical lazyload"
+									     title="VW restructures its personnel."
+									     alt="VW restructures its personnel."/>
+								</picture>
+							</a>
+						</figure>
+										<header>
+												
+												
+												
+												
+													<p class="inf-subhead inf-subhead--small inf-text--hyphens inf-subnav__subhead">
+								Personnel Changes							</p>
+						
+						<p class="inf-headline inf-headline--small inf-subnav__headline">
+							<a class="inf-headline__link" href="/vw-appoints-new-head-of-business-unit-engine-and-foundry-a-966062/">
+								VW Appoints new Head of Business Unit Engine and Foundry							</a>
+						</p>
+					</header>
+				</article>
+								<article class="inf-teaser inf-teaser--vertical inf-teaser--subnav">
+											<figure class="inf-teaser__figure--vertical">
+							<a href="/kurtz-ersa-and-lmi-enter-cooperation-in-the-field-of-additive-manufacturing-a-965388/">
+								<picture>
+
+									<source type="image/webp"
+									        srcset="https://cdn1.vogel.de/0VjUeusBtkuCAtLQZ78GPli8Ebs=/288x162/filters:quality(1)/cdn4.vogel.de/infinity/white.jpg"
+									        data-srcset="https://cdn1.vogel.de/MKtMt4LUBcfIJGzRGy12DkY1dFA=/288x162/smart/filters:format(webp):quality(80)/images.vogel.de/vogelonline/bdb/1748200/1748270/original.jpg 288w, https://cdn1.vogel.de/Qfswn9TkprvnuMvYQc_3Mwn4KHA=/576x324/smart/filters:format(webp):quality(80)/images.vogel.de/vogelonline/bdb/1748200/1748270/original.jpg 576w">
+									<source srcset="https://cdn1.vogel.de/0VjUeusBtkuCAtLQZ78GPli8Ebs=/288x162/filters:quality(1)/cdn4.vogel.de/infinity/white.jpg"
+									        data-srcset="https://cdn1.vogel.de/x8VTSyqQw4vMQjetX8ogzRCFhv4=/288x162/smart/filters:format(jpg):quality(80)/images.vogel.de/vogelonline/bdb/1748200/1748270/original.jpg 288w, https://cdn1.vogel.de/_RexgLSlz7Dzp-TXsTSr4RYIc0o=/576x324/smart/filters:format(jpg):quality(80)/images.vogel.de/vogelonline/bdb/1748200/1748270/original.jpg 576w">
+									<img data-src="https://cdn1.vogel.de/x8VTSyqQw4vMQjetX8ogzRCFhv4=/288x162/smart/filters:format(jpg):quality(80)/images.vogel.de/vogelonline/bdb/1748200/1748270/original.jpg"
+									     src="https://cdn1.vogel.de/0VjUeusBtkuCAtLQZ78GPli8Ebs=/288x162/filters:quality(1)/cdn4.vogel.de/infinity/white.jpg"
+									     class="inf-teaser__image inf-teaser__image--vertical lazyload"
+									     title="New cooperation partners (from left to right). LMI: Dawid Ziebura, Sven Scheres, Steffen Stahlhacke, Prof. Dr.-Ing. Johannes Henrich Schleifenbaum &amp; Kurtz Ersa: CEO Rainer Kurtz, Technical Director Victor Romanov, Managing Director Uwe Rothaug"
+									     alt="New cooperation partners (from left to right). LMI: Dawid Ziebura, Sven Scheres, Steffen Stahlhacke, Prof. Dr.-Ing. Johannes Henrich Schleifenbaum &amp; Kurtz Ersa: CEO Rainer Kurtz, Technical Director Victor Romanov, Managing Director Uwe Rothaug"/>
+								</picture>
+							</a>
+						</figure>
+										<header>
+												
+												
+												
+												
+													<p class="inf-subhead inf-subhead--small inf-text--hyphens inf-subnav__subhead">
+								Business Fields							</p>
+						
+						<p class="inf-headline inf-headline--small inf-subnav__headline">
+							<a class="inf-headline__link" href="/kurtz-ersa-and-lmi-enter-cooperation-in-the-field-of-additive-manufacturing-a-965388/">
+								Kurtz Ersa and LMI Enter Cooperation in the Field of Additive Manufacturing							</a>
+						</p>
+					</header>
+				</article>
+					</div>
+</div>
+					</div>
+				
+							</li>
+					<li class="inf-mainnav__item" id="page_5ace2d690f732">
+				
+								<a id="menu-page_5ace2d690f732" title="Our&#x20;network&#x20;of&#x20;experts" class="inf-mainnav__link" href="&#x2F;experts&#x2F;">Experts</a>				
+											</li>
+					<li class="inf-mainnav__item inf-mainnav__item--with-flyout" id="page_5d722c904cbad">
+				
+								<a id="menu-page_5d722c904cbad" title="Services" class="inf-mainnav__link" href="&#x2F;services&#x2F;">Services</a>				
+													
+										<div class="inf-subnav-flyout inf-flex">
+						
+												<ul class="inf-subnav">
+	
+				<li class="inf-subnav__item" id="page_5d722d9363ecc">
+				
+								<a id="menu-page_5d722d9363ecc" title="Whitepapers" class="inf-subnav__link" href="&#x2F;whitepaper&#x2F;">Whitepapers</a>				
+											</li>
+		
+					<li class="inf-subnav__item" id="page_5eb418e0e3343">
+				
+								<a id="menu-page_5eb418e0e3343" title="Webinars" class="inf-subnav__link" href="&#x2F;webinars&#x2F;">Webinars</a>				
+											</li>
+		
+					<li class="inf-subnav__item" id="page_5ea859d20456c">
+				
+								<a id="menu-page_5ea859d20456c" title="Videos" class="inf-subnav__link" href="&#x2F;videos&#x2F;">Videos</a>				
+											</li>
+		
+		
+</ul>						
+												
+					</div>
+				
+							</li>
+					<li class="inf-mainnav__item inf-mainnav__item--with-flyout" id="page_5d7226b5cbc59">
+				
+								<a id="menu-page_5d7226b5cbc59" title="Events" class="inf-mainnav__link" href="&#x2F;events&#x2F;">Events</a>				
+													
+										<div class="inf-subnav-flyout inf-flex">
+						
+												<ul class="inf-subnav">
+	
+				<li class="inf-subnav__item" id="page_5f11744566463">
+				
+								<a id="menu-page_5f11744566463" title="FORUM&#x20;GIESSEREI-INDUSTRIE" class="inf-subnav__link" href="&#x2F;forum-giessereiindustrie&#x2F;">FORUM GIESSEREI-INDUSTRIE</a>				
+											</li>
+		
+					<li class="inf-subnav__item" id="page_403DB82F-92BA-49DD-8DDC5A4D38B6A0A7">
+				
+								<a id="menu-page_403DB82F-92BA-49DD-8DDC5A4D38B6A0A7" title="EUROGUSS" class="inf-subnav__link" href="&#x2F;euroguss&#x2F;">EUROGUSS</a>				
+											</li>
+		
+					<li class="inf-subnav__item" id="page_5dc2e6cb33369">
+				
+								<a id="menu-page_5dc2e6cb33369" title="EUROGUSS&#x20;MEXICO" class="inf-subnav__link" href="&#x2F;euroguss-mexico&#x2F;">EUROGUSS MEXICO</a>				
+											</li>
+		
+					<li class="inf-subnav__item" id="page_FD319DA8-775C-4879-81535BDD4EE54E3C">
+				
+								<a id="menu-page_FD319DA8-775C-4879-81535BDD4EE54E3C" title="EUROGUSS&#x20;ASIA&#x20;PACIFIC" class="inf-subnav__link" href="&#x2F;euroguss_asia_pacific&#x2F;">EUROGUSS ASIA PACIFIC</a>				
+											</li>
+		
+					<li class="inf-subnav__item" id="page_5be2eeb7cc3b8">
+				
+								<a id="menu-page_5be2eeb7cc3b8" title="ALUCAST" class="inf-subnav__link" href="&#x2F;alucast&#x2F;">ALUCAST</a>				
+											</li>
+		
+					<li class="inf-subnav__item" id="page_5be9860e6904e">
+				
+								<a id="menu-page_5be9860e6904e" title="CHINA&#x20;DIECASTING" class="inf-subnav__link" href="&#x2F;china-diecasting&#x2F;">CHINA DIECASTING</a>				
+											</li>
+		
+		
+</ul>						
+												<div class="inf-subnav-articles">
+	<p class="inf-section__title inf-subnav-articles__title">
+		Latest Articles in <span>"Events"</span>
+	</p>
+	<div class="inf-flex" data-infinity-type="partial" data-infinity-id="layout/partials/menu/head/items">
+						<article class="inf-teaser inf-teaser--vertical inf-teaser--subnav">
+											<figure class="inf-teaser__figure--vertical">
+							<a href="/euroguss-2022-on-track-a-966629/">
+								<picture>
+
+									<source type="image/webp"
+									        srcset="https://cdn1.vogel.de/0VjUeusBtkuCAtLQZ78GPli8Ebs=/288x162/filters:quality(1)/cdn4.vogel.de/infinity/white.jpg"
+									        data-srcset="https://cdn1.vogel.de/eGp7xlfxwiJuB16jLMX_M9okblk=/288x162/smart/filters:format(webp):quality(80)/images.vogel.de/vogelonline/bdb/1750000/1750086/original.jpg 288w, https://cdn1.vogel.de/Ad7cuqQaB6Z5NPW-NMSJ6GjiQXE=/576x324/smart/filters:format(webp):quality(80)/images.vogel.de/vogelonline/bdb/1750000/1750086/original.jpg 576w">
+									<source srcset="https://cdn1.vogel.de/0VjUeusBtkuCAtLQZ78GPli8Ebs=/288x162/filters:quality(1)/cdn4.vogel.de/infinity/white.jpg"
+									        data-srcset="https://cdn1.vogel.de/e3_RggC9quC7-OVsqmnu3J0pkY4=/288x162/smart/filters:format(jpg):quality(80)/images.vogel.de/vogelonline/bdb/1750000/1750086/original.jpg 288w, https://cdn1.vogel.de/-nMFNh6C9BnuQjM02LqlB_DuP8U=/576x324/smart/filters:format(jpg):quality(80)/images.vogel.de/vogelonline/bdb/1750000/1750086/original.jpg 576w">
+									<img data-src="https://cdn1.vogel.de/e3_RggC9quC7-OVsqmnu3J0pkY4=/288x162/smart/filters:format(jpg):quality(80)/images.vogel.de/vogelonline/bdb/1750000/1750086/original.jpg"
+									     src="https://cdn1.vogel.de/0VjUeusBtkuCAtLQZ78GPli8Ebs=/288x162/filters:quality(1)/cdn4.vogel.de/infinity/white.jpg"
+									     class="inf-teaser__image inf-teaser__image--vertical lazyload"
+									     title="“EUROGUSS 2022 is clearly an event not to be missed in this sector, and one that appeals to all die casting foundries, their suppliers, and of course all buyers of die cast components”."
+									     alt="“EUROGUSS 2022 is clearly an event not to be missed in this sector, and one that appeals to all die casting foundries, their suppliers, and of course all buyers of die cast components”."/>
+								</picture>
+							</a>
+						</figure>
+										<header>
+												
+												
+												
+												
+													<p class="inf-subhead inf-subhead--small inf-text--hyphens inf-subnav__subhead">
+								Trade Fair News							</p>
+						
+						<p class="inf-headline inf-headline--small inf-subnav__headline">
+							<a class="inf-headline__link" href="/euroguss-2022-on-track-a-966629/">
+								EUROGUSS 2022 on Track							</a>
+						</p>
+					</header>
+				</article>
+								<article class="inf-teaser inf-teaser--vertical inf-teaser--subnav">
+											<figure class="inf-teaser__figure--vertical">
+							<a href="/exogenous-crises-and-transformation-in-foundries-a-952977/">
+								<picture>
+
+									<source type="image/webp"
+									        srcset="https://cdn1.vogel.de/0VjUeusBtkuCAtLQZ78GPli8Ebs=/288x162/filters:quality(1)/cdn4.vogel.de/infinity/white.jpg"
+									        data-srcset="https://cdn1.vogel.de/G1zLHScOP4TWxU8VekKFHJTa9W8=/288x162/smart/filters:format(webp):quality(80)/images.vogel.de/vogelonline/bdb/1746900/1746979/original.jpg 288w, https://cdn1.vogel.de/y2Yse6781R0ksLuFDVII_2NnNp4=/576x324/smart/filters:format(webp):quality(80)/images.vogel.de/vogelonline/bdb/1746900/1746979/original.jpg 576w">
+									<source srcset="https://cdn1.vogel.de/0VjUeusBtkuCAtLQZ78GPli8Ebs=/288x162/filters:quality(1)/cdn4.vogel.de/infinity/white.jpg"
+									        data-srcset="https://cdn1.vogel.de/uIxmJKm212y1cPIOX_p_Cz4g-AA=/288x162/smart/filters:format(jpg):quality(80)/images.vogel.de/vogelonline/bdb/1746900/1746979/original.jpg 288w, https://cdn1.vogel.de/_yfjcNi3WX1ewAB-jCtdAwurF3o=/576x324/smart/filters:format(jpg):quality(80)/images.vogel.de/vogelonline/bdb/1746900/1746979/original.jpg 576w">
+									<img data-src="https://cdn1.vogel.de/uIxmJKm212y1cPIOX_p_Cz4g-AA=/288x162/smart/filters:format(jpg):quality(80)/images.vogel.de/vogelonline/bdb/1746900/1746979/original.jpg"
+									     src="https://cdn1.vogel.de/0VjUeusBtkuCAtLQZ78GPli8Ebs=/288x162/filters:quality(1)/cdn4.vogel.de/infinity/white.jpg"
+									     class="inf-teaser__image inf-teaser__image--vertical lazyload"
+									     title="The automotive industry and the mechanical and plant engineering sector are facing massive challenges. Thus, the foundry industry is also affected to a large extent."
+									     alt="The automotive industry and the mechanical and plant engineering sector are facing massive challenges. Thus, the foundry industry is also affected to a large extent."/>
+								</picture>
+							</a>
+						</figure>
+										<header>
+												
+												
+												
+												
+													<p class="inf-subhead inf-subhead--small inf-text--hyphens inf-subnav__subhead">
+								Forum Gießerei-Industrie 2020							</p>
+						
+						<p class="inf-headline inf-headline--small inf-subnav__headline">
+							<a class="inf-headline__link" href="/exogenous-crises-and-transformation-in-foundries-a-952977/">
+								Exogenous Crises and Transformation in Foundries							</a>
+						</p>
+					</header>
+				</article>
+								<article class="inf-teaser inf-teaser--vertical inf-teaser--subnav">
+											<figure class="inf-teaser__figure--vertical">
+							<a href="/indian-foundry-invests-in-industrial-3d-printer-a-960838/">
+								<picture>
+
+									<source type="image/webp"
+									        srcset="https://cdn1.vogel.de/0VjUeusBtkuCAtLQZ78GPli8Ebs=/288x162/filters:quality(1)/cdn4.vogel.de/infinity/white.jpg"
+									        data-srcset="https://cdn1.vogel.de/b3XMP4OfQjmhuN-Aa0wc2dqUKHc=/288x162/smart/filters:format(webp):quality(80)/images.vogel.de/vogelonline/bdb/1742100/1742148/original.jpg 288w, https://cdn1.vogel.de/THHKhEOJtloXOsj6ZaIjKxonyIc=/576x324/smart/filters:format(webp):quality(80)/images.vogel.de/vogelonline/bdb/1742100/1742148/original.jpg 576w">
+									<source srcset="https://cdn1.vogel.de/0VjUeusBtkuCAtLQZ78GPli8Ebs=/288x162/filters:quality(1)/cdn4.vogel.de/infinity/white.jpg"
+									        data-srcset="https://cdn1.vogel.de/VvN7qFeyseGXw5jTxDyNlT2oyPY=/288x162/smart/filters:format(jpg):quality(80)/images.vogel.de/vogelonline/bdb/1742100/1742148/original.jpg 288w, https://cdn1.vogel.de/x_ru1DipLB41grMvYE2VTE-jNsk=/576x324/smart/filters:format(jpg):quality(80)/images.vogel.de/vogelonline/bdb/1742100/1742148/original.jpg 576w">
+									<img data-src="https://cdn1.vogel.de/VvN7qFeyseGXw5jTxDyNlT2oyPY=/288x162/smart/filters:format(jpg):quality(80)/images.vogel.de/vogelonline/bdb/1742100/1742148/original.jpg"
+									     src="https://cdn1.vogel.de/0VjUeusBtkuCAtLQZ78GPli8Ebs=/288x162/filters:quality(1)/cdn4.vogel.de/infinity/white.jpg"
+									     class="inf-teaser__image inf-teaser__image--vertical lazyload"
+									     title="The 3D printer VX4000 from voxeljet has a build envelope of 4000 x 2000 x 1000 mm."
+									     alt="The 3D printer VX4000 from voxeljet has a build envelope of 4000 x 2000 x 1000 mm."/>
+								</picture>
+							</a>
+						</figure>
+										<header>
+												
+												
+												
+												
+													<p class="inf-subhead inf-subhead--small inf-text--hyphens inf-subnav__subhead">
+								Additive Manufacturing							</p>
+						
+						<p class="inf-headline inf-headline--small inf-subnav__headline">
+							<a class="inf-headline__link" href="/indian-foundry-invests-in-industrial-3d-printer-a-960838/">
+								Indian Foundry Invests in Industrial 3D Printer							</a>
+						</p>
+					</header>
+				</article>
+					</div>
+</div>
+					</div>
+				
+							</li>
+			<li class="inf-mainnav__item inf-mainnav__item--with-flyout inf-nav__item--more" style="display:none">
+		<a class="inf-mainnav__link">more...</a>
+		<div class="inf-subnav-flyout">
+			<ul class="inf-subnav" data-id="mainnav-more">
+			</ul>
+		</div>
+	</li>
+</ul>		<div class="inf-search-header">
+			<form action="/search/" method="get" class="inf-mainheader__form">
+				<img alt="Search" title="Search"
+				     class="inf-search-header__dropdown-arrow" src="https://cdn2.vogel.de/img/arrow_dropdown.svg">
+				<label>
+					<input type="text" placeholder="Enter search term"
+					       class="inf-form__input-text inf-search-header__input-text" name="k"
+					       autofocus="autofocus"> </label>
+				<button type="submit" id="search_submit_header"
+				        class="inf-btn inf-btn--info inf-search-header__btn inf-focus-on">
+					Search				</button>
+			</form>
+			<div id="inf-searchinput" class="inf-icon inf-icon--search"></div>
+		</div>
+					<div class="inf-mainnav__item inf-mainnav__item--with-flyout inf-account-header">
+		<div id="inf-accountinput" class="inf-icon inf-icon--account" onclick="window.location='/login/'"></div>
+		<div class="inf-subnav-flyout inf-subnav-flyout--accountheader" style="display: none;">
+			<ul class="inf-subnav inf-account-nav">
+				<li class="inf-subnav__item inf-account-nav__item">
+					<a class="inf-subnav__link" id="menu__login" href="/login/">
+						Log in					</a>
+				</li>
+				<li class="inf-subnav__item inf-account-nav__item">
+					<a class="inf-subnav__link" id="menu__registration" href="/registration/">
+						Registration					</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+
+					<div class="inf-newsletter-header">
+				<a class="inf-icon inf-icon--mail" id="menu__newsletter" aria-label="Newsletter Sign-Up"
+				   href="/newsletter/subscribes/"></a>
+			</div>
+			</div>
+</section>
+
+		<div id="advertisement_04" class="inf-billboard gpt"
+	     data-ad-id="advertisement_04" data-infinity-type="ad" data-infinity-id="v1/advertisement_04">
+
+		<script>
+
+			try
+			{
+
+				googletag.cmd.push(function ()
+				{
+					// Banner anzeigen
+					googletag.display(advertisement_04);
+				});
+
+			}
+			catch (OBJ_err)
+			{
+				// Nix
+				console.warn("Ad Slot Error - display advertisement_04");
+			} // end try
+
+		</script>
+
+	</div>
+				<main class="inf-detail-main">
+	
+	<nav class="inf-breadcrumb">
+	<ol class="inf-breadcrumb__list">
+		<li class="inf-breadcrumb__item">
+			<a class="inf-text--mini inf-breadcrumb__link" href="/">
+				Home			</a>
+		</li>
+										<li class="inf-breadcrumb__item">
+						<a class="inf-text--mini inf-breadcrumb__link" href="/technologies/">
+							Technologies						</a>
+					</li>
+								
+										<li class="inf-breadcrumb__item">
+					<h1 class="inf-breadcrumb__h1 inf-text--mini">Machine Learning - Definition and application examples</h1>
+				</li>
+				</ol>
+</nav>	
+		<article data-infinity-type="row" data-infinity-id="content/detail/default/v1" id="article-detail"
+         class="inf-article-detail">
+			<h2 class="inf-no-margin"><span class="inf-subhead inf-subhead--large inf-block">Basic Knowledge </span><span class="inf-headline inf-headline--large--thin inf-block inf-no-margin">Machine Learning - Definition and application examples </span></h2><div class="inf-date-author inf-margintop--big"><time datetime="2018-08-29T07:00:00+02:00">29.08.2018</time> | Editor:
+                     Lina Klass</div><p class="inf-text--large">Machine Learning, deep learning, algorithms - you can no longer avoid these buzzwords when it comes to Industry 4.0. Find out what Machine Learning really is and how it is applied in practice.</p>	
+		<section class="inf-companies-rel" data-infinity-type="teaser" data-infinity-id="companies">
+	<p class="inf-headline--small">
+		Related Companies	</p>
+	<div class="inf-companies-rel__content">
+							<div class="inf-companies-rel__company inf-flex" data-infinity-type="partial" data-infinity-id="company/related"
+	     aria-label="Bühler AG">
+		<a href="/buehler-ag-c-238247/">
+			<picture>
+				<img class="inf-companies-rel__logo lazyload"
+				     alt="bühler.jpg"
+				     title="bühler.jpg"
+				     data-src="https://cdn1.vogel.de/1pTZKJetTOrpk9GbzpgDrFe_0iU=/fit-in/88x88/filters:format(png):fill(fff,0)/images.vogel.de/vogelonline/companyimg/117700/117769/65.jpg"
+				     src="https://cdn1.vogel.de/V-fQpBVA9oxteBMRLBeapVq_sDw=/88x88/filters:quality(1)/cdn4.vogel.de/infinity/white.jpg"
+				/>
+			</picture>
+			<span class="inf-companies-rel__company-name inf-companies-rel__company-name--tablet">
+				Bühler AG			</span>
+		</a>
+	</div>
+							<div class="inf-companies-rel__company inf-flex" data-infinity-type="partial" data-infinity-id="company/related"
+	     aria-label="Godfrey &amp; Wing Inc.">
+		<a href="/godfrey-wing-inc-c-285844/">
+			<picture>
+				<img class="inf-companies-rel__logo lazyload"
+				     alt="Spotlight_logo.jpg"
+				     title="Spotlight_logo.jpg"
+				     data-src="https://cdn1.vogel.de/Ea1KtWfjr3cLwQxCWAnpiBLjfgo=/fit-in/88x88/filters:format(png):fill(fff,0)/p7i.vogel.de/companies/5e/82/5e8236e5a72b0/spotlight-logo.jpg"
+				     src="https://cdn1.vogel.de/V-fQpBVA9oxteBMRLBeapVq_sDw=/88x88/filters:quality(1)/cdn4.vogel.de/infinity/white.jpg"
+				/>
+			</picture>
+			<span class="inf-companies-rel__company-name inf-companies-rel__company-name--tablet">
+				Godfrey &amp; Wing Inc.			</span>
+		</a>
+	</div>
+					</div>
+	</section>	
+		<figure class="inf-inlineimage inf-inlineimage--w100"><a href="https://cdn1.vogel.de/unsafe/fit-in/1000x0/images.vogel.de/vogelonline/bdb/1444700/1444739/original.jpg" target="_blank" rel="noopener"><picture><img class="inf-inlineimage__img lazyload" data-sizes="auto" data-src="https://cdn1.vogel.de/unsafe/800x0/smart/images.vogel.de/vogelonline/bdb/1444700/1444739/original.jpg" src="https://cdn1.vogel.de/unsafe/images.vogel.de/shared/infinity/1/1/63.jpg" alt="There will be no getting around Machine Learning in the future."/></picture></a><figcaption class="inf-figcaption">There will be no getting around Machine Learning in the future.<div class="inf-figcaption__pic-source">                                         (Source: CC0/Pixabay)                                     </div></figcaption></figure><!--head--> <!--xheading--> <h3 class="inf-xheading">Machine Learning – Definition</h3><p class="inf-text--medium-sec">Machine Learning is a sub-area of artificial intelligence, whereby the term refers to the ability of IT systems to independently find solutions to problems by recognizing patterns in databases. In other words: Machine Learning enables IT systems to recognize patterns on the basis of existing algorithms and data sets and to develop adequate solution concepts. Therefore, in Machine Learning, artificial knowledge is generated on the basis of experience. </p><p class="inf-text--medium-sec">In order to enable the software to independently generate solutions, the prior action of people is necessary. For example, the required algorithms and data must be fed into the systems in advance and the respective analysis rules for the recognition of patterns in the data stock must be defined. Once these two steps have been completed, the system can perform the following tasks by Machine Learning:</p><ul class="inf-list"><li class="inf-list__item">Finding, extracting and summarizing relevant data</li></ul><ul class="inf-list"><li class="inf-list__item"><a href="https://www.spotlightmetal.com/predictive-maintenance-based-on-ai-a-891610/" class="inf-text__link" target="_blank" rel="noopener">Making predictions</a> based on the analysis data</li></ul><ul class="inf-list"><li class="inf-list__item">Calculating probabilities for specific results</li></ul><ul class="inf-list"><li class="inf-list__item">Adapting to certain developments autonomously</li></ul><ul class="inf-list"><li class="inf-list__item">Optimizing processes based on recognized patterns</li></ul><article class="inf-teaser inf-teaser--horizontal inf-teaserbox-var-2 inf-flex" data-infinity-type="partial" data-infinity-id="download/teaser/v6"> 			<figure class="inf-teaser__figure--flex"> 			<a class="inf-icon inf-icon-overlay inf-icon-overlay--big inf-icon--download inf-icon-overlay--download-big" href="/robotics-in-automation-d-41380/"></a> 			<a href="/robotics-in-automation-d-41380/"> 				<picture> 					<source type="image/webp" 					        srcset="https://cdn1.vogel.de/WjpOxv5PviFYWPOSgtFTQGsBMVo=/150x150/filters:quality(1)/cdn4.vogel.de/infinity/white.jpg" 					        data-srcset="https://cdn1.vogel.de/EchNJFMOR0Mvi7aISMFxIL86cSA=/fit-in/578x328/filters:format(webp):quality(80):fill(efefef,0)/images.vogel.de/vogelonline/bdb/1546700/1546769/original.jpg 150w, https://cdn1.vogel.de/WAbnAjIgyWGqDJiXNEVWDXuWTzE=/fit-in/289x164/filters:format(webp):quality(80):fill(efefef,0)/images.vogel.de/vogelonline/bdb/1546700/1546769/original.jpg 300w"> 					<source srcset="https://cdn1.vogel.de/WjpOxv5PviFYWPOSgtFTQGsBMVo=/150x150/filters:quality(1)/cdn4.vogel.de/infinity/white.jpg" 					        data-srcset="https://cdn1.vogel.de/bt5ImN3SIe9RTK-MFtPOLbIYVhY=/fit-in/578x328/filters:format(png):quality(80):fill(efefef,0)/images.vogel.de/vogelonline/bdb/1546700/1546769/original.jpg 150w, https://cdn1.vogel.de/3rlw4PT50R1oEVvY7bws95VDm_0=/fit-in/289x164/filters:format(png):quality(80):fill(efefef,0)/images.vogel.de/vogelonline/bdb/1546700/1546769/original.jpg 300w">   					<img class="inf-teaser__image lazyload" 					     alt="Whitepaper Cover: SLM" 					     title="Whitepaper Cover: SLM" 					     data-src="https://cdn1.vogel.de/3rlw4PT50R1oEVvY7bws95VDm_0=/fit-in/289x164/filters:format(png):quality(80):fill(efefef,0)/images.vogel.de/vogelonline/bdb/1546700/1546769/original.jpg" 					     data-sizes="auto" 					     src="https://cdn1.vogel.de/-cdF7JPnq6W9eiD27zyLdlKNzAs=/320x180/filters:quality(1)/cdn4.vogel.de/infinity/white.jpg" 					/> 				</picture> 			</a> 		</figure> 	 	<div class="inf-teaser__wrapper--horizontal"> 		<header class="inf-teaser__header"> 			<h5 class="inf-subhead inf-subhead--medium">Dossier Robotics</h5> 			<h4 class="inf-headline inf-headline--medium--thin inf-no-margin"> 				<a class="inf-headline__link" href="/robotics-in-automation-d-41380/">Robotics in Automation</a> 			</h4> 		</header> 	</div> </article>                 <!--xheading--> <h3 class="inf-xheading">Machine Learning: How it works</h3><p class="inf-text--medium-sec">Machine Learning works in a similar way to human learning. For example, if a child is shown images with specific objects on them, they can learn to identify and differentiate between them. Machine Learning works in the same way: Through data input and certain commands, the computer is enabled to "learn" to identify certain objects (persons, objects, etc.) and to distinguish between them. For this purpose, the software is supplied with data and trained. For instance, the programmer can tell the system that a particular object is a human being (="human") and another object is not a human being (="no human"). The software receives continuous feedback from the programmer. These feedback signals are used by the algorithm to adapt and optimize the model. With each new data set fed into the system, the model is further optimized so that it can clearly distinguish between "humans" and "non-humans" in the end.</p>	<div id="advertisement_07" class="inf-ad--article-right gpt"
+	     data-ad-id="advertisement_07" data-infinity-type="ad" data-infinity-id="v1/advertisement_07">
+
+		<script>
+
+			try
+			{
+
+				googletag.cmd.push(function ()
+				{
+					// Banner anzeigen
+					googletag.display(advertisement_07);
+				});
+
+			}
+			catch (OBJ_err)
+			{
+				// Nix
+				console.warn("Ad Slot Error - display advertisement_07");
+			} // end try
+
+		</script>
+
+	</div>
+	<p class="inf-text--medium-sec">But Machine Learning means much more than just distinguishing between two classes. Using the <a href="https://www.kuka.com/en-gb" class="inf-text__link" target="_blank" rel="noopener">KUKA</a> table tennis robot as an example, you can see how a machine scans the complex tendencies and the playing style of its opponent, adapts to them and even makes a world champion sweat this way.</p><article class="inf-teaser inf-teaserbox-var-2 inf-flex" data-infinity-type="partial"          data-infinity-id="content/teaser/v6"> 	 		 	 	 		 		 		 			<figure class="inf-teaser__figure--flex"> 			<a href="/how-ai-and-machine-learning-help-manufacture-components-a-832598/" > 				<picture> 					<source media="(max-width: 654px)" 					        type="image/webp" 					        srcset="https://cdn1.vogel.de/WjpOxv5PviFYWPOSgtFTQGsBMVo=/150x150/filters:quality(1)/cdn4.vogel.de/infinity/white.jpg" 					        data-srcset="https://cdn1.vogel.de/T_gv09to2WGkx988SQ8tktpL2sg=/150x150/smart/filters:format(webp):quality(80)/images.vogel.de/vogelonline/bdb/1558300/1558321/original.jpg 150w, https://cdn1.vogel.de/swKHyHMGbqRTZN89OowcyBKIQJE=/300x300/smart/filters:format(webp):quality(80)/images.vogel.de/vogelonline/bdb/1558300/1558321/original.jpg 300w"> 					<source media="(max-width: 654px)" 					        srcset="https://cdn1.vogel.de/WjpOxv5PviFYWPOSgtFTQGsBMVo=/150x150/filters:quality(1)/cdn4.vogel.de/infinity/white.jpg" 					        data-srcset="https://cdn1.vogel.de/gqfeu9PTpXrBAt2UYDut5Cp3ujo=/150x150/smart/filters:format(jpg):quality(80)/images.vogel.de/vogelonline/bdb/1558300/1558321/original.jpg 150w, https://cdn1.vogel.de/BPgPRlhDMzC7vYggdFrIac-LNO4=/300x300/smart/filters:format(jpg):quality(80)/images.vogel.de/vogelonline/bdb/1558300/1558321/original.jpg 300w"> 					<source type="image/webp" 					        srcset="https://cdn1.vogel.de/-cdF7JPnq6W9eiD27zyLdlKNzAs=/320x180/filters:quality(1)/cdn4.vogel.de/infinity/white.jpg" 					        data-srcset="https://cdn1.vogel.de/lRLdB6H33jEqj7SJszipyYt71Uc=/320x180/smart/filters:format(webp):quality(80)/images.vogel.de/vogelonline/bdb/1558300/1558321/original.jpg 320w, https://cdn1.vogel.de/yuTwmwxPd_7ohyzcqrL6p3G8P0A=/640x360/smart/filters:format(webp):quality(80)/images.vogel.de/vogelonline/bdb/1558300/1558321/original.jpg 640w"> 					<source srcset="https://cdn1.vogel.de/-cdF7JPnq6W9eiD27zyLdlKNzAs=/320x180/filters:quality(1)/cdn4.vogel.de/infinity/white.jpg" 					        data-srcset="https://cdn1.vogel.de/mDy7Ipw0Q3EvhiZL1jeCsFRd_o0=/320x180/smart/filters:format(jpg):quality(80)/images.vogel.de/vogelonline/bdb/1558300/1558321/original.jpg 320w, https://cdn1.vogel.de/fAUqQR83eGHc8qyz0V6lkuXGiRM=/640x360/smart/filters:format(jpg):quality(80)/images.vogel.de/vogelonline/bdb/1558300/1558321/original.jpg 640w"> 					<img class="inf-teaser__image lazyload" 					     alt="Benefit from machine learning in lightweight construction: The &quot;virtual process expert&quot; helps designers to estimate the manufacturability of components. This not only saves costs, but also accelerates development." 					     title="Benefit from machine learning in lightweight construction: The &quot;virtual process expert&quot; helps designers to estimate the manufacturability of components. This not only saves costs, but also accelerates development." 					     data-src="https://cdn1.vogel.de/mDy7Ipw0Q3EvhiZL1jeCsFRd_o0=/320x180/smart/filters:format(jpg):quality(80)/images.vogel.de/vogelonline/bdb/1558300/1558321/original.jpg" 					     data-sizes="auto" 					     src="https://cdn1.vogel.de/-cdF7JPnq6W9eiD27zyLdlKNzAs=/320x180/filters:quality(1)/cdn4.vogel.de/infinity/white.jpg" 					/> 				</picture> 			</a> 		</figure> 		<header class="inf-teaser__header--flex"> 		 					<p class="inf-subhead inf-subhead--medium">Lightweight Design</p> 		 		<p class="inf-headline inf-headline--medium--thin inf-no-margin"> 			<a class="inf-headline__link" href="/how-ai-and-machine-learning-help-manufacture-components-a-832598/" >How AI and Machine Learning Help Manufacture Components</a> 		</p> 	</header> </article> <!--xheading--> <h3 class="inf-xheading">Advantages of Machine Learning</h3><p class="inf-text--medium-sec">Machine Learning undoubtedly helps people to work more creatively and efficiently. Basically, you too can delegate quite complex or monotonous work to the computer through Machine Learning - starting with scanning, saving and filing paper documents such as invoices up to organizing and editing images.</p><p class="inf-text--medium-sec">In addition to these rather simple tasks, self-learning machines can also perform complex tasks. These include, for example, the recognition of error patterns. This is a major advantage, especially in areas such as the manufacturing industry: the industry relies on continuous and error-free production. While even experts often cannot be sure where and by which correlation a production error in a plant fleet arises, Machine Learning offers the possibility to identify the error early - this saves downtimes and money. In an interview, Damian Heimel, Co-founder and COO of Deevio, explained how their machine learning software is used in the foundry industry. Since the components manufactured here are often subject to strict safety requirements, machine learning is a popular method in the automation of end-of-line quality control. Defects in cast components can vary widely from cracks to blowholes, and when producing several thousand parts per day, the inspection process is prone to human error. While the eyes of a human inspector get tired over time, machine learning software can introduce a standardized quality inspection process. <a href="https://www.spotlightmetal.com/automation-of-end-of-line-quality-control-a-916467/" class="inf-text__link" target="_blank" rel="noopener">Read here how exactly the end-of-line-quality control works</a> with Deevio's machine learning system in foundries. </p>	<div id="advertisement_09" class="inf-ad--article-left gpt"
+	     data-ad-id="advertisement_09" data-infinity-type="ad" data-infinity-id="v1/advertisement_09">
+
+		<script>
+
+			try
+			{
+
+				googletag.cmd.push(function ()
+				{
+					// Banner anzeigen
+					googletag.display(advertisement_09);
+				});
+
+			}
+			catch (OBJ_err)
+			{
+				// Nix
+				console.warn("Ad Slot Error - display advertisement_09");
+			} // end try
+
+		</script>
+
+	</div>
+	<p class="inf-text--medium-sec">Self-learning programs are now also used in the medical field. In the future, after "consuming" huge amounts of data (medical publications, studies, etc.), apps will be able to warn a in case his doctor wants to prescribe a drug that he cannot tolerate. This "knowledge" also means that the app can propose alternative options which for example also take into account the genetic requirements of the respective patient. </p><article class="inf-teaser inf-teaserbox-var-2 inf-flex" data-infinity-type="partial"          data-infinity-id="content/teaser/v6"> 	 			<span class="inf-text--caps inf-teaser__flag inf-teaser__flag--teaserbox">#expert</span> 		 	 	 		 		 		 			<figure class="inf-teaser__figure--flex"> 			<a href="/machine-learning-for-metal-casting--hype-or-opportunity-a-927713/" > 				<picture> 					<source media="(max-width: 654px)" 					        type="image/webp" 					        srcset="https://cdn1.vogel.de/WjpOxv5PviFYWPOSgtFTQGsBMVo=/150x150/filters:quality(1)/cdn4.vogel.de/infinity/white.jpg" 					        data-srcset="https://cdn1.vogel.de/cn-ezdlk0u6H-Ch8mRmFLH-AiDE=/150x150/smart/filters:format(webp):quality(80)/images.vogel.de/vogelonline/bdb/1700000/1700039/original.jpg 150w, https://cdn1.vogel.de/dADl-PYUveCuqNuxmVQiqg6S4ks=/300x300/smart/filters:format(webp):quality(80)/images.vogel.de/vogelonline/bdb/1700000/1700039/original.jpg 300w"> 					<source media="(max-width: 654px)" 					        srcset="https://cdn1.vogel.de/WjpOxv5PviFYWPOSgtFTQGsBMVo=/150x150/filters:quality(1)/cdn4.vogel.de/infinity/white.jpg" 					        data-srcset="https://cdn1.vogel.de/tOiJqfAB8ezLm-7nlvvK8RitH_4=/150x150/smart/filters:format(jpg):quality(80)/images.vogel.de/vogelonline/bdb/1700000/1700039/original.jpg 150w, https://cdn1.vogel.de/XJIQQWzNqv6Jw1NOCRzmmH7kkOE=/300x300/smart/filters:format(jpg):quality(80)/images.vogel.de/vogelonline/bdb/1700000/1700039/original.jpg 300w"> 					<source type="image/webp" 					        srcset="https://cdn1.vogel.de/-cdF7JPnq6W9eiD27zyLdlKNzAs=/320x180/filters:quality(1)/cdn4.vogel.de/infinity/white.jpg" 					        data-srcset="https://cdn1.vogel.de/tKwziB96Ox-6j3xfWMWNTOqwsoM=/320x180/smart/filters:format(webp):quality(80)/images.vogel.de/vogelonline/bdb/1700000/1700039/original.jpg 320w, https://cdn1.vogel.de/ywEJ9yXUEEkm6yFDCT7phKFN8ug=/640x360/smart/filters:format(webp):quality(80)/images.vogel.de/vogelonline/bdb/1700000/1700039/original.jpg 640w"> 					<source srcset="https://cdn1.vogel.de/-cdF7JPnq6W9eiD27zyLdlKNzAs=/320x180/filters:quality(1)/cdn4.vogel.de/infinity/white.jpg" 					        data-srcset="https://cdn1.vogel.de/m4XlwguUGcnYXIPNuua6dvgymuw=/320x180/smart/filters:format(jpg):quality(80)/images.vogel.de/vogelonline/bdb/1700000/1700039/original.jpg 320w, https://cdn1.vogel.de/WHBd9mSdNRqhuXWA-MqLVbVqRW8=/640x360/smart/filters:format(jpg):quality(80)/images.vogel.de/vogelonline/bdb/1700000/1700039/original.jpg 640w"> 					<img class="inf-teaser__image lazyload" 					     alt="Performing fast, fully resolved, and large-scale casting simulations can be achieved through deep neural networks." 					     title="Performing fast, fully resolved, and large-scale casting simulations can be achieved through deep neural networks." 					     data-src="https://cdn1.vogel.de/m4XlwguUGcnYXIPNuua6dvgymuw=/320x180/smart/filters:format(jpg):quality(80)/images.vogel.de/vogelonline/bdb/1700000/1700039/original.jpg" 					     data-sizes="auto" 					     src="https://cdn1.vogel.de/-cdF7JPnq6W9eiD27zyLdlKNzAs=/320x180/filters:quality(1)/cdn4.vogel.de/infinity/white.jpg" 					/> 				</picture> 			</a> 		</figure> 		<header class="inf-teaser__header--flex"> 		 					<p class="inf-subhead inf-subhead--medium">Casting Simulations</p> 		 		<p class="inf-headline inf-headline--medium--thin inf-no-margin"> 			<a class="inf-headline__link" href="/machine-learning-for-metal-casting--hype-or-opportunity-a-927713/" >Machine Learning for Metal Casting - Hype or Opportunity?</a> 		</p> 	</header> </article> <!--xheading--> <h3 class="inf-xheading">These Methods are used in Machine Learning</h3><p class="inf-text--medium-sec">In Machine Learning, statistical and mathematical methods are used to learn from data sets. Dozens of different methods exist for this, whereby a general distinction can be made between two systems, namely symbolic approaches on the one hand and sub-symbolic approaches on the other. While symbolic systems are, for example, propositional systems in which the knowledge content, i.e. the induced rules and the examples are explicitly represented, sub-symbolic systems are artificial neuronal networks. These work on the principle of the human brain, whereby the knowledge contents are implicitly represented.</p><div class="inf-html-video"><iframe class="inf-iframe-video-wrapper--video-detail cmplazyload" data-cmp-vendor="s30" data-cmp-src="https://www.youtube.com/embed/nKW8Ndu7Mjw" src="https://www.youtube.com/embed/nKW8Ndu7Mjw" frameborder="0" allowfullscreen name="fitvid0"></iframe></div>                 <!--xheading--> <h3 class="inf-xheading">Types of Machine Learning</h3><p class="inf-text--medium-sec">Basically, algorithms play an important role in Machine Learning: On the one hand, they are responsible for recognizing patterns and on the other hand, they can generate solutions. Algorithms can be divided into different categories:</p><p class="inf-text--medium-sec"><b>Supervised learning:</b> In the course of monitored learning, example models are defined in advance. In order to ensure an adequate allocation of the information to the respective model groups of the algorithms, these then have to be specified. In other words, the system learns on the basis of given input and output pairs. In the course of monitored learning, a programmer, who acts as a kind of teacher, provides the appropriate values for a particular input. The aim is to train the system in the context of successive calculations with different inputs and outputs and to establish connections.</p><p class="inf-text--medium-sec"><b>Unsupervised learning:</b>In unsupervised learning, artificial intelligence learns without predefined target values and without rewards. It is mainly used for learning segmentation (clustering). The machine tries to structure and sort the data entered according to certain characteristics. For example, a machine could (very simply) learn that coins of different colours can be sorted according to the characteristic "colour" in order to structure them.</p><p class="inf-text--medium-sec"><b>Partially supervised learning:</b>Partially supervised learning is a combination of supervised and unsupervised learning.</p><p class="inf-text--medium-sec"><b>Encouraging learning:</b> Reinforcing learning - just like Skinner's classic conditioning - is based on rewards and punishments. The algorithm is taught by a positive or negative interaction which reaction to a certain situation should take place.</p><p class="inf-text--medium-sec"><b>Active learning:</b> Within the framework of active learning, an algorithm is given the opportunity to query results for specific input data on the basis of pre-defined questions that are considered significant. Usually, the algorithm itself selects questions with high relevance.</p><p class="inf-text--medium-sec">In general, the data basis can be either offline or online, depending on the corresponding system. In addition, it can be available only once or repeatedly for Machine Learning. Another distinguishing feature is the either staggered development of the input and output pairs or their simultaneous presence. On the basis of this aspect, a distinction is made between so-called sequential learning and so-called batch learning.</p><article class="inf-teaser inf-teaserbox-var-2 inf-flex" data-infinity-type="partial"          data-infinity-id="content/teaser/v6"> 	 		 	 	 		 		 		 			<figure class="inf-teaser__figure--flex"> 			<a href="/big-data-in-machine-learning-a-662431/" > 				<picture> 					<source media="(max-width: 654px)" 					        type="image/webp" 					        srcset="https://cdn1.vogel.de/WjpOxv5PviFYWPOSgtFTQGsBMVo=/150x150/filters:quality(1)/cdn4.vogel.de/infinity/white.jpg" 					        data-srcset="https://cdn1.vogel.de/1lmOvbucsFF7Pb6XKofJPUrvGO8=/150x150/smart/filters:format(webp):quality(80)/images.vogel.de/vogelonline/bdb/1317500/1317548/original.jpg 150w, https://cdn1.vogel.de/KJKbVOEyJYHNtdk3JbJ_Cld5fY0=/300x300/smart/filters:format(webp):quality(80)/images.vogel.de/vogelonline/bdb/1317500/1317548/original.jpg 300w"> 					<source media="(max-width: 654px)" 					        srcset="https://cdn1.vogel.de/WjpOxv5PviFYWPOSgtFTQGsBMVo=/150x150/filters:quality(1)/cdn4.vogel.de/infinity/white.jpg" 					        data-srcset="https://cdn1.vogel.de/wWm9rCiFecvx2bUmi9A_XQ6swjA=/150x150/smart/filters:format(jpg):quality(80)/images.vogel.de/vogelonline/bdb/1317500/1317548/original.jpg 150w, https://cdn1.vogel.de/lMKmjPx9YTT7mgtBeLRHlDzGvYk=/300x300/smart/filters:format(jpg):quality(80)/images.vogel.de/vogelonline/bdb/1317500/1317548/original.jpg 300w"> 					<source type="image/webp" 					        srcset="https://cdn1.vogel.de/-cdF7JPnq6W9eiD27zyLdlKNzAs=/320x180/filters:quality(1)/cdn4.vogel.de/infinity/white.jpg" 					        data-srcset="https://cdn1.vogel.de/WySZgRMqBLPXOIPWHbhtflfiFtM=/320x180/smart/filters:format(webp):quality(80)/images.vogel.de/vogelonline/bdb/1317500/1317548/original.jpg 320w, https://cdn1.vogel.de/-L-fl4nRuO7V6cc1DgfKcd89AX4=/640x360/smart/filters:format(webp):quality(80)/images.vogel.de/vogelonline/bdb/1317500/1317548/original.jpg 640w"> 					<source srcset="https://cdn1.vogel.de/-cdF7JPnq6W9eiD27zyLdlKNzAs=/320x180/filters:quality(1)/cdn4.vogel.de/infinity/white.jpg" 					        data-srcset="https://cdn1.vogel.de/Ajq-aeeUeSf1FCQdKleZBUXHaz4=/320x180/smart/filters:format(jpg):quality(80)/images.vogel.de/vogelonline/bdb/1317500/1317548/original.jpg 320w, https://cdn1.vogel.de/LSGsDVCFpLz5R6CmGjXQXsV-2mQ=/640x360/smart/filters:format(jpg):quality(80)/images.vogel.de/vogelonline/bdb/1317500/1317548/original.jpg 640w"> 					<img class="inf-teaser__image lazyload" 					     alt="As a core technology of Industry 4.0, self-learning systems are likely to find their way into factories." 					     title="As a core technology of Industry 4.0, self-learning systems are likely to find their way into factories." 					     data-src="https://cdn1.vogel.de/Ajq-aeeUeSf1FCQdKleZBUXHaz4=/320x180/smart/filters:format(jpg):quality(80)/images.vogel.de/vogelonline/bdb/1317500/1317548/original.jpg" 					     data-sizes="auto" 					     src="https://cdn1.vogel.de/-cdF7JPnq6W9eiD27zyLdlKNzAs=/320x180/filters:quality(1)/cdn4.vogel.de/infinity/white.jpg" 					/> 				</picture> 			</a> 		</figure> 		<header class="inf-teaser__header--flex"> 		 					<p class="inf-subhead inf-subhead--medium">Artificial Intelligence in the Factory</p> 		 		<p class="inf-headline inf-headline--medium--thin inf-no-margin"> 			<a class="inf-headline__link" href="/big-data-in-machine-learning-a-662431/" >Big Data in Machine Learning</a> 		</p> 	</header> </article> <!--xheading--> <h3 class="inf-xheading">Machine Learning and its Most Popular Applications</h3><p class="inf-text--medium-sec">Machine Learning is applied at Netflix and Amazon as well as for Facebook's face recognition. For you as a user, Machine Learning is for example reflected in the possibility of tagging people on uploaded images. In fact, Facebook has the largest face database in the world. The data fed by users into the social network is used by Facebook to optimize and train Machine Learning systems in terms of visual recognition.</p><p class="inf-text--medium-sec">Another application of Machine Learning that is now firmly integrated into everyday life is the automatic detection of spam that is integrated into almost all e-mail programs. Within the scope of spam detection, the data contained in the e-mails is analysed and categorised. The "spam" and "non-spam" patterns are used in this respect. If an e-mail is recognized as junk mail, the program learns to identify spam mails even more efficiently. Other areas of application for Machine Learning include search engine ranking, combating cybercrime and preventing computer attacks.</p><p class="inf-text--medium-sec"><i>Here is an example of how a programmer used machine learning for beating the populat Game Super Mario World:</i></p><div class="inf-html-video"><iframe class="inf-iframe-video-wrapper--video-detail cmplazyload" data-cmp-vendor="s30" data-cmp-src="https://www.youtube.com/embed/qv6UVOQ0F44" src="https://www.youtube.com/embed/qv6UVOQ0F44" frameborder="0" allowfullscreen name="fitvid0"></iframe></div>                 <!--xheading--> <h3 class="inf-xheading">The Commercial Application of Machine Learning</h3><p class="inf-text--medium-sec">With the help of Machine Learning, economic data can be turned into money. Companies that rely on Machine Learning or Machine Learning methods are not only able to increase the satisfaction of their customers, but also to achieve cost reductions at the same time. Through Machine Learning, customer wishes and needs can be evaluated and the following marketing measures can be personalized. This optimizes the customer experience and increases customer loyalty.</p><p class="inf-text--medium-sec">In addition, Machine Learning can help companies to find out whether there is a threat of customer migration in the near future. This is achieved, for example, through the automatic evaluation of support requests. An alternative is to analyse those characteristics that customers who have already migrated in the past have in common. If those existing customers who also have these characteristics are then filtered out on the basis of the characteristics resulting from the analysis, the company receives a list of the customer group at risk of migration. Appropriate measures can then be taken to retain these customers.</p><p class="inf-text--medium-sec">In addition, more and more chat bots are being used in the area of telephone customer service. These are automated programs that communicate with customers. In this way, the chat bots can optimize their cognitive abilities with regard to the interpretation of the tone in different situations. In addition, the chat bots are able to forward the call - for example, if it is a more complex request - to an employee of the call center.</p><article class="inf-teaser inf-teaserbox-var-2 inf-flex" data-infinity-type="partial"          data-infinity-id="content/teaser/v6"> 	 		 	 	 		 		 		 			<figure class="inf-teaser__figure--flex"> 			<a href="/digital-twin-future-of-manufacturing-a-684981/" > 				<picture> 					<source media="(max-width: 654px)" 					        type="image/webp" 					        srcset="https://cdn1.vogel.de/WjpOxv5PviFYWPOSgtFTQGsBMVo=/150x150/filters:quality(1)/cdn4.vogel.de/infinity/white.jpg" 					        data-srcset="https://cdn1.vogel.de/caaOrsCcmvSa__N5ZD0eDrnMiOI=/150x150/smart/filters:format(webp):quality(80)/images.vogel.de/vogelonline/bdb/1352100/1352136/original.jpg 150w, https://cdn1.vogel.de/EhiiuhuHygkBnANC3pGJgdq-OKo=/300x300/smart/filters:format(webp):quality(80)/images.vogel.de/vogelonline/bdb/1352100/1352136/original.jpg 300w"> 					<source media="(max-width: 654px)" 					        srcset="https://cdn1.vogel.de/WjpOxv5PviFYWPOSgtFTQGsBMVo=/150x150/filters:quality(1)/cdn4.vogel.de/infinity/white.jpg" 					        data-srcset="https://cdn1.vogel.de/hlZE-Nudlpf-Z0GyNhrGMLTuZWI=/150x150/smart/filters:format(jpg):quality(80)/images.vogel.de/vogelonline/bdb/1352100/1352136/original.jpg 150w, https://cdn1.vogel.de/A2PRhzizNCslntz89ji2VnIxAGk=/300x300/smart/filters:format(jpg):quality(80)/images.vogel.de/vogelonline/bdb/1352100/1352136/original.jpg 300w"> 					<source type="image/webp" 					        srcset="https://cdn1.vogel.de/-cdF7JPnq6W9eiD27zyLdlKNzAs=/320x180/filters:quality(1)/cdn4.vogel.de/infinity/white.jpg" 					        data-srcset="https://cdn1.vogel.de/RL9gUbe_V5XMGij8xkoe_NhOZKA=/320x180/smart/filters:format(webp):quality(80)/images.vogel.de/vogelonline/bdb/1352100/1352136/original.jpg 320w, https://cdn1.vogel.de/1K28EMjf-7Aj3BXLU1jMNHyqHr4=/640x360/smart/filters:format(webp):quality(80)/images.vogel.de/vogelonline/bdb/1352100/1352136/original.jpg 640w"> 					<source srcset="https://cdn1.vogel.de/-cdF7JPnq6W9eiD27zyLdlKNzAs=/320x180/filters:quality(1)/cdn4.vogel.de/infinity/white.jpg" 					        data-srcset="https://cdn1.vogel.de/fWdvGF5Iv13rtP6aUSi_B5db3t0=/320x180/smart/filters:format(jpg):quality(80)/images.vogel.de/vogelonline/bdb/1352100/1352136/original.jpg 320w, https://cdn1.vogel.de/ahZ7BVWDog9ux7LB6oqFn3156Q8=/640x360/smart/filters:format(jpg):quality(80)/images.vogel.de/vogelonline/bdb/1352100/1352136/original.jpg 640w"> 					<img class="inf-teaser__image lazyload" 					     alt="" 					     title="" 					     data-src="https://cdn1.vogel.de/fWdvGF5Iv13rtP6aUSi_B5db3t0=/320x180/smart/filters:format(jpg):quality(80)/images.vogel.de/vogelonline/bdb/1352100/1352136/original.jpg" 					     data-sizes="auto" 					     src="https://cdn1.vogel.de/-cdF7JPnq6W9eiD27zyLdlKNzAs=/320x180/filters:quality(1)/cdn4.vogel.de/infinity/white.jpg" 					/> 				</picture> 			</a> 		</figure> 		<header class="inf-teaser__header--flex"> 		 					<p class="inf-subhead inf-subhead--medium">Technical concept </p> 		 		<p class="inf-headline inf-headline--medium--thin inf-no-margin"> 			<a class="inf-headline__link" href="/digital-twin-future-of-manufacturing-a-684981/" >Digital Twin – Future of Manufacturing </a> 		</p> 	</header> </article> <p class="inf-text--medium-sec">Furthermore, Machine Learning is a key technology in the development of autonomous systems: In addition to driverless cars, Machine Learning is also used in <a href="https://www.spotlightmetal.com/how-manufacturing-profits-from-human-robot-collaboration-a-833872/" class="inf-text__link" target="_blank" rel="noopener">collaborative robots</a>. Other areas of application for Machine Learning would be:</p><ul class="inf-list"><li class="inf-list__item">Analysis of the stock market</li></ul><ul class="inf-list"><li class="inf-list__item">Credit Card Fraud Detection</li></ul><ul class="inf-list"><li class="inf-list__item">Automated diagnostic procedures</li></ul><ul class="inf-list"><li class="inf-list__item">Acquisition of landmines in acoustic sensor and radar data</li></ul><!--xheading--> <h3 class="inf-xheading">Machine Learning: The Technology Leaders</h3><p class="inf-text--medium-sec">In addition to Microsoft, Google, Facebook, IBM and Amazon, Apple also spends enormous financial resources on the use and further development of Machine Learning. IBM's Watson supercomputer is still the best-known appliance for Machine Learning. Watson is mainly used in the medical and financial sectors. As already mentioned, Facebook uses Machine Learning for image recognition, Microsoft for the speech recognition system Cortana, Apple for Siri. Of course, Machine Learning is also used at Google, both in the area of image services and search engine ranking.</p><p class="inf-text--medium-sec">Cloud providers such as Google, Microsoft, Amazon Webservice and IBM have now created services for Machine Learning. With their help it is also possible for developers who do not have specific Machine Learning knowledge to develop applications. These applications are able to learn from a freely definable set of data. Depending on the provider, these platforms have different names:</p><ul class="inf-list"><li class="inf-list__item">IBM: Watson</li></ul><ul class="inf-list"><li class="inf-list__item">Amazon: Amazon Machine Learning</li></ul><ul class="inf-list"><li class="inf-list__item">Microsoft: Azure ML Studio</li></ul><ul class="inf-list"><li class="inf-list__item">Google: Tensorflow</li></ul><p class="inf-text--medium-sec">In addition to the platforms mentioned above, there is a broad spectrum of high-quality, free open source programs through which Machine Learning has been made accessible to a wider audience, so that you as a developer or data specialist can work with it.</p><p class="inf-text--medium-sec"><i>This article was first published on </i><a href="https://www.maschinenmarkt.international/" class="inf-text__link" target="_blank" rel="noopener">MM International</a>.</p>						<p class="inf-text--small">(ID:45469648)</p>
+	
+</article>				<nav class="inf-toolbar " data-infinity-type="teaser" data-infinity-id="toolbar">
+
+		<a class="inf-icon inf-icon--facebook inf-toolbar__icon"
+		   href="https://www.facebook.com/sharer.php?u=https%3A%2F%2Fwww.spotlightmetal.com%2Fmachine-learning--definition-and-application-examples-a-746226%2F"
+		   target="_blank" rel="noopener" aria-label="facebook">&nbsp;</a>
+
+		<a class="inf-icon inf-icon--whatsapp inf-toolbar__icon"
+		   href="https://api.whatsapp.com/send?text=https%3A%2F%2Fwww.spotlightmetal.com%2Fmachine-learning--definition-and-application-examples-a-746226%2F"
+		   target="_blank" rel="noopener" aria-label="whatsapp"> </a>
+
+		<a class="inf-icon inf-icon--twitter inf-toolbar__icon"
+		   href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fwww.spotlightmetal.com%2Fmachine-learning--definition-and-application-examples-a-746226%2F&text=Machine+Learning+-+Definition+and+application+examples"
+		   target="_blank" rel="noopener" aria-label="twitter">&nbsp;</a>
+
+		<a class="inf-icon inf-toolbar__icon inf-icon--xing-outline"
+		   href="https://www.xing-share.com/app/user?op=share;sc_p=xing-share;url=https%3A%2F%2Fwww.spotlightmetal.com%2Fmachine-learning--definition-and-application-examples-a-746226%2F"
+		   target="_blank" rel="noopener" aria-label="xing">&nbsp;</a>
+
+		<a class="inf-icon inf-toolbar__icon inf-icon--linkedin"
+		   href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fwww.spotlightmetal.com%2Fmachine-learning--definition-and-application-examples-a-746226%2F&title=Machine+Learning+-+Definition+and+application+examples&summary=&source="
+		   target="_blank" rel="noopener" aria-label="linkedin">&nbsp;</a>
+
+		<a class="inf-icon inf-icon--mail inf-toolbar__icon" href="mailto:?subject=SPOTLIGHTMETAL%20-%20Machine%20Learning%20-%20Definition%20and%20application%20examples&body=Machine%20Learning%20-%20Definition%20and%20application%20examples%0AMachine%20Learning%2C%20deep%20learning%2C%20algorithms%20-%20you%20can%20no%20longer%20avoid%20these%20buzzwords%20when%20it%20comes%20to%20Industry%204.0.%20Find%20out%20what%20Machine%20Learning%20really%20is%20and%20how%20it%20is%20applied%20in%20practice.%0A%0A-------------------------------------------------------------------------------------------%0ARead%20the%20full%20content%20here%3A%20https%3A%2F%2Fwww.spotlightmetal.com%2Fmachine-learning--definition-and-application-examples-a-746226%2F%3Fcmp%3Dgo-ta-art-trf-SLM_DSA-20180820%26gclid%3DCj0KCQjwzbv7BRDIARIsAM-A6-1LUa23zEBj1E3bxVox6hllJ2bescH0t6wBMs1h3cLehnmGRMUtrCgaAsleEALw_wcB" rel="noopener" aria-label="mail">&nbsp;</a>
+		
+					<span class="inf-icon inf-icon--print inf-toolbar__icon" onclick="window.print()" rel="noopener"
+			   aria-label="print"> </span>
+				
+					<a href="https://www.spotlightmetal.com/machine-learning--definition-and-application-examples-a-746226/pdf/" class="inf-icon inf-icon--download inf-toolbar__icon" rel="noopener"
+			   aria-label="download"
+			   			> </a>
+		
+	</nav>
+
+	<script>
+		$(document).ready(function ()
+		{
+
+			// Nur mobile Endgeraete
+			if (!(navigator.userAgent.match(/Android|iPhone/i) && !navigator.userAgent.match(/iPod|iPad/i)))
+			{
+				$(".inf-icon--whatsapp").hide();
+			} // end if
+
+		});
+	</script>
+	<div class="inf-flex inf-marginbottom--medium" data-infinity-type="row" data-infinity-id="v1">
+	<section data-section-id="section_5f6f4c2e74c2a1.78582448"		class="inf-section inf-col-6 inf-phone-col-12 inf-section--content-ad"
+		data-infinity-type="section" data-infinity-id="v19">
+		<!-- data-infinity-type="section" data-infinity-id="inner/v1" -->
+	<div id="advertisement_10" class="inf-ad__listing gpt"
+	     data-ad-id="advertisement_10" data-infinity-type="ad" data-infinity-id="v1/advertisement_10">
+
+		<script>
+
+			try
+			{
+
+				googletag.cmd.push(function ()
+				{
+					// Banner anzeigen
+					googletag.display(advertisement_10);
+				});
+
+			}
+			catch (OBJ_err)
+			{
+				// Nix
+				console.warn("Ad Slot Error - display advertisement_10");
+			} // end try
+
+		</script>
+
+	</div>
+	
+</section><section data-section-id="section_5f6f4c2e74c3d8.11945675"		class="inf-section inf-col-6 inf-phone-col-12 inf-section--content-ad"
+		data-infinity-type="section" data-infinity-id="v19">
+		<!-- data-infinity-type="section" data-infinity-id="inner/v1" -->
+	<div id="advertisement_13" class="inf-ad__listing gpt"
+	     data-ad-id="advertisement_13" data-infinity-type="ad" data-infinity-id="v1/advertisement_13">
+
+		<script>
+
+			try
+			{
+
+				googletag.cmd.push(function ()
+				{
+					// Banner anzeigen
+					googletag.display(advertisement_13);
+				});
+
+			}
+			catch (OBJ_err)
+			{
+				// Nix
+				console.warn("Ad Slot Error - display advertisement_13");
+			} // end try
+
+		</script>
+
+	</div>
+	
+</section></div>
+		<section class="inf-section inf-col-12 inf-related-teaser" data-infinity-type="teaser" data-infinity-id="related-content-inline">
+	<p class="inf-section__title">Related content</p>
+	<div class="inf-section__wrapper inf-flex">
+					<article class="inf-teaser inf-teaser--with-overlay" data-infinity-type="partial" data-infinity-id="content/teaser/v4">
+	<a href="/what-classic-industrial-companies-can-learn-from-amazon-and-co-a-839511/" class="inf-block">
+					<figure class="inf-teaser__figure--with-overlay">
+				<picture>
+					<source media="(max-width: 654px)"
+					        type="image/webp"
+					        srcset="https://cdn1.vogel.de/Ww04RNeK3zw6bEjHldauTbjaXhw=/273x152/filters:quality(1)/cdn4.vogel.de/infinity/white.jpg"
+					        data-srcset="https://cdn1.vogel.de/EBfzTbFVGssa-5AllwUHToGXqc0=/273x152/smart/filters:format(webp):quality(80)/images.vogel.de/vogelonline/bdb/1578400/1578410/original.jpg, https://cdn1.vogel.de/kfefjQI54J1kXt2IuE_o9ujT8Sk=/546x304/smart/filters:format(webp):quality(80)/images.vogel.de/vogelonline/bdb/1578400/1578410/original.jpg 2x"
+					        data-src="https://cdn1.vogel.de/EBfzTbFVGssa-5AllwUHToGXqc0=/273x152/smart/filters:format(webp):quality(80)/images.vogel.de/vogelonline/bdb/1578400/1578410/original.jpg">
+					<source media="(max-width: 654px)"
+					        type="image/jpg"
+					        srcset="https://cdn1.vogel.de/Ww04RNeK3zw6bEjHldauTbjaXhw=/273x152/filters:quality(1)/cdn4.vogel.de/infinity/white.jpg"
+					        data-srcset="https://cdn1.vogel.de/un7Xsf1XRo2Amw24-c2JWQ_rUwM=/273x152/smart/filters:format(jpg):quality(80)/images.vogel.de/vogelonline/bdb/1578400/1578410/original.jpg, https://cdn1.vogel.de/EltXqLNpC0Y1H16lEDPqO4cfvi0=/546x304/smart/filters:format(jpg):quality(80)/images.vogel.de/vogelonline/bdb/1578400/1578410/original.jpg 2x"
+					        data-src="https://cdn1.vogel.de/un7Xsf1XRo2Amw24-c2JWQ_rUwM=/273x152/smart/filters:format(jpg):quality(80)/images.vogel.de/vogelonline/bdb/1578400/1578410/original.jpg">
+					<source type="image/webp"
+					        srcset="https://cdn1.vogel.de/sEqGrbJEgzMhoORFrDRgXHk8XVU=/392x392/filters:quality(1)/cdn4.vogel.de/infinity/white.jpg"
+					        data-srcset="https://cdn1.vogel.de/feq9XvgtsKifJoFaQeWknXzhRy0=/392x392/smart/filters:format(webp):quality(80)/images.vogel.de/vogelonline/bdb/1578400/1578410/original.jpg, https://cdn1.vogel.de/sLvVtDaSyf6jFfs7A63KGvZHaK8=/784x784/smart/filters:format(webp):quality(80)/images.vogel.de/vogelonline/bdb/1578400/1578410/original.jpg 2x"
+					        data-src="https://cdn1.vogel.de/feq9XvgtsKifJoFaQeWknXzhRy0=/392x392/smart/filters:format(webp):quality(80)/images.vogel.de/vogelonline/bdb/1578400/1578410/original.jpg">
+					<img class="inf-teaser__image inf-teaser__image--square lazyload"
+                         alt="Platforms such as Amazon focus on customer benefits."
+                         title="Platforms such as Amazon focus on customer benefits."
+					     data-src="https://cdn1.vogel.de/PzXT3v-t-tjms1U_c6Uc6YHc14A=/392x392/smart/filters:format(jpg):quality(80)/images.vogel.de/vogelonline/bdb/1578400/1578410/original.jpg"
+					     src="https://cdn1.vogel.de/sEqGrbJEgzMhoORFrDRgXHk8XVU=/392x392/filters:quality(1)/cdn4.vogel.de/infinity/white.jpg"/>
+				</picture>
+			</figure>
+				<div class="inf-teaser__mask inf-teaser__mask--half"></div>
+		<header class="inf-teaser__header--overlay">
+			
+						
+						
+						
+						
+							<p class="inf-subhead inf-subhead--medium inf-text--white inf-text--shadow">
+					<span class="inf-teaser__span">Focus on Digitalization</span>
+				</p>
+				
+			<p class="inf-headline inf-headline--medium--thin inf-text--white inf-text--shadow inf-no-margin">
+				<span class="inf-teaser__span">What Classic Industrial Companies Can Learn from Amazon and Co</span></p>
+		</header>
+	</a>
+</article>
+
+					<article class="inf-teaser inf-teaser--with-overlay" data-infinity-type="partial" data-infinity-id="content/teaser/v4">
+	<a href="/automation-of-end-of-line-quality-control-a-916467/" class="inf-block">
+					<figure class="inf-teaser__figure--with-overlay">
+				<picture>
+					<source media="(max-width: 654px)"
+					        type="image/webp"
+					        srcset="https://cdn1.vogel.de/Ww04RNeK3zw6bEjHldauTbjaXhw=/273x152/filters:quality(1)/cdn4.vogel.de/infinity/white.jpg"
+					        data-srcset="https://cdn1.vogel.de/a0_eQCulT-L8WmIo4_nDIFEOOyc=/273x152/smart/filters:format(webp):quality(80)/images.vogel.de/vogelonline/bdb/1680000/1680029/original.jpg, https://cdn1.vogel.de/6vjAlV-CTYI-lCcxhReDK2mmOIs=/546x304/smart/filters:format(webp):quality(80)/images.vogel.de/vogelonline/bdb/1680000/1680029/original.jpg 2x"
+					        data-src="https://cdn1.vogel.de/a0_eQCulT-L8WmIo4_nDIFEOOyc=/273x152/smart/filters:format(webp):quality(80)/images.vogel.de/vogelonline/bdb/1680000/1680029/original.jpg">
+					<source media="(max-width: 654px)"
+					        type="image/jpg"
+					        srcset="https://cdn1.vogel.de/Ww04RNeK3zw6bEjHldauTbjaXhw=/273x152/filters:quality(1)/cdn4.vogel.de/infinity/white.jpg"
+					        data-srcset="https://cdn1.vogel.de/guUqgdiR4Ioo2txu5JNkdXSNko8=/273x152/smart/filters:format(jpg):quality(80)/images.vogel.de/vogelonline/bdb/1680000/1680029/original.jpg, https://cdn1.vogel.de/u-lbAbEI9Cf3SCz1tq1027tSKj8=/546x304/smart/filters:format(jpg):quality(80)/images.vogel.de/vogelonline/bdb/1680000/1680029/original.jpg 2x"
+					        data-src="https://cdn1.vogel.de/guUqgdiR4Ioo2txu5JNkdXSNko8=/273x152/smart/filters:format(jpg):quality(80)/images.vogel.de/vogelonline/bdb/1680000/1680029/original.jpg">
+					<source type="image/webp"
+					        srcset="https://cdn1.vogel.de/sEqGrbJEgzMhoORFrDRgXHk8XVU=/392x392/filters:quality(1)/cdn4.vogel.de/infinity/white.jpg"
+					        data-srcset="https://cdn1.vogel.de/FLS1_YZnzhsZVqty53i0D0eDXCA=/392x392/smart/filters:format(webp):quality(80)/images.vogel.de/vogelonline/bdb/1680000/1680029/original.jpg, https://cdn1.vogel.de/qFct3Gskws1M5K89lCAkcF4mYoI=/784x784/smart/filters:format(webp):quality(80)/images.vogel.de/vogelonline/bdb/1680000/1680029/original.jpg 2x"
+					        data-src="https://cdn1.vogel.de/FLS1_YZnzhsZVqty53i0D0eDXCA=/392x392/smart/filters:format(webp):quality(80)/images.vogel.de/vogelonline/bdb/1680000/1680029/original.jpg">
+					<img class="inf-teaser__image inf-teaser__image--square lazyload"
+                         alt="Cracks, impact points, blowholes and defects such as porosity are generally difficult to define."
+                         title="Cracks, impact points, blowholes and defects such as porosity are generally difficult to define."
+					     data-src="https://cdn1.vogel.de/OeOPIx5b5gBYjwtVdbEsF_ZK5Hc=/392x392/smart/filters:format(jpg):quality(80)/images.vogel.de/vogelonline/bdb/1680000/1680029/original.jpg"
+					     src="https://cdn1.vogel.de/sEqGrbJEgzMhoORFrDRgXHk8XVU=/392x392/filters:quality(1)/cdn4.vogel.de/infinity/white.jpg"/>
+				</picture>
+			</figure>
+				<div class="inf-teaser__mask inf-teaser__mask--half"></div>
+		<header class="inf-teaser__header--overlay">
+			
+						
+						
+						
+						
+							<p class="inf-subhead inf-subhead--medium inf-text--white inf-text--shadow">
+					<span class="inf-teaser__span">Interview</span>
+				</p>
+				
+			<p class="inf-headline inf-headline--medium--thin inf-text--white inf-text--shadow inf-no-margin">
+				<span class="inf-teaser__span">Automation of End of Line Quality Control</span></p>
+		</header>
+	</a>
+</article>
+
+			</div>
+</section>	<div class="inf-flex inf-row--articlebillboard" data-infinity-type="row" data-infinity-id="v1">
+	<section data-section-id="section_5f6f4c2e74c7d6.20311761"		class="inf-section inf-full-width inf-tab-ls-col-6 inf-phone-col-12 inf-section--content-ad"
+		data-infinity-type="section" data-infinity-id="v13">
+		<!-- data-infinity-type="section" data-infinity-id="inner/v1" -->
+	<div id="advertisement_05" class="inf-ad__listing gpt"
+	     data-ad-id="advertisement_05" data-infinity-type="ad" data-infinity-id="v1/advertisement_05">
+
+		<script>
+
+			try
+			{
+
+				googletag.cmd.push(function ()
+				{
+					// Banner anzeigen
+					googletag.display(advertisement_05);
+				});
+
+			}
+			catch (OBJ_err)
+			{
+				// Nix
+				console.warn("Ad Slot Error - display advertisement_05");
+			} // end try
+
+		</script>
+
+	</div>
+
+</body>
+
+
+{% endblock body %}

@@ -1,0 +1,1767 @@
+{% extends 'base.html' %}
+
+{% block title %}Robotics
+{% endblock title %}
+
+{% block body %}
+
+
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr"
+    prefix="content: http://purl.org/rss/1.0/modules/content/ dc: http://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/ og: http://ogp.me/ns# rdfs: http://www.w3.org/2000/01/rdf-schema# schema: http://schema.org/ sioc: http://rdfs.org/sioc/ns# sioct: http://rdfs.org/sioc/types# skos: http://www.w3.org/2004/02/skos/core# xsd: http://www.w3.org/2001/XMLSchema# ">
+
+<head>
+    <meta charset="utf-8" />
+    <script
+        type="text/javascript">(window.NREUM || (NREUM = {})).loader_config = { licenseKey: "1490ac5bd8", applicationID: "427532063" }; window.NREUM || (NREUM = {}), __nr_require = function (e, n, t) { function r(t) { if (!n[t]) { var i = n[t] = { exports: {} }; e[t][0].call(i.exports, function (n) { var i = e[t][1][n]; return r(i || n) }, i, i.exports) } return n[t].exports } if ("function" == typeof __nr_require) return __nr_require; for (var i = 0; i < t.length; i++)r(t[i]); return r }({ 1: [function (e, n, t) { function r() { } function i(e, n, t) { return function () { return o(e, [u.now()].concat(c(arguments)), n ? null : this, t), n ? void 0 : this } } var o = e("handle"), a = e(5), c = e(6), f = e("ee").get("tracer"), u = e("loader"), s = NREUM; "undefined" == typeof window.newrelic && (newrelic = s); var d = ["setPageViewName", "setCustomAttribute", "setErrorHandler", "finished", "addToTrace", "inlineHit", "addRelease"], p = "api-", l = p + "ixn-"; a(d, function (e, n) { s[n] = i(p + n, !0, "api") }), s.addPageAction = i(p + "addPageAction", !0), s.setCurrentRouteName = i(p + "routeName", !0), n.exports = newrelic, s.interaction = function () { return (new r).get() }; var m = r.prototype = { createTracer: function (e, n) { var t = {}, r = this, i = "function" == typeof n; return o(l + "tracer", [u.now(), e, t], r), function () { if (f.emit((i ? "" : "no-") + "fn-start", [u.now(), r, i], t), i) try { return n.apply(this, arguments) } catch (e) { throw f.emit("fn-err", [arguments, this, e], t), e } finally { f.emit("fn-end", [u.now()], t) } } } }; a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","), function (e, n) { m[n] = i(l + n) }), newrelic.noticeError = function (e, n) { "string" == typeof e && (e = new Error(e)), o("err", [e, u.now(), !1, n]) } }, {}], 2: [function (e, n, t) { function r(e, n) { var t = e.getEntries(); t.forEach(function (e) { "first-paint" === e.name ? d("timing", ["fp", Math.floor(e.startTime)]) : "first-contentful-paint" === e.name && d("timing", ["fcp", Math.floor(e.startTime)]) }) } function i(e, n) { var t = e.getEntries(); t.length > 0 && d("lcp", [t[t.length - 1]]) } function o(e) { e.getEntries().forEach(function (e) { e.hadRecentInput || d("cls", [e]) }) } function a(e) { if (e instanceof m && !g) { var n = Math.round(e.timeStamp), t = { type: e.type }; n <= p.now() ? t.fid = p.now() - n : n > p.offset && n <= Date.now() ? (n -= p.offset, t.fid = p.now() - n) : n = p.now(), g = !0, d("timing", ["fi", n, t]) } } function c(e) { d("pageHide", [p.now(), e]) } if (!("init" in NREUM && "page_view_timing" in NREUM.init && "enabled" in NREUM.init.page_view_timing && NREUM.init.page_view_timing.enabled === !1)) { var f, u, s, d = e("handle"), p = e("loader"), l = e(4), m = NREUM.o.EV; if ("PerformanceObserver" in window && "function" == typeof window.PerformanceObserver) { f = new PerformanceObserver(r); try { f.observe({ entryTypes: ["paint"] }) } catch (v) { } u = new PerformanceObserver(i); try { u.observe({ entryTypes: ["largest-contentful-paint"] }) } catch (v) { } s = new PerformanceObserver(o); try { s.observe({ type: "layout-shift", buffered: !0 }) } catch (v) { } } if ("addEventListener" in document) { var g = !1, y = ["click", "keydown", "mousedown", "pointerdown", "touchstart"]; y.forEach(function (e) { document.addEventListener(e, a, !1) }) } l(c) } }, {}], 3: [function (e, n, t) { function r(e, n) { if (!i) return !1; if (e !== i) return !1; if (!n) return !0; if (!o) return !1; for (var t = o.split("."), r = n.split("."), a = 0; a < r.length; a++)if (r[a] !== t[a]) return !1; return !0 } var i = null, o = null, a = /Version\/(\S+)\s+Safari/; if (navigator.userAgent) { var c = navigator.userAgent, f = c.match(a); f && c.indexOf("Chrome") === -1 && c.indexOf("Chromium") === -1 && (i = "Safari", o = f[1]) } n.exports = { agent: i, version: o, match: r } }, {}], 4: [function (e, n, t) { function r(e) { function n() { e(a && document[a] ? document[a] : document[i] ? "hidden" : "visible") } "addEventListener" in document && o && document.addEventListener(o, n, !1) } n.exports = r; var i, o, a; "undefined" != typeof document.hidden ? (i = "hidden", o = "visibilitychange", a = "visibilityState") : "undefined" != typeof document.msHidden ? (i = "msHidden", o = "msvisibilitychange") : "undefined" != typeof document.webkitHidden && (i = "webkitHidden", o = "webkitvisibilitychange", a = "webkitVisibilityState") }, {}], 5: [function (e, n, t) { function r(e, n) { var t = [], r = "", o = 0; for (r in e) i.call(e, r) && (t[o] = n(r, e[r]), o += 1); return t } var i = Object.prototype.hasOwnProperty; n.exports = r }, {}], 6: [function (e, n, t) { function r(e, n, t) { n || (n = 0), "undefined" == typeof t && (t = e ? e.length : 0); for (var r = -1, i = t - n || 0, o = Array(i < 0 ? 0 : i); ++r < i;)o[r] = e[n + r]; return o } n.exports = r }, {}], 7: [function (e, n, t) { n.exports = { exists: "undefined" != typeof window.performance && window.performance.timing && "undefined" != typeof window.performance.timing.navigationStart } }, {}], ee: [function (e, n, t) { function r() { } function i(e) { function n(e) { return e && e instanceof r ? e : e ? f(e, c, o) : o() } function t(t, r, i, o) { if (!p.aborted || o) { e && e(t, r, i); for (var a = n(i), c = v(t), f = c.length, u = 0; u < f; u++)c[u].apply(a, r); var d = s[w[t]]; return d && d.push([b, t, r, a]), a } } function l(e, n) { h[e] = v(e).concat(n) } function m(e, n) { var t = h[e]; if (t) for (var r = 0; r < t.length; r++)t[r] === n && t.splice(r, 1) } function v(e) { return h[e] || [] } function g(e) { return d[e] = d[e] || i(t) } function y(e, n) { u(e, function (e, t) { n = n || "feature", w[t] = n, n in s || (s[n] = []) }) } var h = {}, w = {}, b = { on: l, addEventListener: l, removeEventListener: m, emit: t, get: g, listeners: v, context: n, buffer: y, abort: a, aborted: !1 }; return b } function o() { return new r } function a() { (s.api || s.feature) && (p.aborted = !0, s = p.backlog = {}) } var c = "nr@context", f = e("gos"), u = e(5), s = {}, d = {}, p = n.exports = i(); p.backlog = s }, {}], gos: [function (e, n, t) { function r(e, n, t) { if (i.call(e, n)) return e[n]; var r = t(); if (Object.defineProperty && Object.keys) try { return Object.defineProperty(e, n, { value: r, writable: !0, enumerable: !1 }), r } catch (o) { } return e[n] = r, r } var i = Object.prototype.hasOwnProperty; n.exports = r }, {}], handle: [function (e, n, t) { function r(e, n, t, r) { i.buffer([e], r), i.emit(e, n, t) } var i = e("ee").get("handle"); n.exports = r, r.ee = i }, {}], id: [function (e, n, t) { function r(e) { var n = typeof e; return !e || "object" !== n && "function" !== n ? -1 : e === window ? 0 : a(e, o, function () { return i++ }) } var i = 1, o = "nr@id", a = e("gos"); n.exports = r }, {}], loader: [function (e, n, t) { function r() { if (!x++) { var e = E.info = NREUM.info, n = l.getElementsByTagName("script")[0]; if (setTimeout(s.abort, 3e4), !(e && e.licenseKey && e.applicationID && n)) return s.abort(); u(w, function (n, t) { e[n] || (e[n] = t) }); var t = a(); f("mark", ["onload", t + E.offset], null, "api"), f("timing", ["load", t]); var r = l.createElement("script"); r.src = "https://" + e.agent, n.parentNode.insertBefore(r, n) } } function i() { "complete" === l.readyState && o() } function o() { f("mark", ["domContent", a() + E.offset], null, "api") } function a() { return O.exists && performance.now ? Math.round(performance.now()) : (c = Math.max((new Date).getTime(), c)) - E.offset } var c = (new Date).getTime(), f = e("handle"), u = e(5), s = e("ee"), d = e(3), p = window, l = p.document, m = "addEventListener", v = "attachEvent", g = p.XMLHttpRequest, y = g && g.prototype; NREUM.o = { ST: setTimeout, SI: p.setImmediate, CT: clearTimeout, XHR: g, REQ: p.Request, EV: p.Event, PR: p.Promise, MO: p.MutationObserver }; var h = "" + location, w = { beacon: "bam.nr-data.net", errorBeacon: "bam.nr-data.net", agent: "js-agent.newrelic.com/nr-1177.min.js" }, b = g && y && y[m] && !/CriOS/.test(navigator.userAgent), E = n.exports = { offset: c, now: a, origin: h, features: {}, xhrWrappable: b, userAgent: d }; e(1), e(2), l[m] ? (l[m]("DOMContentLoaded", o, !1), p[m]("load", r, !1)) : (l[v]("onreadystatechange", i), p[v]("onload", r)), f("mark", ["firstbyte", c], null, "api"); var x = 0, O = e(7) }, {}], "wrap-function": [function (e, n, t) { function r(e) { return !(e && e instanceof Function && e.apply && !e[a]) } var i = e("ee"), o = e(6), a = "nr@original", c = Object.prototype.hasOwnProperty, f = !1; n.exports = function (e, n) { function t(e, n, t, i) { function nrWrapper() { var r, a, c, f; try { a = this, r = o(arguments), c = "function" == typeof t ? t(r, a) : t || {} } catch (u) { p([u, "", [r, a, i], c]) } s(n + "start", [r, a, i], c); try { return f = e.apply(a, r) } catch (d) { throw s(n + "err", [r, a, d], c), d } finally { s(n + "end", [r, a, f], c) } } return r(e) ? e : (n || (n = ""), nrWrapper[a] = e, d(e, nrWrapper), nrWrapper) } function u(e, n, i, o) { i || (i = ""); var a, c, f, u = "-" === i.charAt(0); for (f = 0; f < n.length; f++)c = n[f], a = e[c], r(a) || (e[c] = t(a, u ? c + i : i, o, c)) } function s(t, r, i) { if (!f || n) { var o = f; f = !0; try { e.emit(t, r, i, n) } catch (a) { p([a, t, r, i]) } f = o } } function d(e, n) { if (Object.defineProperty && Object.keys) try { var t = Object.keys(e); return t.forEach(function (t) { Object.defineProperty(n, t, { get: function () { return e[t] }, set: function (n) { return e[t] = n, n } }) }), n } catch (r) { p([r]) } for (var i in e) c.call(e, i) && (n[i] = e[i]); return n } function p(n) { try { e.emit("internal-error", n) } catch (t) { } } return e || (e = i), t.inPlace = u, t.flag = a, t } }, {}] }, {}, ["loader"]);</script>
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&amp;l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-M7NGJ28');</script>
+    <script>(function (i, s, o, g, r, a, m) { i["GoogleAnalyticsObject"] = r; i[r] = i[r] || function () { (i[r].q = i[r].q || []).push(arguments) }, i[r].l = 1 * new Date(); a = s.createElement(o), m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m) })(window, document, "script", "https://www.google-analytics.com/analytics.js", "ga"); ga("create", "UA-36850930-1", { "cookieDomain": "auto" }); ga("set", "anonymizeIp", true); ga('require', 'GTM-WN85SW2'); ga("send", "pageview");</script>
+    <meta name="title" content="What Is Robotics? Types Of Robots | Built In" />
+    <link rel="canonical" href="https://builtin.com/robotics" />
+    <meta name="description"
+        content="Robotics is an interdisciplinary sector of science and engineering dedicated to the design, construction and use of mechanical robots. Our guide will give you a concrete grasp of robotics, including different types of robots and how they&#039;re being applied across industries." />
+    <meta name="keywords" content="Robotics" />
+    <meta name="Generator" content="Drupal 8 (https://www.drupal.org)" />
+    <meta name="MobileOptimized" content="width" />
+    <meta name="HandheldFriendly" content="true" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="/themes/builtin/favicon.png" type="image/png" />
+    <link rel="delete-form" href="/taxonomy/term/10/delete" />
+    <link rel="edit-form" href="/taxonomy/term/10/edit" />
+    <title>What Is Robotics? Types Of Robots | Built In</title>
+    <meta name="theme-color" content="#04003F" />
+    <meta name="facebook-domain-verification" content="nelofa6ume3bt1c6bh28gptjmbtwmi" />
+    <link rel="stylesheet" href="/sites/default/files/css/css_ix5MM0IUZMIqfElSqhJnI3Nu-RkHpAfwoYzqwCWJUow.css?qh28fi"
+        media="all" />
+    <link rel="stylesheet" href="/sites/default/files/css/css_9dzv0DX0wIxMxfRvM3kKM-VaQLhDi53SGswpOsTukPE.css?qh28fi"
+        media="all" />
+    <!--[if lte IE 8]><script src="/sites/default/files/js/js_VtafjXmRvoUgAzqzYTA3Wrjkx9wcWhjP0G4ZnnqRamA.js"></script><![endif]-->
+    <script src="/sites/default/files/js/js_B7pS3ddmNLFYOJi3j28odiodelMu-EhaOeKlHZ8E6y0.js"></script>
+    <script src="//script.crazyegg.com/pages/scripts/0011/8062.js" async></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preload" as="style"
+        href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Barlow+Condensed:wght@400;500;600;700&family=Montserrat:wght@300;400;600;700;800&family=Lora:ital,wght@0,400;0,700;1,400;1,700&display=swap" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Barlow+Condensed:wght@400;500;600;700&family=Montserrat:wght@300;400;600;700;800&family=Lora:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        media="print" onload="this.media='all'" />
+</head>
+
+<body class="path-taxonomy"> <a href="#main-content" class="visually-hidden focusable skip-link"> Skip to main content
+    </a> <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M7NGJ28" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
+    <div class="off-canvas-wrapper dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
+        <div class="layout-container">
+            <header role="banner">
+
+                <head>
+                    <link href="https://frontend.builtin.com/b8c7b22af2304a52a286e300631baae7e0182797/app.83d4bcd.css"
+                        rel="stylesheet" crossorigin="anonymous">
+                </head>
+                <link rel="preload" crossorigin="anonymous"
+                    href="https://frontend.builtin.com/b8c7b22af2304a52a286e300631baae7e0182797/runtime.7b892c0.js"
+                    as="script">
+                <link rel="preload" crossorigin="anonymous"
+                    href="https://frontend.builtin.com/b8c7b22af2304a52a286e300631baae7e0182797/app.83d4bcd.css"
+                    as="style">
+                <link rel="preload" crossorigin="anonymous"
+                    href="https://frontend.builtin.com/b8c7b22af2304a52a286e300631baae7e0182797/app.4a6be39.js"
+                    as="script">
+                <div id="__nuxt">
+                    <style>
+                        #nuxt-loading {
+                            background: #fff;
+                            visibility: hidden;
+                            opacity: 0;
+                            position: absolute;
+                            left: 0;
+                            right: 0;
+                            top: 0;
+                            bottom: 0;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            flex-direction: column;
+                            animation: nuxtLoadingIn 10s ease;
+                            -webkit-animation: nuxtLoadingIn 10s ease;
+                            animation-fill-mode: forwards;
+                            overflow: hidden
+                        }
+
+                        @keyframes nuxtLoadingIn {
+                            0% {
+                                visibility: hidden;
+                                opacity: 0
+                            }
+
+                            20% {
+                                visibility: visible;
+                                opacity: 0
+                            }
+
+                            100% {
+                                visibility: visible;
+                                opacity: 1
+                            }
+                        }
+
+                        @-webkit-keyframes nuxtLoadingIn {
+                            0% {
+                                visibility: hidden;
+                                opacity: 0
+                            }
+
+                            20% {
+                                visibility: visible;
+                                opacity: 0
+                            }
+
+                            100% {
+                                visibility: visible;
+                                opacity: 1
+                            }
+                        }
+
+                        #nuxt-loading>div,
+                        #nuxt-loading>div:after {
+                            border-radius: 50%;
+                            width: 5rem;
+                            height: 5rem
+                        }
+
+                        #nuxt-loading>div {
+                            font-size: 10px;
+                            position: relative;
+                            text-indent: -9999em;
+                            border: .5rem solid #f5f5f5;
+                            border-left: .5rem solid #4fe2c1;
+                            -webkit-transform: translateZ(0);
+                            -ms-transform: translateZ(0);
+                            transform: translateZ(0);
+                            -webkit-animation: nuxtLoading 1.1s infinite linear;
+                            animation: nuxtLoading 1.1s infinite linear
+                        }
+
+                        #nuxt-loading.error>div {
+                            border-left: .5rem solid #ff4500;
+                            animation-duration: 5s
+                        }
+
+                        @-webkit-keyframes nuxtLoading {
+                            0% {
+                                -webkit-transform: rotate(0);
+                                transform: rotate(0)
+                            }
+
+                            100% {
+                                -webkit-transform: rotate(360deg);
+                                transform: rotate(360deg)
+                            }
+                        }
+
+                        @keyframes nuxtLoading {
+                            0% {
+                                -webkit-transform: rotate(0);
+                                transform: rotate(0)
+                            }
+
+                            100% {
+                                -webkit-transform: rotate(360deg);
+                                transform: rotate(360deg)
+                            }
+                        }
+                    </style>
+                    <script>window.addEventListener("error", function () { var e = document.getElementById("nuxt-loading"); e && (e.className += " error") })</script>
+                    <div id="nuxt-loading" aria-live="polite" role="status">
+                        <div>Loading...</div>
+                    </div>
+                </div>
+                <script>window.__NUXT__ = { config: {}, staticAssetsBase: void 0 }</script>
+                <script src="https://frontend.builtin.com/b8c7b22af2304a52a286e300631baae7e0182797/runtime.7b892c0.js"
+                    crossorigin="anonymous"></script>
+                <script src="https://frontend.builtin.com/b8c7b22af2304a52a286e300631baae7e0182797/app.4a6be39.js"
+                    crossorigin="anonymous"></script>
+            </header>
+            <div class="region region-highlighted"></div>
+            <main role="main"> <a id="main-content" tabindex="-1"></a>
+                <div class="layout-content">
+                    <div class="region region-content">
+                        <div id="block-builtin-content" class="block block-system-main-block">
+                            <div class="block-content">
+                                <div class="layout layout--three-columns">
+                                    <div class="container">
+                                        <div class="layout__region layout__region--top">
+                                            <div class="container">
+                                                <div class="block-region-top">
+                                                    <div class="block block-views-blocktopic-description-block-4">
+                                                        <div class="block-content">
+                                                            <div class="g g-illustration robotics"></div>
+                                                            <h1 class="title">Robotics<span>.<span></h1>
+                                                            <h2>What Is Robotics? Types Of Robots</h2>
+                                                            <div class="view-footer">
+                                                                <div class="g g1"></div>
+                                                                <div class="g g2"></div>
+                                                                <div class="g g3"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="layout__region layout__region--main">
+                                            <div class="block-region-main">
+                                                <div class="block block-views-blocktopic-blog-posts-block-1">
+                                                    <div class="block-content">
+                                                        <div
+                                                            class="view view-topic-blog-posts view-id-topic_blog_posts view-display-id-block_1 js-view-dom-id-892b14a72905af5e82036e670187a225b88e5a24c1c82d1585908edbbef5d80f">
+                                                            <div class="featured views-row">
+                                                                <article role="article"
+                                                                    about="/robotics/robotics-companies-roundup"
+                                                                    class="blog_post featured is-spotlight">
+                                                                    <h2> <a href="/robotics/robotics-companies-roundup"
+                                                                            rel="bookmark"><span>26 Robotics Companies
+                                                                                on the Forefront of
+                                                                                Innovation</span></a></h2>
+                                                                    <div
+                                                                        class="field--name-body field--type-text-with-summary field__item">
+                                                                        At robotics companies across America, the
+                                                                        co-mingling of engineering and science is
+                                                                        producing some truly innovative products.</div>
+                                                                    <div
+                                                                        class="field--name-field-bg-image field--type-image field__item">
+                                                                        <img src="/sites/default/files/styles/medium/public/2018-10/robotics-companies-roundup.jpg"
+                                                                            width="490" height="310"
+                                                                            alt="robotics companies "
+                                                                            typeof="foaf:Image" /></div> <span
+                                                                        class="read-article">Read Article</span>
+                                                                </article>
+                                                            </div>
+                                                            <div class="views-row">
+                                                                <article role="article"
+                                                                    about="/robotics/why-are-robots-cute"
+                                                                    class="blog_post teaser is-spotlight">
+                                                                    <div>
+                                                                        <div
+                                                                            class="field--name-field-bg-image field--type-image field__item">
+                                                                            <img src="/sites/default/files/styles/thumbnail/public/2020-01/cute%20robots.jpg"
+                                                                                width="380" height="210"
+                                                                                alt="robots cute ux design"
+                                                                                typeof="foaf:Image" /></div>
+                                                                    </div>
+                                                                    <h2> <a href="/robotics/why-are-robots-cute"
+                                                                            rel="bookmark"><span>Why Are Robots Designed
+                                                                                to Be Cute?</span></a></h2>
+                                                                </article>
+                                                            </div>
+                                                            <div class="view-footer">
+                                                                <div class="see-more">See More Stories</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="block block-views-blocktopic-description-block-1">
+                                                    <div class="block-content">
+                                                        <div
+                                                            class="view view-topic-description view-id-topic_description view-display-id-block_1 js-view-dom-id-7e1797e49a297ea1caa96da4ab29724e3672a83b291825b3a0cf56fd5dad18fa">
+                                                            <div class="view-content">
+                                                                <div class="title">Robotics Technology</div>
+                                                                <div class="description">
+                                                                    <p>Robotics is an interdisciplinary sector of
+                                                                        science and engineering dedicated to the design,
+                                                                        construction and use of mechanical robots. Our
+                                                                        guide will give you a concrete grasp of
+                                                                        robotics, including different types of robots
+                                                                        and how they're being applied across industries.
+                                                                    </p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="block block-views-blocktopic-description-block-3">
+                                                    <div class="block-content">
+                                                        <div
+                                                            class="view view-topic-description view-id-topic_description view-display-id-block_3 js-view-dom-id-3397142388921bfef580f706c5c208e30719bb5c80573cfb8b90d776a15c1c95">
+                                                            <div class="view-content">
+                                                                <div class="title">Overview</div>
+                                                                <div class="title">Types</div>
+                                                                <div class="title">Uses</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="block block-views-blocktopic-description-block-2">
+                                                    <div class="block-content">
+                                                        <div
+                                                            class="view view-topic-description view-id-topic_description view-display-id-block_2 js-view-dom-id-eca3f5e55dd1cda82a1fbc0d196d7283d88791f5de0aee8061e6833284d59c1c">
+                                                            <div class="view-content">
+                                                                <div
+                                                                    class="paragraph paragraph--type--section paragraph--view-mode--default">
+                                                                    <div
+                                                                        class="field--name-field-p-title field--type-string field__item">
+                                                                        Overview</div>
+                                                                    <div
+                                                                        class="field--name-field-p-body field--type-text-long field__item">
+                                                                        <figure><img alt="robotics pillar page overview"
+                                                                                data-entity-type="file"
+                                                                                data-entity-uuid="45c77e54-a4f2-4f1e-936d-34c36e634a7c"
+                                                                                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                                                                                data-src="https://builtin.com/sites/default/files/styles/ckeditor_optimize/public/inline-images/robotics-pillar-page-overview.jpg"
+                                                                                class="b-lazy" />
+                                                                            <figcaption>Robotics is an interdisciplinary
+                                                                                sector focused on creating machines that
+                                                                                efficiently carry out various tasks.
+                                                                            </figcaption>
+                                                                        </figure>
+                                                                        <h2 dir="ltr"> </h2>
+                                                                        <h2 dir="ltr"><strong>What Is Robotics?</strong>
+                                                                        </h2>
+                                                                        <hr />
+                                                                        <p dir="ltr">Robotics is the intersection of
+                                                                            science, engineering and technology that
+                                                                            produces machines, called robots, that
+                                                                            substitute for (or replicate) human actions.
+                                                                            Pop culture has always been fascinated with
+                                                                            robots. R2-D2. Optimus Prime. WALL-E. These
+                                                                            over-exaggerated, humanoid concepts of
+                                                                            robots usually seem like a caricature of the
+                                                                            real thing...or are they more forward
+                                                                            thinking than we realize? Robots are gaining
+                                                                            intellectual and mechanical capabilities
+                                                                            that don’t put the possibility of a
+                                                                            R2-D2-like machine out of reach in the
+                                                                            future.</p>
+                                                                        <p dir="ltr">As technology progresses, so too
+                                                                            does the scope of what is considered
+                                                                            robotics. In 2005, <a
+                                                                                href="https://builtin.com/robotics/automotive-cars-manufacturing-assembly">90%
+                                                                                of all robots could be found assembling
+                                                                                cars</a> in automotive factories. These
+                                                                            robots consist mainly of mechanical arms
+                                                                            tasked with welding or screwing on certain
+                                                                            parts of a car. Today, we’re seeing an
+                                                                            evolved and expanded definition of robotics
+                                                                            that includes the development, creation and
+                                                                            use of <a
+                                                                                href="https://builtin.com/robotics/underwater-robots-explore-antarctic-ice-shelf">bots
+                                                                                that explore Earth’s harshest
+                                                                                conditions</a>, <a
+                                                                                href="https://builtin.com/robotics/police-robot-law-enforcement">robots
+                                                                                that assist law-enforcement</a> and even
+                                                                            <a
+                                                                                href="https://builtin.com/robotics/surgical-medical-healthcare-robotics-companies">robots
+                                                                                that assist in almost every facet of
+                                                                                healthcare</a>. </p>
+                                                                        <p dir="ltr">While the overall world of robotics
+                                                                            is expanding, a robot has some consistent
+                                                                            characteristics:</p>
+                                                                        <ol dir="ltr">
+                                                                            <li>Robots all consist of some sort of
+                                                                                mechanical construction. The mechanical
+                                                                                aspect of a robot helps it complete
+                                                                                tasks in the environment for which it’s
+                                                                                designed. For example, the <a
+                                                                                    href="https://mars.nasa.gov/mars2020/mission/rover/wheels/">Mars
+                                                                                    2020 Rover’s wheels</a> are
+                                                                                individually motorized and made of
+                                                                                titanium tubing that help it firmly grip
+                                                                                the harsh terrain of the red planet.
+                                                                            </li>
+                                                                            <li>Robots need electrical components that
+                                                                                control and power the machinery.
+                                                                                Essentially, an electric current (a
+                                                                                battery, for example) is needed to power
+                                                                                a large majority of robots.</li>
+                                                                            <li>Robots contain at least some level of
+                                                                                computer programming. Without a set of
+                                                                                code telling it what to do, a robot
+                                                                                would just be another piece of simple
+                                                                                machinery. Inserting a program into a
+                                                                                robot gives it the ability to know when
+                                                                                and how to carry out a task.</li>
+                                                                        </ol>
+                                                                        <p dir="ltr">The robotics industry is still
+                                                                            relatively young, but has already made
+                                                                            amazing strides. From the deepest depths of
+                                                                            our oceans to the highest heights of outer
+                                                                            space, robots can be found performing tasks
+                                                                            that humans couldn’t dream of achieving.</p>
+                                                                        <hr />
+                                                                        <ul dir="ltr">
+                                                                            <li><a
+                                                                                    href="https://builtin.com/robotics/robotics-companies-roundup">26
+                                                                                    Robotics Companies Changing The Way
+                                                                                    We Live And Work</a></li>
+                                                                            <li><a
+                                                                                    href="https://builtin.com/artificial-intelligence/robotics-ai-companies">How
+                                                                                    12 Companies Are Using Artificial
+                                                                                    Intelligence To Make Smarter
+                                                                                    Robots</a></li>
+                                                                        </ul>
+                                                                        <hr />
+                                                                        <h3>Check Out the Top Companies in the Nation's
+                                                                            Hottest Robotics Hubs</h3>
+                                                                        <p> </p>
+                                                                        <p><a
+                                                                                href="https://www.builtinaustin.com/companies/type/robotics-companies-austin"><img
+                                                                                    alt="austin"
+                                                                                    src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                                                                                    data-src="https://i.imgur.com/L1uLbS9.png"
+                                                                                    class="b-lazy" /></a></p>
+                                                                        <p><a
+                                                                                href="https://www.builtinboston.com/companies/type/robotics-companies-boston"><img
+                                                                                    alt="boston"
+                                                                                    src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                                                                                    data-src="https://i.imgur.com/OHsVR57.png"
+                                                                                    class="b-lazy" /></a></p>
+                                                                        <p><a
+                                                                                href="https://www.builtinchicago.org/companies/type/robotics-companies-chicago"><img
+                                                                                    alt="chicago"
+                                                                                    src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                                                                                    data-src="https://i.imgur.com/pub2jXz.png"
+                                                                                    class="b-lazy" /></a></p>
+                                                                        <p><a
+                                                                                href="https://www.builtincolorado.com/companies/type/robotics-companies-colorado"><img
+                                                                                    alt="colorado"
+                                                                                    src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                                                                                    data-src="https://i.imgur.com/B2R4YW8.png"
+                                                                                    class="b-lazy" /></a></p>
+                                                                        <p><a
+                                                                                href="https://www.builtinla.com/companies/type/robotics-companies-los%20angeles"><img
+                                                                                    alt="los-angeles"
+                                                                                    src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                                                                                    data-src="https://i.imgur.com/N9aa0Q2.png"
+                                                                                    class="b-lazy" /></a></p>
+                                                                        <div class="row">
+                                                                            <div class="column"><a
+                                                                                    href="https://www.builtinnyc.com/companies/type/robotics-companies-nyc"><img
+                                                                                        alt="nyc"
+                                                                                        src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                                                                                        data-src="https://i.imgur.com/HeBADFO.png"
+                                                                                        class="b-lazy" /></a></div>
+                                                                            <div class="column"> </div>
+                                                                            <p><a
+                                                                                    href="https://www.builtinseattle.com/companies/type/robotics-companies-seattle"><img
+                                                                                        alt="seattle"
+                                                                                        src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                                                                                        data-src="https://i.imgur.com/10TYPUI.png"
+                                                                                        class="b-lazy" /></a></p>
+                                                                            <div class="column"> </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div
+                                                                    class="paragraph paragraph--type--section paragraph--view-mode--default">
+                                                                    <div
+                                                                        class="field--name-field-p-title field--type-string field__item">
+                                                                        Types</div>
+                                                                    <div
+                                                                        class="field--name-field-p-body field--type-text-long field__item">
+                                                                        <h2 dir="ltr"> </h2>
+                                                                        <div
+                                                                            class="video-embed-field-provider-youtube video-embed-field-responsive-video">
+                                                                            <iframe width="854" height="480"
+                                                                                frameborder="0"
+                                                                                allowfullscreen="allowfullscreen"
+                                                                                src="https://www.youtube.com/embed/E8Ox6H64yu8?autoplay=0&amp;start=0&amp;rel=0"></iframe>
+                                                                        </div>
+                                                                        <p dir="ltr"> </p>
+                                                                        <h2><strong>Types of Robots</strong></h2>
+                                                                        <hr />
+                                                                        <p dir="ltr">Mechanical bots come in all shapes
+                                                                            and sizes to efficiently carry out the task
+                                                                            for which they are designed. From the 0.2
+                                                                            millimeter-long “RoboBee” to the 200
+                                                                            meter-long robotic shipping vessel
+                                                                            “Vindskip,” robots are emerging to carry out
+                                                                            tasks that humans simply can’t. Generally,
+                                                                            there are five types of robots:</p>
+                                                                        <h3 dir="ltr"><br /><strong>Pre-Programmed
+                                                                                Robots</strong></h3>
+                                                                        <p dir="ltr">Pre-programmed robots operate in a
+                                                                            controlled environment where they do simple,
+                                                                            monotonous tasks. An example of a
+                                                                            pre-programmed robot would be a mechanical
+                                                                            arm on an automotive assembly line. The arm
+                                                                            serves one function — to weld a door on, to
+                                                                            insert a certain part into the engine, etc.
+                                                                            — and it's job is to perform that task
+                                                                            longer, faster and more efficiently than a
+                                                                            human.</p>
+                                                                        <h3 dir="ltr"><br /><strong>Humanoid
+                                                                                Robots</strong></h3>
+                                                                        <p dir="ltr">Humanoid robots are robots that
+                                                                            look like and/or mimic human behavior. These
+                                                                            robots usually perform human-like activities
+                                                                            (like running, jumping and carrying
+                                                                            objects), and are sometimes designed to look
+                                                                            like us, even having human faces and
+                                                                            expressions. Two of the most prominent
+                                                                            examples of humanoid robots are <a
+                                                                                href="https://www.hansonrobotics.com/sophia/">Hanson
+                                                                                Robotics’ Sophia</a> (in the video
+                                                                            above) and Boston Dynamics’ <a
+                                                                                href="https://www.bostondynamics.com/atlas">Atlas</a>.
+                                                                        </p>
+                                                                        <drupal-builtin-jobs
+                                                                            data-embed-builtin-jobs="entity-ebmed-jobs"
+                                                                            data-embed-builtin-jobs-category="0">
+                                                                        </drupal-builtin-jobs>
+                                                                        <h3 dir="ltr"><br /><strong>Autonomous
+                                                                                Robots</strong></h3>
+                                                                        <p dir="ltr">Autonomous robots operate
+                                                                            independently of human operators. These
+                                                                            robots are usually designed to carry out
+                                                                            tasks in open environments that do not
+                                                                            require human supervision. An example of an
+                                                                            autonomous robot would be the Roomba vacuum
+                                                                            cleaner, which uses sensors to roam
+                                                                            throughout a home freely. </p>
+                                                                        <h3 dir="ltr"><br /><strong>Teleoperated
+                                                                                Robots</strong></h3>
+                                                                        <p dir="ltr">Teleoperated robots are mechanical
+                                                                            bots controlled by humans. These robots
+                                                                            usually work in extreme geographical
+                                                                            conditions, weather, circumstances, etc.
+                                                                            Examples of teleoperated robots are the
+                                                                            human-controlled submarines used to fix
+                                                                            underwater pipe leaks during the BP oil
+                                                                            spill or <a
+                                                                                href="https://builtin.com/robotics/landmine-detecting-drones-could-help-save-lives">drones
+                                                                                used to detect landmines</a> on a
+                                                                            battlefield.</p>
+                                                                        <hr />
+                                                                        <ul dir="ltr">
+                                                                            <li><a
+                                                                                    href="https://builtin.com/robotics/vr-robots">From
+                                                                                    Diffusing Bombs to Performing
+                                                                                    Surgery, VR Robots Have Some Amazing
+                                                                                    Uses</a></li>
+                                                                        </ul>
+                                                                        <hr />
+                                                                        <h3><br /><strong>Augmenting Robots</strong>
+                                                                        </h3>
+                                                                        <p dir="ltr">Augmenting robots either enhance
+                                                                            current human capabilities or replace the
+                                                                            capabilities a human may have lost. Some
+                                                                            examples of augmenting robots are robotic
+                                                                            prosthetic limbs or exoskeletons used to
+                                                                            lift hefty weights.</p>
+                                                                        <div class="snippet-box snippet-box-unordered">
+                                                                            <h2 class="title">Applications of Robotics
+                                                                            </h2>
+                                                                            <div class="description">
+                                                                                <ul>
+                                                                                    <li>Helping fight forest fires</li>
+                                                                                    <li>Working alongside humans in
+                                                                                        manufacturing plants (known as
+                                                                                        co-bots)</li>
+                                                                                    <li>Robots that offer companionship
+                                                                                        to elderly individuals</li>
+                                                                                    <li>Surgical assistants</li>
+                                                                                    <li>Last-mile package and food order
+                                                                                        delivery</li>
+                                                                                    <li>Autonomous household robots that
+                                                                                        carry out tasks like vacuuming
+                                                                                        and mowing the grass</li>
+                                                                                    <li>Assisting with finding items and
+                                                                                        carrying them throughout
+                                                                                        warehouses</li>
+                                                                                    <li>Used during search-and-rescue
+                                                                                        missions after natural disasters
+                                                                                    </li>
+                                                                                    <li>Landmine detectors in war zones
+                                                                                    </li>
+                                                                                </ul>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div
+                                                                    class="paragraph paragraph--type--section paragraph--view-mode--default">
+                                                                    <div
+                                                                        class="field--name-field-p-title field--type-string field__item">
+                                                                        Uses</div>
+                                                                    <div
+                                                                        class="field--name-field-p-body field--type-text-long field__item">
+                                                                        <figure><img alt="robotics pillar page uses"
+                                                                                data-entity-type="file"
+                                                                                data-entity-uuid="90383d09-1482-4baa-8f6c-226906c68c95"
+                                                                                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                                                                                data-src="https://builtin.com/sites/default/files/styles/ckeditor_optimize/public/inline-images/robotics-pillar-page-uses.jpg"
+                                                                                class="b-lazy" />
+                                                                            <figcaption>Robotics is quickly infiltrating
+                                                                                every aspect our lives, including at
+                                                                                home.</figcaption>
+                                                                        </figure>
+                                                                        <h2>Uses of Robots</h2>
+                                                                        <hr />
+                                                                        <h3 dir="ltr"><strong>Manufacturing</strong>
+                                                                        </h3>
+                                                                        <p dir="ltr">The manufacturing industry is
+                                                                            probably the oldest and most well-known user
+                                                                            of robots. These robots and co-bots (bots
+                                                                            that work alongside humans) work to
+                                                                            efficiently test and assemble products, like
+                                                                            cars and industrial equipment. It’s
+                                                                            estimated that there are more than three
+                                                                            million industrial robots in use right now.
+                                                                        </p>
+                                                                        <hr />
+                                                                        <ul dir="ltr">
+                                                                            <li><a
+                                                                                    href="https://builtin.com/robotics/automotive-cars-manufacturing-assembly">Six
+                                                                                    Companies Shaping The Future Of
+                                                                                    Automotive Robotics</a></li>
+                                                                        </ul>
+                                                                        <hr />
+                                                                        <h3 dir="ltr"><br /><strong>Logistics</strong>
+                                                                        </h3>
+                                                                        <p dir="ltr">Shipping, handling and quality
+                                                                            control robots are becoming a must-have for
+                                                                            most retailers and logistics companies.
+                                                                            Because we now expect our packages arriving
+                                                                            at blazing speeds, logistics companies
+                                                                            employ robots in warehouses, and even on the
+                                                                            road, to help maximize time efficiency.
+                                                                            Right now, there are robots taking your
+                                                                            items off the shelves, transporting them
+                                                                            across the warehouse floor and packaging
+                                                                            them. Additionally, a rise in last-mile
+                                                                            robots (robots that will autonomously
+                                                                            deliver your package to your door) ensure
+                                                                            that you’ll have a face-to-metal-face
+                                                                            encounter with a logistics bot in the near
+                                                                            future.<br /> </p>
+                                                                        <h3 dir="ltr"><strong>Home</strong></h3>
+                                                                        <p dir="ltr">It’s not science fiction anymore.
+                                                                            Robots can be seen all over our homes,
+                                                                            helping with chores, reminding us of our
+                                                                            schedules and even entertaining our kids.
+                                                                            The most well-known example of home robots
+                                                                            is the autonomous vacuum cleaner <a
+                                                                                href="https://www.irobot.com/roomba">Roomba</a>.
+                                                                            Additionally, robots have now evolved to do
+                                                                            everything from autonomously mowing grass to
+                                                                            cleaning pools. </p>
+                                                                        <h3><br /><strong>Travel</strong></h3>
+                                                                        <p dir="ltr">Is there anything more science
+                                                                            fiction-like than autonomous vehicles? These
+                                                                            self-driving cars are no longer just
+                                                                            imagination. A combination of data science
+                                                                            and robotics, self-driving vehicles are
+                                                                            taking the world by storm. Automakers, like
+                                                                            Tesla, Ford, Waymo, Volkswagen and BMW are
+                                                                            all working on the next wave of travel that
+                                                                            will let us sit back, relax and enjoy the
+                                                                            ride. Rideshare companies Uber and Lyft are
+                                                                            also developing autonomous rideshare
+                                                                            vehicles that don’t require humans to
+                                                                            operate the vehicle. </p>
+                                                                        <h3 dir="ltr"><br /><strong>Healthcare</strong>
+                                                                        </h3>
+                                                                        <p>Robots have <a
+                                                                                href="https://builtin.com/robotics/surgical-medical-healthcare-robotics-companies">made
+                                                                                enormous strides</a> in the healthcare
+                                                                            industry. These mechanical marvels have use
+                                                                            in just about every aspect of healthcare,
+                                                                            from robot-assisted surgeries to bots that
+                                                                            help humans recover from injury in physical
+                                                                            therapy. Examples of robots at work in
+                                                                            healthcare are Toyota’s healthcare
+                                                                            assistants, which help people regain the
+                                                                            ability to walk, and “TUG,” a robot <a
+                                                                                href="https://aethon.com/mobile-robots-for-healthcare/">designed
+                                                                                to autonomously stroll throughout a
+                                                                                hospital</a> and deliver everything from
+                                                                            medicines to clean linens.</p>
+                                                                        <hr />
+                                                                        <ul>
+                                                                            <li><a
+                                                                                    href="https://builtin.com/robotics/surgical-medical-healthcare-robotics-companies">Healthcare
+                                                                                    Helpers: 10 Examples Of Robotics In
+                                                                                    Healthcare</a></li>
+                                                                        </ul>
+                                                                        <hr />
+                                                                        <p> </p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="block block-views-blocktopic-blog-posts-block-3">
+                                                    <div class="block-content">
+                                                        <div
+                                                            class="view view-topic-blog-posts view-id-topic_blog_posts view-display-id-block_3 js-view-dom-id-378f88cce7e16c5319db53b846f2f6ea39d63da91e6c5f0196d4a63ba6251f55">
+                                                            <div class="view-header">
+                                                                <div class="block-title">More Stories</div>
+                                                                <div class="back-top">Back to Top</div>
+                                                            </div>
+                                                            <div class="view-content">
+                                                                <div class="views-row">
+                                                                    <article role="article"
+                                                                        about="/machine-learning/companion-dog-training"
+                                                                        class="blog_post featured is-spotlight">
+                                                                        <h2> <a href="/machine-learning/companion-dog-training"
+                                                                                rel="bookmark"><span>How Companion Uses
+                                                                                    TensorFlow to Build a Robotic Pet
+                                                                                    Trainer</span></a></h2>
+                                                                        <div
+                                                                            class="field--name-body field--type-text-with-summary field__item">
+                                                                            Computer vision (and treats) can help
+                                                                            anxious dogs stay calm.</div>
+                                                                        <div
+                                                                            class="field--name-field-bg-image field--type-image field__item">
+                                                                            <img src="/sites/default/files/styles/medium/public/2020-05/companion-pro-hero.jpg"
+                                                                                width="490" height="310"
+                                                                                alt="companion pro hero"
+                                                                                typeof="foaf:Image" /></div> <span
+                                                                            class="read-article">Read Article</span>
+                                                                    </article>
+                                                                </div>
+                                                                <div class="views-row">
+                                                                    <article role="article"
+                                                                        about="/e-commerce/covid-19-robotic-microfulfillment"
+                                                                        class="blog_post teaser is-spotlight">
+                                                                        <div>
+                                                                            <div
+                                                                                class="field--name-field-bg-image field--type-image field__item">
+                                                                                <img src="/sites/default/files/styles/thumbnail/public/2020-05/microfulfillment%20head.jpg"
+                                                                                    width="380" height="210"
+                                                                                    alt="robotic micro-fulfillment grocery"
+                                                                                    typeof="foaf:Image" /></div>
+                                                                        </div>
+                                                                        <h2> <a href="/e-commerce/covid-19-robotic-microfulfillment"
+                                                                                rel="bookmark"><span>Online Grocery
+                                                                                    Orders Could Be a Robotics Gold
+                                                                                    Rush</span></a></h2>
+                                                                    </article>
+                                                                </div>
+                                                                <div class="views-row">
+                                                                    <article role="article"
+                                                                        about="/robotics/harvesting-robots-agriculture-root-ai"
+                                                                        class="blog_post teaser is-spotlight">
+                                                                        <div>
+                                                                            <div
+                                                                                class="field--name-field-bg-image field--type-image field__item">
+                                                                                <img src="/sites/default/files/styles/thumbnail/public/2020-05/harvesting-robots-agriculture-root-ai.jpg"
+                                                                                    width="380" height="210"
+                                                                                    alt="harvesting robots agriculture root ai"
+                                                                                    typeof="foaf:Image" /></div>
+                                                                        </div>
+                                                                        <h2> <a href="/robotics/harvesting-robots-agriculture-root-ai"
+                                                                                rel="bookmark"><span>How Root AI&#039;s
+                                                                                    Agricultural Robots Are Powering the
+                                                                                    Farmtech Revolution</span></a></h2>
+                                                                    </article>
+                                                                </div>
+                                                                <div class="views-row">
+                                                                    <article role="article"
+                                                                        about="/robotics/robots-drones-help-coronavirus-covid19"
+                                                                        class="blog_post teaser is-spotlight">
+                                                                        <div>
+                                                                            <div
+                                                                                class="field--name-field-bg-image field--type-image field__item">
+                                                                                <img src="/sites/default/files/styles/thumbnail/public/2020-04/robot-coronavirus.png"
+                                                                                    width="380" height="210"
+                                                                                    alt="robot drone coronavirus"
+                                                                                    typeof="foaf:Image" /></div>
+                                                                        </div>
+                                                                        <h2> <a href="/robotics/robots-drones-help-coronavirus-covid19"
+                                                                                rel="bookmark"><span>How Robots Can Help
+                                                                                    Us Beat the Pandemic</span></a></h2>
+                                                                    </article>
+                                                                </div>
+                                                                <div class="views-row">
+                                                                    <article role="article"
+                                                                        about="/robotics/future-robots-robotics"
+                                                                        class="blog_post teaser is-spotlight">
+                                                                        <div>
+                                                                            <div
+                                                                                class="field--name-field-bg-image field--type-image field__item">
+                                                                                <img src="/sites/default/files/styles/thumbnail/public/2020-01/hero-future-of-robots-and-robotics.jpg"
+                                                                                    width="380" height="210"
+                                                                                    alt="future of robots and robotics"
+                                                                                    typeof="foaf:Image" /></div>
+                                                                        </div>
+                                                                        <h2> <a href="/robotics/future-robots-robotics"
+                                                                                rel="bookmark"><span>The Future of
+                                                                                    Robots and Robotics</span></a></h2>
+                                                                    </article>
+                                                                </div>
+                                                                <div class="views-row">
+                                                                    <article role="article"
+                                                                        about="/iot-internet-things/construction-future-oracle-innovation-lab"
+                                                                        class="blog_post featured is-spotlight">
+                                                                        <h2> <a href="/iot-internet-things/construction-future-oracle-innovation-lab"
+                                                                                rel="bookmark"><span>How Oracle&#039;s
+                                                                                    Chicago Innovation Lab Is Building
+                                                                                    the Future of
+                                                                                    Construction</span></a></h2>
+                                                                        <div
+                                                                            class="field--name-body field--type-text-with-summary field__item">
+                                                                            <p dir="ltr"><span><span>About 30 miles
+                                                                                        north of Chicago in suburban
+                                                                                        Deerfield, a construction
+                                                                                        trailer is parked behind the old
+                                                                                        headquarters of Textura — a
+                                                                                        company Oracle bought for $663
+                                                                                        million in Ap</span></span></p>
+                                                                        </div>
+                                                                        <div
+                                                                            class="field--name-field-bg-image field--type-image field__item">
+                                                                            <img src="/sites/default/files/styles/medium/public/2019-12/oracle-innovation-labs.jpg"
+                                                                                width="490" height="310"
+                                                                                alt="oracle innovation lab"
+                                                                                typeof="foaf:Image" /></div> <span
+                                                                            class="read-article">Read Article</span>
+                                                                    </article>
+                                                                </div>
+                                                                <div class="views-row">
+                                                                    <article role="article"
+                                                                        about="/artificial-intelligence/mit-research-team-built-pizza-delivery-robot"
+                                                                        class="blog_post teaser is-spotlight">
+                                                                        <div>
+                                                                            <div
+                                                                                class="field--name-field-bg-image field--type-image field__item">
+                                                                                <img src="/sites/default/files/styles/thumbnail/public/2019-12/robot_delivery_marked.png"
+                                                                                    width="380" height="210"
+                                                                                    alt="MIT Researchers Last Mile AI Algorithm"
+                                                                                    typeof="foaf:Image" /></div>
+                                                                        </div>
+                                                                        <h2> <a href="/artificial-intelligence/mit-research-team-built-pizza-delivery-robot"
+                                                                                rel="bookmark"><span>How MIT Uses
+                                                                                    Artificial Intelligence to Train
+                                                                                    Delivery Robots to Find Front
+                                                                                    Doors</span></a></h2>
+                                                                    </article>
+                                                                </div>
+                                                                <div class="views-row">
+                                                                    <article role="article"
+                                                                        about="/robotics/farming-agricultural-robots"
+                                                                        class="blog_post teaser is-spotlight">
+                                                                        <div>
+                                                                            <div
+                                                                                class="field--name-field-bg-image field--type-image field__item">
+                                                                                <img src="/sites/default/files/styles/thumbnail/public/2019-07/farming-robots.jpg"
+                                                                                    width="380" height="210"
+                                                                                    alt="farming and agriculture robots "
+                                                                                    typeof="foaf:Image" /></div>
+                                                                        </div>
+                                                                        <h2> <a href="/robotics/farming-agricultural-robots"
+                                                                                rel="bookmark"><span>Farming &amp;
+                                                                                    Agriculture Robots</span></a></h2>
+                                                                    </article>
+                                                                </div>
+                                                                <div class="views-row">
+                                                                    <article role="article"
+                                                                        about="/robotics/rescue-robots"
+                                                                        class="blog_post teaser is-spotlight">
+                                                                        <div>
+                                                                            <div
+                                                                                class="field--name-field-bg-image field--type-image field__item">
+                                                                                <img src="/sites/default/files/styles/thumbnail/public/2019-06/rescue-robot-examples.jpg"
+                                                                                    width="380" height="210"
+                                                                                    alt="rescue robot examples"
+                                                                                    typeof="foaf:Image" /></div>
+                                                                        </div>
+                                                                        <h2> <a href="/robotics/rescue-robots"
+                                                                                rel="bookmark"><span>12 Examples of
+                                                                                    Rescue Robots</span></a></h2>
+                                                                    </article>
+                                                                </div>
+                                                                <div class="views-row">
+                                                                    <article role="article"
+                                                                        about="/robotics/police-robot-law-enforcement"
+                                                                        class="blog_post teaser is-spotlight">
+                                                                        <div>
+                                                                            <div
+                                                                                class="field--name-field-bg-image field--type-image field__item">
+                                                                                <img src="/sites/default/files/styles/thumbnail/public/2019-05/shutterstock_8051158.jpg"
+                                                                                    width="380" height="210"
+                                                                                    alt="police-robot-law-enforcement"
+                                                                                    typeof="foaf:Image" /></div>
+                                                                        </div>
+                                                                        <h2> <a href="/robotics/police-robot-law-enforcement"
+                                                                                rel="bookmark"><span>Are Police Robots
+                                                                                    the Future of Law
+                                                                                    Enforcement?</span></a></h2>
+                                                                    </article>
+                                                                </div>
+                                                                <div class="views-row">
+                                                                    <article role="article"
+                                                                        about="/robotics/application-of-robotics"
+                                                                        class="blog_post featured is-spotlight">
+                                                                        <h2> <a href="/robotics/application-of-robotics"
+                                                                                rel="bookmark"><span>Robots for hire: 6
+                                                                                    ways robots serve their human
+                                                                                    masters</span></a></h2>
+                                                                        <div
+                                                                            class="field--name-body field--type-text-with-summary field__item">
+                                                                            From delivery bots to robo buddies, robots
+                                                                            serve humans in a variety of ways.</div>
+                                                                        <div
+                                                                            class="field--name-field-bg-image field--type-image field__item">
+                                                                            <img src="/sites/default/files/styles/medium/public/2019-03/Robot-applications-banner_0.jpg"
+                                                                                width="490" height="310"
+                                                                                alt="application-of-robotics-examples-uses"
+                                                                                typeof="foaf:Image" /></div> <span
+                                                                            class="read-article">Read Article</span>
+                                                                    </article>
+                                                                </div>
+                                                                <div class="views-row">
+                                                                    <article role="article"
+                                                                        about="/robotics/robotics-in-the-classroom"
+                                                                        class="blog_post teaser is-spotlight">
+                                                                        <div>
+                                                                            <div
+                                                                                class="field--name-field-bg-image field--type-image field__item">
+                                                                                <img src="/sites/default/files/styles/thumbnail/public/2019-04/robotics-in-the-classroom.jpg"
+                                                                                    width="380" height="210"
+                                                                                    alt="robotics in the classroom"
+                                                                                    typeof="foaf:Image" /></div>
+                                                                        </div>
+                                                                        <h2> <a href="/robotics/robotics-in-the-classroom"
+                                                                                rel="bookmark"><span>Classroom robots
+                                                                                    are infiltrating the education
+                                                                                    industry, but teachers are safe —
+                                                                                    for now</span></a></h2>
+                                                                    </article>
+                                                                </div>
+                                                                <div class="views-row">
+                                                                    <article role="article" about="/robotics/vr-robots"
+                                                                        class="blog_post teaser is-spotlight">
+                                                                        <div>
+                                                                            <div
+                                                                                class="field--name-field-bg-image field--type-image field__item">
+                                                                                <img src="/sites/default/files/styles/thumbnail/public/2019-03/shutterstock_630738080.jpg"
+                                                                                    width="380" height="210"
+                                                                                    alt="vr-robots"
+                                                                                    typeof="foaf:Image" /></div>
+                                                                        </div>
+                                                                        <h2> <a href="/robotics/vr-robots"
+                                                                                rel="bookmark"><span>From diffusing
+                                                                                    bombs to performing surgery, VR is
+                                                                                    turning people into robots (sort
+                                                                                    of)</span></a></h2>
+                                                                    </article>
+                                                                </div>
+                                                                <div class="views-row">
+                                                                    <article role="article"
+                                                                        about="/robotics/robo-banking-robotics-applications-banking-and-finance"
+                                                                        class="blog_post teaser is-spotlight">
+                                                                        <div>
+                                                                            <div
+                                                                                class="field--name-field-bg-image field--type-image field__item">
+                                                                                <img src="/sites/default/files/styles/thumbnail/public/2019-04/Uses%20of%20robotics%20in%20finance%20and%20banking.jpg"
+                                                                                    width="380" height="210"
+                                                                                    alt="Uses of robotics in finance and banking"
+                                                                                    typeof="foaf:Image" /></div>
+                                                                        </div>
+                                                                        <h2> <a href="/robotics/robo-banking-robotics-applications-banking-and-finance"
+                                                                                rel="bookmark"><span>11 Robotics
+                                                                                    Applications in Banking and
+                                                                                    Finance</span></a></h2>
+                                                                    </article>
+                                                                </div>
+                                                                <div class="views-row">
+                                                                    <article role="article"
+                                                                        about="/robotics/robots-in-restaurants-food-service"
+                                                                        class="blog_post teaser is-spotlight">
+                                                                        <div>
+                                                                            <div
+                                                                                class="field--name-field-bg-image field--type-image field__item">
+                                                                                <img src="/sites/default/files/styles/thumbnail/public/2019-03/shutterstock_1159976947_0.jpg"
+                                                                                    width="380" height="210"
+                                                                                    alt="robots-in-restaurants-food-service"
+                                                                                    typeof="foaf:Image" /></div>
+                                                                        </div>
+                                                                        <h2> <a href="/robotics/robots-in-restaurants-food-service"
+                                                                                rel="bookmark"><span>Food robots are
+                                                                                    serving up changes in the restaurant
+                                                                                    industry</span></a></h2>
+                                                                    </article>
+                                                                </div>
+                                                                <div class="views-row">
+                                                                    <article role="article"
+                                                                        about="/robotics/surgical-medical-healthcare-robotics-companies"
+                                                                        class="blog_post featured is-spotlight">
+                                                                        <h2> <a href="/robotics/surgical-medical-healthcare-robotics-companies"
+                                                                                rel="bookmark"><span>10 Examples of
+                                                                                    Robotics in Healthcare</span></a>
+                                                                        </h2>
+                                                                        <div
+                                                                            class="field--name-body field--type-text-with-summary field__item">
+                                                                            Robotics continues to revolutionize the
+                                                                            surgical and healthcare industries, with
+                                                                            dazzling new advances being made all the
+                                                                            time.</div>
+                                                                        <div
+                                                                            class="field--name-field-bg-image field--type-image field__item">
+                                                                            <img src="/sites/default/files/styles/medium/public/2018-10/shutterstock_734412025.jpg"
+                                                                                width="490" height="310"
+                                                                                alt="Robotics applications in healthcare"
+                                                                                typeof="foaf:Image" /></div> <span
+                                                                            class="read-article">Read Article</span>
+                                                                    </article>
+                                                                </div>
+                                                                <div class="views-row">
+                                                                    <article role="article"
+                                                                        about="/robotics/automotive-cars-manufacturing-assembly"
+                                                                        class="blog_post teaser is-spotlight">
+                                                                        <div>
+                                                                            <div
+                                                                                class="field--name-field-bg-image field--type-image field__item">
+                                                                                <img src="/sites/default/files/styles/thumbnail/public/2019-02/robotics-applications-automotive-cover.jpg"
+                                                                                    width="380" height="210"
+                                                                                    alt="Automotive Robotics Applications"
+                                                                                    typeof="foaf:Image" /></div>
+                                                                        </div>
+                                                                        <h2> <a href="/robotics/automotive-cars-manufacturing-assembly"
+                                                                                rel="bookmark"><span>Thanks a lot, Mr.
+                                                                                    Robot (no, really): Six companies
+                                                                                    shaping the future of automotive
+                                                                                    robotics</span></a></h2>
+                                                                    </article>
+                                                                </div>
+                                                                <div class="views-row">
+                                                                    <article role="article"
+                                                                        about="/robotics/publicly-traded-robotics-companies"
+                                                                        class="blog_post teaser is-spotlight">
+                                                                        <div>
+                                                                            <div
+                                                                                class="field--name-field-bg-image field--type-image field__item">
+                                                                                <img src="/sites/default/files/styles/thumbnail/public/2018-11/robotics-publicly-traded-companies-cover-photo.jpg"
+                                                                                    width="380" height="210"
+                                                                                    alt="10 Publicly Traded Companies That Use Robots"
+                                                                                    typeof="foaf:Image" /></div>
+                                                                        </div>
+                                                                        <h2> <a href="/robotics/publicly-traded-robotics-companies"
+                                                                                rel="bookmark"><span>10 Publicly Traded
+                                                                                    Companies That are Betting on
+                                                                                    Robotics</span></a></h2>
+                                                                    </article>
+                                                                </div>
+                                                                <div class="views-row">
+                                                                    <article role="article"
+                                                                        about="/artificial-intelligence/robotics-ai-companies"
+                                                                        class="blog_post teaser is-spotlight">
+                                                                        <div>
+                                                                            <div
+                                                                                class="field--name-field-bg-image field--type-image field__item">
+                                                                                <img src="/sites/default/files/styles/thumbnail/public/2018-10/artificial-intelligence-robotics.jpg"
+                                                                                    width="380" height="210"
+                                                                                    alt="artificial intelligence applications robotics"
+                                                                                    typeof="foaf:Image" /></div>
+                                                                        </div>
+                                                                        <h2> <a href="/artificial-intelligence/robotics-ai-companies"
+                                                                                rel="bookmark"><span>AI Robots: How 19
+                                                                                    Companies Use Artificial
+                                                                                    Intelligence in Robotics</span></a>
+                                                                        </h2>
+                                                                    </article>
+                                                                </div>
+                                                                <div class="views-row">
+                                                                    <article role="article"
+                                                                        about="/e-commerce-robotics/human-robot-collaboration-amazon-reveals-future-work"
+                                                                        class="blog_post teaser is-spotlight">
+                                                                        <div>
+                                                                            <div
+                                                                                class="field--name-field-bg-image field--type-image field__item">
+                                                                                <img src="/sites/default/files/styles/thumbnail/public/2019-03/robotics-amazon-warehouse.jpg"
+                                                                                    width="380" height="210"
+                                                                                    alt="robotics-amazon-fulfillment-centers"
+                                                                                    typeof="foaf:Image" /></div>
+                                                                        </div>
+                                                                        <h2> <a href="/e-commerce-robotics/human-robot-collaboration-amazon-reveals-future-work"
+                                                                                rel="bookmark"><span>Human-robot
+                                                                                    collaboration at Amazon reveals the
+                                                                                    future of work</span></a></h2>
+                                                                    </article>
+                                                                </div>
+                                                                <div class="views-row">
+                                                                    <article role="article"
+                                                                        about="/drones-e-commerce-robotics/jdcom-and-rakuten-join-forces-enable-drone-deliveries-japan"
+                                                                        class="blog_post featured is-spotlight">
+                                                                        <h2> <a href="/drones-e-commerce-robotics/jdcom-and-rakuten-join-forces-enable-drone-deliveries-japan"
+                                                                                rel="bookmark"><span>JD.com and Rakuten
+                                                                                    join forces to enable drone
+                                                                                    deliveries in Japan</span></a></h2>
+                                                                        <div
+                                                                            class="field--name-body field--type-text-with-summary field__item">
+                                                                            Rakuten, headquartered in Japan, has
+                                                                            experimented with autonomous last mile
+                                                                            delivery for the past few years.</div>
+                                                                        <div
+                                                                            class="field--name-field-bg-image field--type-image field__item">
+                                                                            <img src="/sites/default/files/styles/medium/public/2019-03/robotics-drones-jd-rakuten.jpg"
+                                                                                width="490" height="310"
+                                                                                alt="robotics-jd-rakuten-drones"
+                                                                                typeof="foaf:Image" /></div> <span
+                                                                            class="read-article">Read Article</span>
+                                                                    </article>
+                                                                </div>
+                                                                <div class="views-row">
+                                                                    <article role="article"
+                                                                        about="/drones-robotics/houston-area-police-invest-drones-future-law-enforcement"
+                                                                        class="blog_post teaser is-spotlight">
+                                                                        <div>
+                                                                            <div
+                                                                                class="field--name-field-bg-image field--type-image field__item">
+                                                                                <img src="/sites/default/files/styles/thumbnail/public/2019-03/shutterstock_536219983.jpg"
+                                                                                    width="380" height="210"
+                                                                                    alt="drones-houston-police"
+                                                                                    typeof="foaf:Image" /></div>
+                                                                        </div>
+                                                                        <h2> <a href="/drones-robotics/houston-area-police-invest-drones-future-law-enforcement"
+                                                                                rel="bookmark"><span>Houston area police
+                                                                                    invest in drones as future of law
+                                                                                    enforcement</span></a></h2>
+                                                                    </article>
+                                                                </div>
+                                                                <div class="views-row">
+                                                                    <article role="article"
+                                                                        about="/robotics/johnson-johnson-acquires-robotics-company-auris-health"
+                                                                        class="blog_post teaser is-spotlight">
+                                                                        <div>
+                                                                            <div
+                                                                                class="field--name-field-bg-image field--type-image field__item">
+                                                                                <img src="/sites/default/files/styles/thumbnail/public/2019-03/shutterstock_787873258.jpg"
+                                                                                    width="380" height="210"
+                                                                                    alt="robotics-johnson-johnson-auris-health"
+                                                                                    typeof="foaf:Image" /></div>
+                                                                        </div>
+                                                                        <h2> <a href="/robotics/johnson-johnson-acquires-robotics-company-auris-health"
+                                                                                rel="bookmark"><span>Johnson &amp;
+                                                                                    Johnson acquires robotics company
+                                                                                    Auris Health</span></a></h2>
+                                                                    </article>
+                                                                </div>
+                                                                <div class="views-row">
+                                                                    <article role="article"
+                                                                        about="/drones-robotics/faa-drones-must-show-registration-number-exterior"
+                                                                        class="blog_post teaser is-spotlight">
+                                                                        <div>
+                                                                            <div
+                                                                                class="field--name-field-bg-image field--type-image field__item">
+                                                                                <img src="/sites/default/files/styles/thumbnail/public/2019-03/shutterstock_1292903740.jpg"
+                                                                                    width="380" height="210"
+                                                                                    alt="robotics-drones-registration"
+                                                                                    typeof="foaf:Image" /></div>
+                                                                        </div>
+                                                                        <h2> <a href="/drones-robotics/faa-drones-must-show-registration-number-exterior"
+                                                                                rel="bookmark"><span>FAA: Drones must
+                                                                                    show registration number on
+                                                                                    exterior</span></a></h2>
+                                                                    </article>
+                                                                </div>
+                                                                <div class="views-row">
+                                                                    <article role="article"
+                                                                        about="/robotics/weed-trimmers-concerned-robots-may-spell-end-livelihood"
+                                                                        class="blog_post teaser is-spotlight">
+                                                                        <div>
+                                                                            <div
+                                                                                class="field--name-field-bg-image field--type-image field__item">
+                                                                                <img src="/sites/default/files/styles/thumbnail/public/2019-03/shutterstock_1052355875.jpg"
+                                                                                    width="380" height="210"
+                                                                                    alt="robotics-weed-trimmers"
+                                                                                    typeof="foaf:Image" /></div>
+                                                                        </div>
+                                                                        <h2> <a href="/robotics/weed-trimmers-concerned-robots-may-spell-end-livelihood"
+                                                                                rel="bookmark"><span>Weed trimmers
+                                                                                    concerned robots may spell end for
+                                                                                    livelihood</span></a></h2>
+                                                                    </article>
+                                                                </div>
+                                                                <div class="views-row">
+                                                                    <article role="article"
+                                                                        about="/drones-robotics/oklahoma-lawmakers-consider-drone-ban-over-rural-property"
+                                                                        class="blog_post featured is-spotlight">
+                                                                        <h2> <a href="/drones-robotics/oklahoma-lawmakers-consider-drone-ban-over-rural-property"
+                                                                                rel="bookmark"><span>Oklahoma lawmakers
+                                                                                    consider drone ban over rural
+                                                                                    property</span></a></h2>
+                                                                        <div
+                                                                            class="field--name-body field--type-text-with-summary field__item">
+                                                                            Oklahoma lawmakers are evaluating a drone
+                                                                            bill that would ban the use of unmanned
+                                                                            aircraft over private property in rural
+                                                                            areas.</div>
+                                                                        <div
+                                                                            class="field--name-field-bg-image field--type-image field__item">
+                                                                            <img src="/sites/default/files/styles/medium/public/2019-03/shutterstock_338590781.jpg"
+                                                                                width="490" height="310"
+                                                                                alt="robotics-oklahoma-drone-bill"
+                                                                                typeof="foaf:Image" /></div> <span
+                                                                            class="read-article">Read Article</span>
+                                                                    </article>
+                                                                </div>
+                                                                <div class="views-row">
+                                                                    <article role="article"
+                                                                        about="/robotics/autonomous-scanners-debut-tampa-bay-walmarts"
+                                                                        class="blog_post teaser is-spotlight">
+                                                                        <div>
+                                                                            <div
+                                                                                class="field--name-field-bg-image field--type-image field__item">
+                                                                                <img src="/sites/default/files/styles/thumbnail/public/2019-03/shutterstock_682617673.jpg"
+                                                                                    width="380" height="210"
+                                                                                    alt="robotics-tampa-bay-walmart"
+                                                                                    typeof="foaf:Image" /></div>
+                                                                        </div>
+                                                                        <h2> <a href="/robotics/autonomous-scanners-debut-tampa-bay-walmarts"
+                                                                                rel="bookmark"><span>Autonomous scanners
+                                                                                    debut at Tampa Bay
+                                                                                    Walmarts</span></a></h2>
+                                                                    </article>
+                                                                </div>
+                                                                <div class="views-row">
+                                                                    <article role="article"
+                                                                        about="/drones-robotics/aerial-drones-map-jewish-cemeteries-preservation-efforts"
+                                                                        class="blog_post teaser is-spotlight">
+                                                                        <div>
+                                                                            <div
+                                                                                class="field--name-field-bg-image field--type-image field__item">
+                                                                                <img src="/sites/default/files/styles/thumbnail/public/2019-03/shutterstock_1152741311.jpg"
+                                                                                    width="380" height="210"
+                                                                                    alt="robotics-drones-jewish-cemeteries"
+                                                                                    typeof="foaf:Image" /></div>
+                                                                        </div>
+                                                                        <h2> <a href="/drones-robotics/aerial-drones-map-jewish-cemeteries-preservation-efforts"
+                                                                                rel="bookmark"><span>Aerial drones to
+                                                                                    map Jewish cemeteries in
+                                                                                    preservation efforts</span></a></h2>
+                                                                    </article>
+                                                                </div>
+                                                                <div class="views-row">
+                                                                    <article role="article"
+                                                                        about="/robotics/qualcomm-expands-automotive-and-robotics-offerings"
+                                                                        class="blog_post teaser is-spotlight">
+                                                                        <div>
+                                                                            <div
+                                                                                class="field--name-field-bg-image field--type-image field__item">
+                                                                                <img src="/sites/default/files/styles/thumbnail/public/2019-03/shutterstock_566330083.jpg"
+                                                                                    width="380" height="210"
+                                                                                    alt="robotics-qualcomm-automotive"
+                                                                                    typeof="foaf:Image" /></div>
+                                                                        </div>
+                                                                        <h2> <a href="/robotics/qualcomm-expands-automotive-and-robotics-offerings"
+                                                                                rel="bookmark"><span>Qualcomm expands
+                                                                                    automotive and robotics
+                                                                                    offerings</span></a></h2>
+                                                                    </article>
+                                                                </div>
+                                                                <div class="views-row">
+                                                                    <article role="article"
+                                                                        about="/robotics/panasonic-collaborates-academia-build-consumer-robots"
+                                                                        class="blog_post teaser is-spotlight">
+                                                                        <div>
+                                                                            <div
+                                                                                class="field--name-field-bg-image field--type-image field__item">
+                                                                                <img src="/sites/default/files/styles/thumbnail/public/2019-03/shutterstock_1142410115.jpg"
+                                                                                    width="380" height="210"
+                                                                                    alt="robotics-panasonic-academia"
+                                                                                    typeof="foaf:Image" /></div>
+                                                                        </div>
+                                                                        <h2> <a href="/robotics/panasonic-collaborates-academia-build-consumer-robots"
+                                                                                rel="bookmark"><span>Panasonic
+                                                                                    collaborates with academia to build
+                                                                                    consumer robots</span></a></h2>
+                                                                    </article>
+                                                                </div>
+                                                                <div class="views-row">
+                                                                    <article role="article"
+                                                                        about="/drones-robotics/drones-help-researchers-manage-koala-populations"
+                                                                        class="blog_post featured is-spotlight">
+                                                                        <h2> <a href="/drones-robotics/drones-help-researchers-manage-koala-populations"
+                                                                                rel="bookmark"><span>Drones help
+                                                                                    researchers manage koala
+                                                                                    populations</span></a></h2>
+                                                                        <div
+                                                                            class="field--name-body field--type-text-with-summary field__item">
+                                                                            Researchers are using drones to manage koala
+                                                                            populations, with hopes to also protect
+                                                                            other threatened species and detect invasive
+                                                                            species.</div>
+                                                                        <div
+                                                                            class="field--name-field-bg-image field--type-image field__item">
+                                                                            <img src="/sites/default/files/styles/medium/public/2019-03/shutterstock_1283529034.jpg"
+                                                                                width="490" height="310"
+                                                                                alt="robotics-drones-koalas"
+                                                                                typeof="foaf:Image" /></div> <span
+                                                                            class="read-article">Read Article</span>
+                                                                    </article>
+                                                                </div>
+                                                                <div class="views-row">
+                                                                    <article role="article"
+                                                                        about="/robotics/flir-acquires-military-robot-firm-endeavor-385-million"
+                                                                        class="blog_post teaser is-spotlight">
+                                                                        <div>
+                                                                            <div
+                                                                                class="field--name-field-bg-image field--type-image field__item">
+                                                                                <img src="/sites/default/files/styles/thumbnail/public/2019-02/shutterstock_144458506.jpg"
+                                                                                    width="380" height="210"
+                                                                                    alt="robotics-flir-endeavor"
+                                                                                    typeof="foaf:Image" /></div>
+                                                                        </div>
+                                                                        <h2> <a href="/robotics/flir-acquires-military-robot-firm-endeavor-385-million"
+                                                                                rel="bookmark"><span>FLIR acquires
+                                                                                    military robot firm Endeavor for
+                                                                                    $385 million</span></a></h2>
+                                                                    </article>
+                                                                </div>
+                                                                <div class="views-row">
+                                                                    <article role="article"
+                                                                        about="/drones-robotics/small-isles-scotland-get-close-courtesy-drones"
+                                                                        class="blog_post teaser is-spotlight">
+                                                                        <div>
+                                                                            <div
+                                                                                class="field--name-field-bg-image field--type-image field__item">
+                                                                                <img src="/sites/default/files/styles/thumbnail/public/2019-02/shutterstock_716327950.jpg"
+                                                                                    width="380" height="210"
+                                                                                    alt="robotics-drones-scotland-canna-sanday"
+                                                                                    typeof="foaf:Image" /></div>
+                                                                        </div>
+                                                                        <h2> <a href="/drones-robotics/small-isles-scotland-get-close-courtesy-drones"
+                                                                                rel="bookmark"><span>Small Isles of
+                                                                                    Scotland get a close-up courtesy of
+                                                                                    drones</span></a></h2>
+                                                                    </article>
+                                                                </div>
+                                                                <div class="views-row">
+                                                                    <article role="article"
+                                                                        about="/drones-robotics/droneseed-replants-trees-keep-forests-healthy"
+                                                                        class="blog_post teaser is-spotlight">
+                                                                        <div>
+                                                                            <div
+                                                                                class="field--name-field-bg-image field--type-image field__item">
+                                                                                <img src="/sites/default/files/styles/thumbnail/public/2019-02/shutterstock_1244117566.jpg"
+                                                                                    width="380" height="210"
+                                                                                    alt="robotics-drones-trees"
+                                                                                    typeof="foaf:Image" /></div>
+                                                                        </div>
+                                                                        <h2> <a href="/drones-robotics/droneseed-replants-trees-keep-forests-healthy"
+                                                                                rel="bookmark"><span>DroneSeed replants
+                                                                                    trees to keep forests
+                                                                                    healthy</span></a></h2>
+                                                                    </article>
+                                                                </div>
+                                                                <div class="views-row">
+                                                                    <article role="article"
+                                                                        about="/robotics/us-companies-install-record-breaking-number-robots"
+                                                                        class="blog_post teaser is-spotlight">
+                                                                        <div>
+                                                                            <div
+                                                                                class="field--name-field-bg-image field--type-image field__item">
+                                                                                <img src="/sites/default/files/styles/thumbnail/public/2019-03/robotics-automation-growth.jpg"
+                                                                                    width="380" height="210"
+                                                                                    alt="robotics-automation-growth"
+                                                                                    typeof="foaf:Image" /></div>
+                                                                        </div>
+                                                                        <h2> <a href="/robotics/us-companies-install-record-breaking-number-robots"
+                                                                                rel="bookmark"><span>U.S. companies
+                                                                                    install record-breaking number of
+                                                                                    robots</span></a></h2>
+                                                                    </article>
+                                                                </div>
+                                                                <div class="views-row">
+                                                                    <article role="article"
+                                                                        about="/e-commerce-robotics/fedex-roll-out-last-mile-delivery-bot"
+                                                                        class="blog_post featured is-spotlight">
+                                                                        <h2> <a href="/e-commerce-robotics/fedex-roll-out-last-mile-delivery-bot"
+                                                                                rel="bookmark"><span>FedEx to roll out
+                                                                                    last mile delivery bot </span></a>
+                                                                        </h2>
+                                                                        <div
+                                                                            class="field--name-body field--type-text-with-summary field__item">
+                                                                            The logistics giant plans to start testing a
+                                                                            robot to handle home deliveries for partners
+                                                                            ranging from Walmart to Pizza Hut.</div>
+                                                                        <div
+                                                                            class="field--name-field-bg-image field--type-image field__item">
+                                                                            <img src="/sites/default/files/styles/medium/public/2019-03/robotics-fedex-last-mile.jpg"
+                                                                                width="490" height="310"
+                                                                                alt="robotics-fedex-last-mile"
+                                                                                typeof="foaf:Image" /></div> <span
+                                                                            class="read-article">Read Article</span>
+                                                                    </article>
+                                                                </div>
+                                                                <div class="views-row">
+                                                                    <article role="article"
+                                                                        about="/drones-robotics/zipline-founder-talks-about-upcoming-north-carolina-pilot"
+                                                                        class="blog_post teaser is-spotlight">
+                                                                        <div>
+                                                                            <div
+                                                                                class="field--name-field-bg-image field--type-image field__item">
+                                                                                <img src="/sites/default/files/styles/thumbnail/public/2019-03/shutterstock_535732786.jpg"
+                                                                                    width="380" height="210"
+                                                                                    alt="iot-drones-zipline-north-carolina"
+                                                                                    typeof="foaf:Image" /></div>
+                                                                        </div>
+                                                                        <h2> <a href="/drones-robotics/zipline-founder-talks-about-upcoming-north-carolina-pilot"
+                                                                                rel="bookmark"><span>Zipline founder
+                                                                                    talks about upcoming North Carolina
+                                                                                    pilot</span></a></h2>
+                                                                    </article>
+                                                                </div>
+                                                                <div class="views-row">
+                                                                    <article role="article"
+                                                                        about="/drones-robotics/drones-locate-avalanche-victims-faster"
+                                                                        class="blog_post teaser is-spotlight">
+                                                                        <div>
+                                                                            <div
+                                                                                class="field--name-field-bg-image field--type-image field__item">
+                                                                                <img src="/sites/default/files/styles/thumbnail/public/2019-03/shutterstock_261524033.jpg"
+                                                                                    width="380" height="210"
+                                                                                    alt="robotics-drones-avalanches"
+                                                                                    typeof="foaf:Image" /></div>
+                                                                        </div>
+                                                                        <h2> <a href="/drones-robotics/drones-locate-avalanche-victims-faster"
+                                                                                rel="bookmark"><span>Drones to locate
+                                                                                    avalanche victims faster</span></a>
+                                                                        </h2>
+                                                                    </article>
+                                                                </div>
+                                                                <div class="views-row">
+                                                                    <article role="article"
+                                                                        about="/drones-robotics/nasa-test-drone-flights-nevada-and-texas"
+                                                                        class="blog_post teaser is-spotlight">
+                                                                        <div>
+                                                                            <div
+                                                                                class="field--name-field-bg-image field--type-image field__item">
+                                                                                <img src="/sites/default/files/styles/thumbnail/public/2019-03/shutterstock_625526411.jpg"
+                                                                                    width="380" height="210"
+                                                                                    alt="robotics-drones-nasa"
+                                                                                    typeof="foaf:Image" /></div>
+                                                                        </div>
+                                                                        <h2> <a href="/drones-robotics/nasa-test-drone-flights-nevada-and-texas"
+                                                                                rel="bookmark"><span>NASA to test drone
+                                                                                    flights in Nevada and
+                                                                                    Texas</span></a></h2>
+                                                                    </article>
+                                                                </div>
+                                                                <div class="views-row">
+                                                                    <article role="article"
+                                                                        about="/drones-robotics/drone-collision-commercial-plane-could-doom-industry-us-house-rep-warns"
+                                                                        class="blog_post teaser is-spotlight">
+                                                                        <div>
+                                                                            <div
+                                                                                class="field--name-field-bg-image field--type-image field__item">
+                                                                                <img src="/sites/default/files/styles/thumbnail/public/2019-02/shutterstock_523950889.jpg"
+                                                                                    width="380" height="210"
+                                                                                    alt="robotics-drone-accident-commercial"
+                                                                                    typeof="foaf:Image" /></div>
+                                                                        </div>
+                                                                        <h2> <a href="/drones-robotics/drone-collision-commercial-plane-could-doom-industry-us-house-rep-warns"
+                                                                                rel="bookmark"><span>Drone collision
+                                                                                    with commercial plane could doom
+                                                                                    industry, U.S. House Rep.
+                                                                                    warns</span></a></h2>
+                                                                    </article>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="block block-views-blocktopic-blog-posts-block-2">
+                                                    <div class="block-content">
+                                                        <div
+                                                            class="view view-topic-blog-posts view-id-topic_blog_posts view-display-id-block_2 js-view-dom-id-cf82ea301abdec3f84718d8f1053b4f51f13a7f3db41a14e9c609f21d68074f8">
+                                                            <div class="view-header"></div>
+                                                            <div data-drupal-views-infinite-scroll-content-wrapper
+                                                                class="views-infinite-scroll-content-wrapper clearfix">
+                                                                <div class="views-row">
+                                                                    <article role="article"
+                                                                        about="/drones-robotics/landmine-detecting-drones-could-help-save-lives"
+                                                                        class="blog_post featured is-spotlight">
+                                                                        <h2> <a href="/drones-robotics/landmine-detecting-drones-could-help-save-lives"
+                                                                                rel="bookmark"><span>Landmine-detecting
+                                                                                    drones could help save
+                                                                                    lives</span></a></h2>
+                                                                        <div
+                                                                            class="field--name-body field--type-text-with-summary field__item">
+                                                                            An undergraduate duo has built new drone
+                                                                            technology that can spot hard-to-identify
+                                                                            butterfly landmines from the sky.</div>
+                                                                        <div
+                                                                            class="field--name-field-bg-image field--type-image field__item">
+                                                                            <img src="/sites/default/files/styles/medium/public/2019-02/shutterstock_746687539.jpg"
+                                                                                width="490" height="310"
+                                                                                alt="robotics-drones-landmines"
+                                                                                typeof="foaf:Image" /></div> <span
+                                                                            class="read-article">Read Article</span>
+                                                                    </article>
+                                                                </div>
+                                                                <div class="views-row">
+                                                                    <article role="article"
+                                                                        about="/drones-robotics/net-releasing-drone-grenades-are-latest-anti-drone-tech"
+                                                                        class="blog_post teaser is-spotlight">
+                                                                        <div>
+                                                                            <div
+                                                                                class="field--name-field-bg-image field--type-image field__item">
+                                                                                <img src="/sites/default/files/styles/thumbnail/public/2019-02/shutterstock_1206338134.jpg"
+                                                                                    width="380" height="210"
+                                                                                    alt="robotics-anti-drone-technology"
+                                                                                    typeof="foaf:Image" /></div>
+                                                                        </div>
+                                                                        <h2> <a href="/drones-robotics/net-releasing-drone-grenades-are-latest-anti-drone-tech"
+                                                                                rel="bookmark"><span>Net-releasing drone
+                                                                                    grenades are the latest in
+                                                                                    anti-drone tech</span></a></h2>
+                                                                    </article>
+                                                                </div>
+                                                                <div class="views-row">
+                                                                    <article role="article"
+                                                                        about="/robotics/robotics-startup-dispatch-helped-amazon-build-scout"
+                                                                        class="blog_post teaser is-spotlight">
+                                                                        <div>
+                                                                            <div
+                                                                                class="field--name-field-bg-image field--type-image field__item">
+                                                                                <img src="/sites/default/files/styles/thumbnail/public/2019-02/shutterstock_373709401.jpg"
+                                                                                    width="380" height="210"
+                                                                                    alt="robotics-Amazon-Dispatch"
+                                                                                    typeof="foaf:Image" /></div>
+                                                                        </div>
+                                                                        <h2> <a href="/robotics/robotics-startup-dispatch-helped-amazon-build-scout"
+                                                                                rel="bookmark"><span>Robotics startup
+                                                                                    Dispatch helped Amazon build
+                                                                                    Scout</span></a></h2>
+                                                                    </article>
+                                                                </div>
+                                                                <div class="views-row">
+                                                                    <article role="article"
+                                                                        about="/robotics/robots-dismantle-100000-aging-chemical-weapons"
+                                                                        class="blog_post teaser is-spotlight">
+                                                                        <div>
+                                                                            <div
+                                                                                class="field--name-field-bg-image field--type-image field__item">
+                                                                                <img src="/sites/default/files/styles/thumbnail/public/2019-02/shutterstock_139159520.jpg"
+                                                                                    width="380" height="210"
+                                                                                    alt="robotics-chemical-weapons"
+                                                                                    typeof="foaf:Image" /></div>
+                                                                        </div>
+                                                                        <h2> <a href="/robotics/robots-dismantle-100000-aging-chemical-weapons"
+                                                                                rel="bookmark"><span>Robots dismantle
+                                                                                    100,000 aging chemical
+                                                                                    weapons</span></a></h2>
+                                                                    </article>
+                                                                </div>
+                                                                <div class="views-row">
+                                                                    <article role="article"
+                                                                        about="/robotics/boston-dynamics-receives-additional-37-million-softbank"
+                                                                        class="blog_post teaser is-spotlight">
+                                                                        <div>
+                                                                            <div
+                                                                                class="field--name-field-bg-image field--type-image field__item">
+                                                                                <img src="/sites/default/files/styles/thumbnail/public/2019-02/shutterstock_445158679.jpg"
+                                                                                    width="380" height="210"
+                                                                                    alt="robotics-Boston-Dynamics-SoftBank"
+                                                                                    typeof="foaf:Image" /></div>
+                                                                        </div>
+                                                                        <h2> <a href="/robotics/boston-dynamics-receives-additional-37-million-softbank"
+                                                                                rel="bookmark"><span>Boston Dynamics
+                                                                                    receives additional $37 million from
+                                                                                    SoftBank</span></a></h2>
+                                                                    </article>
+                                                                </div>
+                                                            </div>
+                                                            <ul class="js-pager__items pager"
+                                                                data-drupal-views-infinite-scroll-pager>
+                                                                <li class="pager__item"> <a class="button"
+                                                                        href="/robotics?page=1" title="Go to next page"
+                                                                        rel="next">Load More</a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="layout__region layout__region--postscript">
+                                        <div class="container">
+                                            <div class="block-region-postscript">
+                                                <div class="block block-builtin-global-tech-trends">
+                                                    <div class="block-content">
+                                                        <h2>Tech Trends</h2>
+                                                        <h3>Keep up with tech<br />industry trends.</h3><a
+                                                            href="/industries" class="button">Grow Your Career</a>
+                                                        <ul>
+                                                            <li><a href="/data-science">Data Science</a></li>
+                                                            <li><a href="/blockchain">Blockchain</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="block block-builtin-global-hiring-resources">
+                                                    <div class="block-content">
+                                                        <h2>Hiring Resources</h2>
+                                                        <h3>Recruitment 3.0—<br />stay informed.</h3><a
+                                                            href="/employers" class="button">Grow Your Company</a>
+                                                        <ul>
+                                                            <li><a href="/employer-branding">Employer Branding</a></li>
+                                                            <li><a href="/company-culture">Company Culture</a></li>
+                                                            <li><a href="/recruiting">Recruiting</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="layout__region layout__region--bottom">
+                                        <div class="container">
+                                            <div class="block-region-bottom">
+                                                <div class="block block-builtin-global-recruit-with-us">
+                                                    <div class="block-content">
+                                                        <h3>Great Companies Need Great People. <b>That's Where We Come
+                                                                In.</b></h3><a href="/for-employers"
+                                                            data-ga-event="b2b-recruit-with-us-footer">Recruit With
+                                                            Us</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+            <footer role="contentinfo">
+                <div class="container">
+                    <div class="region region-footer">
+                        <div class="copyright"> <img src="/themes/builtin/logo.svg" alt="" typeof="foaf:Image" />
+                            <p><br />© Built In 2019</p>
+                        </div>
+                        <nav role="navigation" aria-labelledby="block-getinvolved-menu" id="block-getinvolved"
+                            class="block block-menu navigation menu--get-involved">
+                            <div class="menu-title" id="block-getinvolved-menu">Get Involved</div>
+                            <ul>
+                                <li> <a href="https://builtin.com/for-employers"
+                                        data-ga-event="b2b-recruit-with-built-in-footer">Recruit With Built In</a></li>
+                                <li> <a href="https://builtin.com/contributors">Become an Expert Contributor</a></li>
+                                <li> <a href="https://builtin.zendesk.com/hc/en-us">Contact Us</a></li>
+                                <li> <a href="https://www.builtinchicago.org/company/built">Careers</a></li>
+                            </ul>
+                        </nav>
+                        <nav role="navigation" aria-labelledby="block-stayconnected-menu" id="block-stayconnected"
+                            class="block block-menu navigation menu--stay-connected">
+                            <div class="menu-title" id="block-stayconnected-menu">Stay Connected</div>
+                            <ul>
+                                <li> <a href="https://facebook.com/builtinhq" target="_blank"
+                                        rel="noopener">Facebook</a></li>
+                                <li> <a href="https://twitter.com/builtin" target="_blank" rel="noopener">Twitter</a>
+                                </li>
+                                <li> <a href="https://www.linkedin.com/company/3763094" target="_blank"
+                                        rel="noopener">LinkedIn</a></li>
+                            </ul>
+                        </nav>
+                        <nav role="navigation" aria-labelledby="block-ourcommunities-menu" id="block-ourcommunities"
+                            class="block block-menu navigation menu--our-communities">
+                            <div class="menu-title" id="block-ourcommunities-menu">Our Communities</div>
+                            <ul>
+                                <li> <a href="https://www.builtinaustin.com/" target="_blank" rel="noopener">Built in
+                                        Austin</a></li>
+                                <li> <a href="https://www.builtinboston.com/" target="_blank" rel="noopener">Built in
+                                        Boston</a></li>
+                                <li> <a href="https://www.builtinchicago.org/" target="_blank" rel="noopener">Built in
+                                        Chicago</a></li>
+                                <li> <a href="https://www.builtincolorado.com/" target="_blank" rel="noopener">Built in
+                                        Colorado</a></li>
+                                <li> <a href="https://www.builtinla.com/" target="_blank" rel="noopener">Built in LA</a>
+                                </li>
+                                <li> <a href="https://www.builtinnyc.com/" target="_blank" rel="noopener">Built in
+                                        NYC</a></li>
+                                <li> <a href="https://www.builtinseattle.com/" target="_blank" rel="noopener">Built in
+                                        Seattle</a></li>
+                                <li> <a href="https://www.builtinsf.com" target="_blank" rel="noopener">Built In San
+                                        Francisco</a></li>
+                            </ul>
+                        </nav>
+                        <nav role="navigation" aria-labelledby="block-about-menu" id="block-about"
+                            class="block block-menu navigation menu--about">
+                            <div class="menu-title" id="block-about-menu">About</div>
+                            <ul>
+                                <li> <a href="https://builtin.com/our-story">Our Story</a></li>
+                                <li> <a href="/our-staff" data-drupal-link-system-path="node/321">Our Staff Writers</a>
+                                </li>
+                                <li> <a href="/privacy-policy" data-drupal-link-system-path="node/31">Privacy Policy</a>
+                                </li>
+                                <li> <a href="/community-terms-of-use" data-drupal-link-system-path="node/138">Terms of
+                                        Use</a></li>
+                                <li> <a href="/copyright-policy" data-drupal-link-system-path="node/1032">Copyright
+                                        Policy</a></li>
+                                <li> <a href="https://builtin.com/node/1122">Do Not Sell My Personal Info</a></li>
+                                <li> <a href="https://builtin.com/ca-notice-collection">CA Notice of Collection</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </footer>
+            <div id="basement" class="basement">
+                <div>Live your purpose.<span></span>Work your passion.</div>
+            </div>
+            <div class="scrolling-cta" data-expertise="%5B%22Robotics%22%5D">
+                <div class="start-accent"> <span class="circle"></span> <span class="diamond"></span> <span
+                        class="waves"></span></div>
+                <div class="cta-body"> <a class="geo-cta-nav-jobs cta-text-link" href="/jobs" target="_blank"
+                        rel="noopener"> <span class="cta-text">View <span class="expertise"></span> jobs at top <span
+                                class="market"></span> tech companies</span> </a> <a class="geo-cta-nav-jobs cta-link"
+                        href="/jobs" target="_blank" rel="noopener"> <span class="link-text">View Jobs</span> <span
+                            class="link-icon"></span> </a></div>
+                <div class="end-accent"> <span class="dot-grid"></span> <span class="gradient-box"></span></div>
+            </div>
+        </div>
+    </div>
+    <script>
+        !function () {
+            var t;
+            if (t = window.driftt = window.drift = window.driftt || [], !t.init) return t.invoked ? void (window.console && console.error && console.error("Drift snippet included twice.")) : (t.invoked = !0,
+                t.methods = ["identify", "config", "track", "reset", "debug", "show", "ping", "page", "hide", "off", "on"],
+                t.factory = function (e) {
+                    return function () {
+                        var n;
+                        return n = Array.prototype.slice.call(arguments), n.unshift(e), t.push(n), t;
+                    };
+                }, t.methods.forEach(function (e) {
+                    t[e] = t.factory(e);
+                }), t.load = function (t) {
+                    var e, n, o, i;
+                    e = 3e5, i = Math.ceil(new Date() / e) * e, o = document.createElement("script"),
+                        o.type = "text/javascript", o.async = !0, o.crossorigin = "anonymous", o.src = "https://js.driftt.com/include/" + i + "/" + t + ".js",
+                        n = document.getElementsByTagName("script")[0], n.parentNode.insertBefore(o, n);
+                });
+        }();
+        drift.SNIPPET_VERSION = '0.3.1';
+        drift.load('y8v83xbavrv8');
+    </script>
+    <script type="text/javascript">
+        piAId = '324011';
+        piCId = '1399';
+        piHostname = 'pi.pardot.com';
+        (function () {
+            function async_load() { var s = document.createElement('script'); s.type = 'text/javascript'; s.src = ('https:' == document.location.protocol ? 'https://pi' : 'http://cdn') + '.pardot.com/pd.js'; var c = document.getElementsByTagName('script')[0]; c.parentNode.insertBefore(s, c); }
+            if (window.attachEvent) { window.attachEvent('onload', async_load); }
+            else { window.addEventListener('load', async_load, false); }
+        })();
+    </script>
+    <script type="application/json"
+        data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","scriptPath":null,"pathPrefix":"","currentPath":"taxonomy\/term\/10","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en"},"pluralDelimiter":"\u0003","ajaxPageState":{"libraries":"blazy\/load,builtin\/builtin-jobs-embed,builtin\/global-styling,builtin\/term,builtin\/three_columns,builtin\/topic,builtin_jobs_scrolling_cta\/jobs-scrolling-cta,codesnippet\/codesnippet.highlightjs,codesnippet\/codesnippet.style.solarized_dark,core\/html5shiv,crazyegg\/crazyegg,extlink\/drupal.extlink,filter\/caption,google_analytics\/google_analytics,paragraphs\/drupal.paragraphs.unpublished,system\/base,video_embed_field\/responsive-video,views\/views.ajax,views\/views.module,views_infinite_scroll\/views-infinite-scroll","theme":"builtin","theme_token":null},"ajaxTrustedUrl":[],"google_analytics":{"trackOutbound":true,"trackMailto":true,"trackDownload":true,"trackDownloadExtensions":"7z|aac|arc|arj|asf|asx|avi|bin|csv|doc(x|m)?|dot(x|m)?|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt(x|m)?|pot(x|m)?|pps(x|m)?|ppam|sld(x|m)?|thmx|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls(x|m|b)?|xlt(x|m)|xlam|xml|z|zip"},"data":{"extlink":{"extTarget":true,"extTargetNoOverride":true,"extNofollow":false,"extFollowNoOverride":false,"extClass":"0","extLabel":"(link is external)","extImgClass":false,"extSubdomains":true,"extExclude":"","extInclude":"","extCssExclude":"","extCssExplicit":"","extAlert":false,"extAlertText":"This link will take you to an external web site. We are not responsible for their content.","mailtoClass":"0","mailtoLabel":"(link sends email)"}},"views":{"ajax_path":"\/views\/ajax","ajaxViews":{"views_dom_id:cf82ea301abdec3f84718d8f1053b4f51f13a7f3db41a14e9c609f21d68074f8":{"view_name":"topic_blog_posts","view_display_id":"block_2","view_args":"10","view_path":"\/robotics","view_base_path":null,"view_dom_id":"cf82ea301abdec3f84718d8f1053b4f51f13a7f3db41a14e9c609f21d68074f8","pager_element":0},"views_dom_id:378f88cce7e16c5319db53b846f2f6ea39d63da91e6c5f0196d4a63ba6251f55":{"view_name":"topic_blog_posts","view_display_id":"block_3","view_args":"10","view_path":"\/robotics","view_base_path":null,"view_dom_id":"378f88cce7e16c5319db53b846f2f6ea39d63da91e6c5f0196d4a63ba6251f55","pager_element":0}}},"blazy":{"loadInvisible":true,"offset":100,"saveViewportOffsetDelay":50},"event_tracking_url":"https:\/\/api.builtin.com\/track\/client-event","market_id":"1000000000","nid":"","node_type":"","user":{"uid":0,"permissionsHash":"c8950582ee6938e3d14127b0b50dc6ac99ddba718b6870a18e2213586d209235"}}</script>
+    <script src="/sites/default/files/js/js_P86nH2TmK3l8iWnSbtGMlwA-rPqyUgBwc2wzOvzuqr4.js"></script>
+    <script
+        type="text/javascript">window.NREUM || (NREUM = {}); NREUM.info = { "beacon": "bam.nr-data.net", "licenseKey": "1490ac5bd8", "applicationID": "427532063", "transactionName": "YFABN0RRWkZZVxEKX1kaIgBCWVtbF0QEBFVoVgIAXlU=", "queueTime": 0, "applicationTime": 24, "atts": "TBcCQQxLSUg=", "errorBeacon": "bam.nr-data.net", "agent": "" }</script>
+</body>
+
+</html>
+
+
+
+
+
+{% endblock body %}

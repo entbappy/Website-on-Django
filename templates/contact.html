@@ -1,0 +1,162 @@
+{% extends 'base.html' %}
+
+{% block title %}Contact
+{% endblock title %}
+
+{% block body %}
+
+<div class="containner mb-3">
+
+  <img src="https://source.unsplash.com/1600x600/?telephone" class="d-block w-100" alt="...">
+</div>
+
+<div class="container ">
+  <h1 class="text-center ">Ask Questions </h1>
+
+
+  <form method="POST" action="/contact">
+    {% csrf_token %}
+    <div class="form-group">
+      <label for="name">Your Name</label>
+      <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name">
+    </div>
+
+    <div class="form-group">
+      <label for="emailexampleFormControlInput1">Email address</label>
+      <input type="email" class="form-control" id="email" name="email" placeholder="name@example.com">
+    </div>
+
+
+    <div class="form-group">
+      <label for="phone">Phone Number</label>
+      <input type="phone" class="form-control" id="phone" name="phone" placeholder="Enter your phone number">
+    </div>
+
+
+  
+    <div class="form-group">
+      <label for="description">What do you want to ask for?</label>
+      <textarea class="form-control" id="description" rows="3" name="description" ></textarea>
+    </div>
+   <button class="btn btn-primary" type="submit">Submit</button>
+  </form>
+
+</div>
+
+
+<style>
+  .bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+
+  @media (min-width: 768px) {
+    .bd-placeholder-img-lg {
+      font-size: 3.5rem;
+    }
+  }
+</style>
+<!-- Custom styles for this template -->
+<link href="pricing.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+    <h1 class="display-4">Contact Me Through</h1>
+    <p class="lead">If you want to contact with me so cheak bellow</p>
+  </div>
+
+  <div class="container">
+    <div class="card-deck mb-3 text-center">
+      <div class="card mb-4 shadow-sm">
+        <div class="card-header">
+          <h4 class="my-0 font-weight-normal">Facebook</h4>
+        </div>
+        <div class="card-body">
+          <h1 class="card-title pricing-card-title">F<small class="text-muted"></small></h1>
+          <ul class="list-unstyled mt-3 mb-4">
+            <li>Cheak my account</li>
+            <li>https://www.facebook.com/profile.php?id=100005254877425</li>
+
+          </ul>
+          <button type="button" class="btn btn-lg btn-block btn-outline-primary">Click Here</button>
+        </div>
+      </div>
+      <div class="card mb-4 shadow-sm">
+        <div class="card-header">
+          <h4 class="my-0 font-weight-normal">Instagram</h4>
+        </div>
+        <div class="card-body">
+          <h1 class="card-title pricing-card-title">I <small class="text-muted"></small></h1>
+          <ul class="list-unstyled mt-3 mb-4">
+            <li></li>
+            <li>Link</li>
+            <li></li>
+            <li>Help center access</li>
+          </ul>
+          <button type="button" class="btn btn-lg btn-block btn-primary">Click Here</button>
+        </div>
+      </div>
+      <div class="card mb-4 shadow-sm">
+        <div class="card-header">
+          <h4 class="my-0 font-weight-normal">Linkedin</h4>
+        </div>
+        <div class="card-body">
+          <h1 class="card-title pricing-card-title">L <small class="text-muted"></small></h1>
+          <ul class="list-unstyled mt-3 mb-4">
+            <li>/li>
+            <li></li>
+            <li>Phone and email support</li>
+            <li>Help center access</li>
+          </ul>
+          <button type="button" class="btn btn-lg btn-block btn-primary">Click Here</button>
+        </div>
+      </div>
+    </div>
+
+    <footer class="pt-4 my-md-5 pt-md-5 border-top">
+      <div class="row">
+        <div class="col-12 col-md">
+          <img class="mb-2" src="/docs/4.5/assets/brand/bootstrap-solid.svg" alt="" width="24" height="24">
+          <small class="d-block mb-3 text-muted">&copy; 2017-2020</small>
+        </div>
+        <div class="col-6 col-md">
+          <h5>Features</h5>
+          <ul class="list-unstyled text-small">
+            <li><a class="text-muted" href="#">Cool stuff</a></li>
+            <li><a class="text-muted" href="#">Random feature</a></li>
+            <li><a class="text-muted" href="#">Team feature</a></li>
+            <li><a class="text-muted" href="#">Stuff for developers</a></li>
+            <li><a class="text-muted" href="#">Another one</a></li>
+            <li><a class="text-muted" href="#">Last time</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md">
+          <h5>Resources</h5>
+          <ul class="list-unstyled text-small">
+            <li><a class="text-muted" href="#">Resource</a></li>
+            <li><a class="text-muted" href="#">Resource name</a></li>
+            <li><a class="text-muted" href="#">Another resource</a></li>
+            <li><a class="text-muted" href="#">Final resource</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md">
+          <h5>About</h5>
+          <ul class="list-unstyled text-small">
+            <li><a class="text-muted" href="#">Team</a></li>
+            <li><a class="text-muted" href="#">Locations</a></li>
+            <li><a class="text-muted" href="#">Privacy</a></li>
+            <li><a class="text-muted" href="#">Terms</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+  </div>
+</body>
+
+{% endblock body %}
